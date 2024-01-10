@@ -28,8 +28,13 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          secondary: "hsla(238, 50%, 22%, 1)",
+          accent: "hsla(225, 57%, 97%, 1)"
+        },
         foreground: "hsl(var(--foreground))",
+        RoyalBlue: "hsla(248, 96%, 48%, 1)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
