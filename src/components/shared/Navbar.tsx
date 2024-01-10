@@ -9,7 +9,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     return (
-        <ul className='flex flex-wrap items-center justify-center gap-x-8 gap-y-2'>
+        <ul className='flex flex-wrap flex-col lg:flex-row items-center justify-center gap-x-8 gap-y-2'>
             {navbar.map((link) => {
                 const isActive = pathname === link.route;
 
