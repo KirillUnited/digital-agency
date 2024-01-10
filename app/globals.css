@@ -76,6 +76,9 @@
   body {
     @apply font-sans bg-background text-foreground;
   }
+  .wrapper {
+    @apply min-h-screen flex flex-col;
+  }
   .heading-1 {
     @apply text-4xl md:text-[54px] font-semibold;
     line-height: 130%;
