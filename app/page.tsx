@@ -5,7 +5,8 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <div className="container">
-      <Button variant={'link'} className='gap-4'>TEST <MoveRight /></Button>
+      <Button>Primary</Button>
+      <Button variant={'secondary'}>Button text</Button>
       <h1 className="heading-1">Sample text helps you understand how real text may look.</h1>
       <h2 className="heading-2">Sample text helps you understand how real text may look.</h2>
       <h3 className="heading-3">Sample text helps you understand how real text may look.</h3>
