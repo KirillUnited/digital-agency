@@ -76,4 +76,32 @@
   body {
     @apply font-sans bg-background text-foreground;
   }
+  .heading-1 {
+    @apply text-4xl md:text-[54px] font-semibold;
+    line-height: 130%;
+  }
+  .heading-2 {
+    @apply text-3xl md:text-5xl font-semibold;
+    line-height: 130%;
+  }
+  .heading-3 {
+    @apply text-2xl md:text-4xl font-semibold;
+    line-height: 130%;
+  }
+  .heading-4 {
+    @apply text-xl md:text-4xl font-semibold;
+    line-height: 130%;
+  }
+  .heading-5 {
+    @apply text-base md:text-3xl font-semibold;
+    line-height: 130%;
+  }
+  .heading-6 {
+    @apply text-sm md:text-2xl font-semibold;
+    line-height: 130%;
+  }
+  .paragraph {
+    @apply text-base font-normal;
+    line-height: 175%;
+  }
 }

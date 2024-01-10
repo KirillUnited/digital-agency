@@ -11,14 +11,14 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      "sm": "580px",
+      "md": "940px",
+      "lg": "1280px",
+    },
     container: {
       center: true,
-      padding: "10px",
-      screens: {
-        "sm": "580px",
-        "md": "940px",
-        "lg": "1280px",
-      },
+      padding: "10px"
     },
     extend: {
       fontFamily: {
