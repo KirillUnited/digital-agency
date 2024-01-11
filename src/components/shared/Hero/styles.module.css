@@ -1,0 +1,15 @@
+.section{
+    @apply bg-background-secondary text-foregroundSecondary py-6 lg:py-28 bg-contain;
+}
+.container {
+    @apply grid grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-x-14 gap-y-7 items-center;
+}
+.content {
+    @apply flex flex-col gap-6;
+}
+.footer{
+    @apply flex flex-wrap items-center flex-col lg:flex-row gap-x-10 gap-y-4 mt-0 lg:mt-6;
+}
+.image {
+    @apply w-full max-h-[70vh] object-contain object-center 2xl:max-h-[50vh];
+}

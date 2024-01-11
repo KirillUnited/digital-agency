@@ -18,7 +18,7 @@ module.exports = {
     // },
     container: {
       center: true,
-      padding: "10px"
+      padding: "1rem"
     },
     extend: {
       fontFamily: {
