@@ -23,7 +23,7 @@ const MobileMenu = () => {
                         <Logo />
                     </SheetTitle>
                     <Navbar variant='primary' />
-                    <Button>Обратная связь</Button>
+                    <Button size={'sm'}>Обратная связь</Button>
                 </SheetContent>
             </Sheet>
         </nav>

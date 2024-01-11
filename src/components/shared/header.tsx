@@ -12,7 +12,7 @@ const Header = () => {
                     <Logo/>
                     <nav className="lg:flex hidden items-center justify-end gap-12">
                         <Navbar variant='primary' />
-                        <Button>Обратная связь</Button>
+                        <Button size={'sm'}>Обратная связь</Button>
                     </nav>
                     <MobileMenu />
                 </div>
