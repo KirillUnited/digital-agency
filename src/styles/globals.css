@@ -79,6 +79,9 @@
   .wrapper {
     @apply min-h-screen flex flex-col;
   }
+  .section {
+    @apply py-6 lg:py-14 xl:py-24;
+  }
   .heading-1 {
     @apply text-4xl md:text-[54px] font-semibold;
     line-height: 130%;
@@ -104,10 +107,10 @@
     line-height: 130%;
   }
   .paragraph {
-    @apply text-base font-normal;
+    @apply text-sm md:text-base font-normal;
     line-height: 175%;
   }
-  .text-link {
+  .link {
     @apply text-lg font-medium text-link transition-colors duration-300 hover:text-link-secondary;
   }
 }

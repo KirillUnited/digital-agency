@@ -12,7 +12,7 @@ const Hero = () => {
     const image = site.home?.hero?.image;
 
     return (
-        <section className={`${styles.section}`}>
+        <section className={`section ${styles.section}`}>
             <div className={`container ${styles.container}`}>
                 <div className={`${styles.content}`}>
                     <h1 className="heading-1 lg:tracking-[-0.03em]">{title}</h1>
