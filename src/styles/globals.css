@@ -111,6 +111,6 @@
     line-height: 175%;
   }
   .link {
-    @apply text-lg font-medium text-link transition-colors duration-300 hover:text-link-secondary;
+    @apply inline-flex items-center gap-4 text-lg font-medium text-link transition-colors duration-300 hover:text-link-secondary;
   }
 }

@@ -1,0 +1,13 @@
+.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 284px);
+    gap: 2rem;
+}
+.grid>:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.card-content {
+    @apply relative text-white;
+    background: linear-gradient(329deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+}
