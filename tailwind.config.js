@@ -35,7 +35,10 @@ module.exports = {
         },
         foreground: "hsl(var(--foreground))",
         foregroundSecondary: "hsla(0, 0%, 100%, 1)",
-        RoyalBlue: "hsla(248, 96%, 48%, 1)",
+        link: {
+          DEFAULT: "hsla(248, 96%, 48%, 1)",
+          secondary: "hsla(238, 50%, 22%, 1)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

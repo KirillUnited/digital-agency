@@ -23,7 +23,7 @@ const Navbar = ({ variant }: NavbarType) => {
                     >
                         <Link href={link.route}
                             className={cn(
-                                "flex text-base font-medium transition-colors duration-300",
+                                "flex text-base font-medium transition-colors duration-300 hover:text-foreground/70",
                                 {
                                     "text-neutral-300 hover:text-white": variant == 'primary'
                                 },

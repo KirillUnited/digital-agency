@@ -107,4 +107,7 @@
     @apply text-base font-normal;
     line-height: 175%;
   }
+  .text-link {
+    @apply text-lg font-medium text-link transition-colors duration-300 hover:text-link-secondary;
+  }
 }

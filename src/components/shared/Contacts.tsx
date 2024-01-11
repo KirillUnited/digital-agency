@@ -10,7 +10,7 @@ const Contacts = () => {
                         return (
                             <li key={href}>
                                 <p className='text-lg font-medium'>{title}</p>
-                                <a href={href}>{label}</a>
+                                <a href={href} className='hover:text-foreground/70'>{label}</a>
                             </li>
                         )
                     })

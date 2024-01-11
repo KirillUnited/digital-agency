@@ -21,9 +21,9 @@ const Hero = () => {
                     </p>
                     <div className={`${styles.footer}`}>
                         <Button asChild className='w-full sm:w-fit'>
-                            <Link href={'/projects'}>View our work</Link>
+                            <Link href={'/projects'}>Портфолио</Link>
                         </Button>
-                        <Link href={'/'} className='inline-flex items-center gap-4'>View Pricing <MoveRight /></Link>
+                        <Link href={'/'} className='inline-flex items-center gap-4 transition-colors duration-300 hover:text-foregroundSecondary/70'>Подробнее <MoveRight /></Link>
                     </div>
                 </div>
                 <Image
