@@ -6,7 +6,7 @@ import { site } from '@/content'
 import styles from './styles.module.css'
 
 const Projects = () => {
-  const shownProjects = site.home?.projects.filter((item, index)=>index<3);
+  const shownProjects = site.home?.projects.filter((item, index) => index < 3);
 
   return (
     <section className="section">
@@ -17,7 +17,11 @@ const Projects = () => {
         </div>
         <div className={`grid ${styles.grid}`}>
           {
-            shownProjects.map((item)=><ProjectCard key={item.title} {...item} />)
+            shownProjects.map((item) => {
+              return (
+                  <ProjectCard key={item.title} {...item} />
+              )
+            })
           }
         </div>
       </div>
