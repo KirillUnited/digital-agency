@@ -5,7 +5,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 
-const Navbar = () => {
+type NavbarType = {
+    variant?: 'primary' | 'secondary'
+}
+
+const Navbar = ({ variant }: NavbarType) => {
     const pathname = usePathname();
 
     return (
@@ -19,10 +23,16 @@ const Navbar = () => {
                     >
                         <Link href={link.route}
                             className={cn(
-                                "flex text-neutral-300 text-base font-medium transition-colors duration-300 hover:text-white",
+                                "flex text-base font-medium transition-colors duration-300",
                                 {
-                                    "text-white": isActive,
-                                }
+                                    "text-neutral-300 hover:text-white": variant == 'primary'
+                                },
+                                {
+                                    "text-white": variant == 'primary' && isActive,
+                                },
+                                {
+                                    "text-foreground": variant == 'secondary'
+                                },
                             )}
                         >
                             {link.label}

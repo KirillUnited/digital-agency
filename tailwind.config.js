@@ -34,6 +34,7 @@ module.exports = {
           accent: "hsla(225, 57%, 97%, 1)"
         },
         foreground: "hsl(var(--foreground))",
+        foregroundSecondary: "hsla(0, 0%, 100%, 1)",
         RoyalBlue: "hsla(248, 96%, 48%, 1)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
