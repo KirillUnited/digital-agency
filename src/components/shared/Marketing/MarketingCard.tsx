@@ -18,7 +18,9 @@ const MarketingCard = ({ title, description, image }: MarketingCardType) => {
             styles.card
         )}>
             <Image src={image} width={515} height={336} alt={title} className={cn(styles["card-image"])} />
-            <div className="flex flex-col gap-4">
+            <div className={cn(
+                styles["card-content"]
+            )}>
                 <h3 className="heading-3">{title}</h3>
                 <p className="paragraph text-foreground/70">{description}</p>
                 <Link href={'/'} className='link'>Подробнее <MoveRightIcon /></Link>
