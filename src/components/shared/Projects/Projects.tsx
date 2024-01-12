@@ -2,11 +2,11 @@ import { MoveRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import { site } from '@/content'
+import { projects } from '@/content'
 import styles from './styles.module.css'
 
 const Projects = () => {
-  const shownProjects = site.home?.projects.filter((item, index) => index < 3);
+  const shownProjects = projects.filter((item, index) => index < 3);
 
   return (
     <section className="section">

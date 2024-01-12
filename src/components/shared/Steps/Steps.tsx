@@ -1,4 +1,4 @@
-import { site } from '@/content'
+import { steps } from '@/content'
 import { MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -14,7 +14,7 @@ const Steps = () => {
                 </div>
                 <ul className="content grid grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] w-full max-w-2xl mx-auto gap-6">
                     {
-                        site.home.steps.map(({step, title, description }) => <li key={step}><StepsCard step={step} title={title} description={description} /></li>)
+                        steps.map(({step, title, description }) => <li key={step}><StepsCard step={step} title={title} description={description} /></li>)
                     }
                 </ul>
             </div>

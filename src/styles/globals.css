@@ -113,4 +113,10 @@
   .link {
     @apply inline-flex items-center gap-4 text-lg font-medium text-link transition-colors duration-300 hover:text-link-secondary;
   }
+  .marketing-grid {
+    @apply flex flex-col;
+  }
+  .marketing-grid > :nth-child(odd){
+    flex-direction: row-reverse;
+  }
 }
