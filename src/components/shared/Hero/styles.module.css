@@ -2,7 +2,7 @@
     @apply bg-background-secondary text-foregroundSecondary bg-contain;
 }
 .container {
-    @apply grid grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-x-14 gap-y-7 items-center;
+    @apply grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-x-14 gap-y-7 items-center;
 }
 .content {
     @apply flex flex-col gap-6;

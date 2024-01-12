@@ -8,7 +8,7 @@ const Footer = () => {
     <footer>
       <section className='bg-background-secondary text-foregroundSecondary'>
         <div className="container pt-8 lg:pt-24">
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-6">
+          <div className="grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-6">
             <div className='flex flex-col gap-6'>
               <Logo />
               <p className='paragraph lg:max-w-lg text-background-accent'>We are always open to discuss your project and improve your online presence.</p>
