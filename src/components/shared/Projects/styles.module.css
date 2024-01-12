@@ -1,16 +1,32 @@
 .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 284px);
-    gap: 2rem;
 }
 .grid>:nth-child(1){
     grid-column: span 2;
     grid-row: span 2;
 }
-.card-content {
-    @apply relative text-white;
-    background: linear-gradient(329deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+.card {
+    @apply relative h-60 lg:h-full;
+    overflow: hidden;
+}
+.card:hover .card-body {
+    max-width: 414px;
 }
 .card-image {
     @apply object-cover w-full transition-all duration-700;
+}
+.card-body {
+    @apply relative text-white h-full transition-all duration-700;
+    max-width: 0;
+    background: linear-gradient(329deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+}
+.card-content {
+    @apply p-8 overflow-hidden;
+}
+.grid>:nth-child(1) .card-content{
+    @apply lg:h-1/2;
+}
+.card-link {
+    @apply text-primary hover:text-primary/70 truncate mt-auto;
 }
