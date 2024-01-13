@@ -1,0 +1,9 @@
+.accordion-item {
+    @apply lg:mb-8;
+}
+.accordion-trigger {
+    @apply lg:pt-0 pb-4 lg:pb-8;
+}
+.accordion-content {
+    @apply lg:pb-8;
+}
