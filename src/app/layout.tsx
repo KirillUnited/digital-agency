@@ -28,9 +28,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.variable}>
         <div className='wrapper'>
-          <Header />
+          {/* <Header /> */}
           <main className='flex-1'>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>
