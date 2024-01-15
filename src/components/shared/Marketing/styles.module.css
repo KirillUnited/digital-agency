@@ -1,5 +1,6 @@
 .card {
     @apply gap-6 lg:gap-16 xl:gap-32 items-center;
+    flex-direction: var(--direction)
 }
 .card-image {
     @apply w-full aspect-[515/336] object-contain object-center basis-[41%] mx-auto;
