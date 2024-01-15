@@ -1,10 +1,16 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Montserrat, Poppins } from 'next/font/google'
 import '@/styles/globals.css'
 import Header from '@/components/shared/Header'
 import Footer from '@/components/shared/Footer'
 
-const poppins = Poppins({
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   weight: ['400', '500', '600', '700'],
+//   variable: "--font-sans"
+// });
+
+const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: "--font-sans"
@@ -26,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.variable}>
+      <body className={montserrat.variable}>
         <div className='wrapper'>
           <Header />
           <main className='flex-1'>{children}</main>
