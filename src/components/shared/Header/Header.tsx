@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import { Button } from '../../ui/button'
 import MobileMenu from './MobileMenu'
 import Logo from '../Logo'
+import HeaderDrawer from './HeaderDrawer'
 
 const Header = () => {
     return (
@@ -15,7 +16,8 @@ const Header = () => {
                         <Navbar variant='primary' />
                         <Button size={'sm'}>Обратная связь</Button>
                     </nav>
-                    <MobileMenu />
+                    {/* <MobileMenu /> */}
+                    <HeaderDrawer />
                 </div>
             </div>
         </header>
