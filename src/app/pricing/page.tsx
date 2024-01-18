@@ -1,4 +1,4 @@
-import PricingCard from '@/components/Pricing/PricingCard'
+import PricingCard from '@/components/shared/Pricing/PricingCard'
 import { pricing } from '@/content'
 import React from 'react'
 import FaqAccordian from '@/components/shared/Faq/FaqAccordian'

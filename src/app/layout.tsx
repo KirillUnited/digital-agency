@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button'
 import Navbar from '@/components/shared/Navbar'
 import Logo from '@/components/shared/Logo'
 import Contacts from '@/components/shared/Contacts'
-// import Header from '@/components/shared/Header'
-// import Footer from '@/components/shared/Footer'
+import Header from '@/components/shared/Header'
+import Footer from '@/components/shared/Footer'
 
 // const poppins = Poppins({
 //   subsets: ['latin'],
@@ -39,8 +39,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.variable}>
         <div className='wrapper'>
-          {/* <Header /> */}
-          <header className='sticky z-50 top-0 bg-background-secondary'>
+          <Header />
+          {/* <header className='sticky z-50 top-0 bg-background-secondary'>
             <div className="container">
               <div className="flex items-center justify-between min-h-24 py-4">
                 <Logo />
@@ -51,9 +51,9 @@ export default function RootLayout({
                 <MobileMenu />
               </div>
             </div>
-          </header>
+          </header> */}
           <main className='flex-1'>{children}</main>
-          <footer>
+          {/* <footer>
             <section className='bg-background-secondary text-foregroundSecondary'>
               <div className="container pt-8 lg:pt-24">
                 <div className="grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-6">
@@ -79,8 +79,8 @@ export default function RootLayout({
                 </div>
               </div>
             </section>
-          </footer>
-          {/* <Footer /> */}
+          </footer> */}
+          <Footer />
         </div>
       </body>
     </html>
