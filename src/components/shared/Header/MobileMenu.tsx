@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/sheet"
 import Navbar from './Navbar'
 import { Menu } from 'lucide-react'
-import { Button } from '../ui/button'
-import Logo from './Logo'
+import { Button } from '../../ui/button'
+import Logo from '../Logo'
 
 const MobileMenu = () => {
     return (
