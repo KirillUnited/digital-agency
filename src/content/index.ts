@@ -16,7 +16,7 @@ export const navbar = [
     },
     {
         label: 'Услуги',
-        route: '/features'
+        route: '/pricing'
     },
     {
         label: 'Технологии',
@@ -149,5 +149,49 @@ export const faq = [
     {
         title: 'What is your class naming convention?',
         description: 'Voluptatem repellendus explicabo impedit voluptas cumque et soluta quis ad. Quibusdam unde debitis itaque. Officia illo accusamus molestiae non cupiditate voluptas nisi est.'
+    },
+];
+
+export const pricing = [
+    {
+        price: '$299 +',
+        title: 'аудит сайта',
+        description: 'Beatae reiciendis necessitatibus dolor saepe.'
+    },
+    {
+        price: '$299 +',
+        title: 'дизайн сайта',
+        description: 'Adipisci ipsa temporibus ea.',
+        variant: 'primary'
+    },
+    {
+        price: '$299 +',
+        title: 'разработка сайта',
+        description: 'Hic quo et quae beatae dicta doloremque quisquam ut.'
+    },
+    {
+        price: '$299 +',
+        title: 'разработка лендинга',
+        description: 'Unde ut aliquam odio ut omnis.'
+    },
+    {
+        price: '$299 +',
+        title: 'контакстная реклама',
+        description: 'Atque repellat aut et.'
+    },
+    {
+        price: '$299 +',
+        title: 'таргетированая реклама',
+        description: 'Quod totam voluptatum.'
+    },
+    {
+        price: '$299 +',
+        title: 'SEO продвижение',
+        description: 'Rem nesciunt architecto itaque natus culpa doloremque neque et voluptatibus.'
+    },
+    {
+        price: '$299 +',
+        title: 'SMM (ведение профилей в соцсетях)',
+        description: 'Laboriosam ex ut.'
     },
 ]
