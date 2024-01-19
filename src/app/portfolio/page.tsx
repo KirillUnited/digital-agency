@@ -1,6 +1,6 @@
 import ProjectPreview from '@/components/shared/Projects/ProjectPreview';
 import { Button } from '@/components/ui/button';
-import getProjects, { ProjectType } from '@/lib/getProjects'
+import getProjects from '@/lib/getProjects'
 import Link from 'next/link';
 import React from 'react'
 
