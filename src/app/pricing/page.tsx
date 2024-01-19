@@ -12,7 +12,7 @@ const Pricing = () => {
                     <h2 className="heading-2">Our Pricing Plans</h2>
                     <p className='mt-4'>When you’re ready to go beyond prototyping in Figma, Webflow is ready to help you bring your designs to life — without coding them.</p>
                 </div>
-                <ul className='flex flex-col lg:grid grid-cols-[repeat(auto-fit,_minmax(406px,_1fr))] gap-8 self-stretch'>
+                <ul className='flex flex-col lg:grid grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-8 self-stretch'>
                     {
                         pricing.map((item) => {
                             return <li key={item.title}><PricingCard {...item} /></li>
