@@ -16,28 +16,28 @@ import { Button } from "@/components/ui/button"
 
 const HeaderDrawer = () => {
     return (
-        <nav className='lg:hidden'>
-            <Drawer shouldScaleBackground>
-                <DrawerTrigger>
-                    <Menu className='text-white' />
-                </DrawerTrigger>
-                <DrawerContent className='bg-background-secondary border-background-secondary'>
-                    <div className="flex flex-col gap-6 overflow-auto">
-                        <DrawerHeader className="flex flex-col items-center">
-                            <DrawerTitle>
-                                <Logo />
-                            </DrawerTitle>
-                        </DrawerHeader>
-                        <DrawerFooter>
+        <Drawer shouldScaleBackground>
+            <DrawerTrigger className='lg:hidden'>
+                <Menu className='text-white' />
+            </DrawerTrigger>
+            <DrawerContent className='bg-background-secondary border-background-secondary'>
+                <div className="flex flex-col gap-6 overflow-auto">
+                    <DrawerHeader className="flex flex-col items-center">
+                        <DrawerTitle>
+                            <Logo />
+                        </DrawerTitle>
+                    </DrawerHeader>
+                    <DrawerFooter>
+                        <nav>
                             <Navbar variant='primary' />
-                        </DrawerFooter>
-                        <DrawerFooter>
-                            <Button size={'sm'}>Обратная связь</Button>
-                        </DrawerFooter>
-                    </div>
-                </DrawerContent>
-            </Drawer>
-        </nav>
+                        </nav>
+                    </DrawerFooter>
+                    <DrawerFooter>
+                        <Button size={'sm'}>Обратная связь</Button>
+                    </DrawerFooter>
+                </div>
+            </DrawerContent>
+        </Drawer>
     )
 }
 
