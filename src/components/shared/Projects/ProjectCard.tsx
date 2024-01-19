@@ -19,6 +19,7 @@ const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
         )}>
             <Image
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`${cover}`}
                 alt={`${title}`}
                 className={`${styles["card-image"]}`}
