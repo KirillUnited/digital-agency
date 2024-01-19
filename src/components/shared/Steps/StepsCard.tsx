@@ -8,7 +8,7 @@ type StepsCardType = {
 }
 const StepsCard = ({ step, title, description }: StepsCardType) => {
     return (
-        <div className='flex flex-col items-center sm:items-stretch gap-4' key={step}>
+        <div className='flex flex-col sm:items-stretch gap-4' key={step}>
             <div className="relative w-12 h-12 bg-link rounded-md grid place-items-center">
                 <Image
                     src={'/images/step.svg'}
@@ -19,7 +19,7 @@ const StepsCard = ({ step, title, description }: StepsCardType) => {
                 />
                 <span className='relative text-white text-lg font-medium'>{step}</span>
             </div>
-            <div className='flex flex-col text-center sm:text-left gap-2'>
+            <div className='flex flex-col gap-2'>
                 <h5 className="heading-5 font-medium">{title}</h5>
                 <p className="paragraph text-foreground/70">{description}</p>
             </div>
