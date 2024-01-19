@@ -22,9 +22,9 @@ const Hero = () => {
                     </p>
                     <div className={`${styles.footer}`}>
                         <Button asChild className='w-full sm:w-fit'>
-                            <Link href={'/projects'}>Портфолио</Link>
+                            <Link href={'/portfolio'}>Портфолио</Link>
                         </Button>
-                        <Link href={'/'} className='inline-flex items-center gap-4 transition-colors duration-300 hover:text-foregroundSecondary/70'>Подробнее <MoveRight /></Link>
+                        <Link href={'/'} className='link text-foregroundSecondary hover:text-foregroundSecondary/70'>Подробнее <MoveRight /></Link>
                     </div>
                 </div>
                 <Image
