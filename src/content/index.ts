@@ -12,7 +12,7 @@ export const site = {
 export const navbar = [
     {
         label: 'Портфолио',
-        route: '/projects'
+        route: '/portfolio'
     },
     {
         label: 'Услуги',

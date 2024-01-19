@@ -13,7 +13,7 @@ const Projects = () => {
       <div className="container">
         <div className={`flex flex-wrap items-center justify-between gap-4 pb-8 lg:pb-16`}>
           <h2 className="heading-2">View our projects</h2>
-          <Link href={'/'} className='link text-link-secondary hover:text-link-secondary/70'>View More <MoveRightIcon /></Link>
+          <Link href={'/portfolio'} className='link text-link-secondary hover:text-link-secondary/70'>View More <MoveRightIcon /></Link>
         </div>
         <div className={`flex flex-col lg:grid gap-4 lg:gap-8 ${styles.grid}`}>
           {

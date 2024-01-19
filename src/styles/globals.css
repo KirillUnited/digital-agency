@@ -82,6 +82,9 @@
   .section {
     @apply py-14 xl:py-24;
   }
+  .heading{
+    @apply flex flex-col text-center mx-auto;
+  }
   .heading-1 {
     @apply text-4xl md:text-[54px] font-semibold;
     line-height: 130%;
