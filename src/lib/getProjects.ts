@@ -9,6 +9,8 @@ export type ProjectType = {
     description?: string,
     cover?: string,
     link?: string,
+    info?: object,
+    keywords?: string[]
     body: string
 }
 // `cache` is a React 18 feature that allows you to cache a function for the lifetime of a request.
