@@ -2,47 +2,36 @@ import { MoveRightIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import styles from './styles.module.css';
 import { cn } from '@/lib/utils';
+import styles from './styles.module.css'
 
 type ProjectCardType = {
     title: string,
     description?: string,
     cover?: string,
-    link?: string,
-    slug?: string,
-    
+    link?: string
 }
 
 const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
     return (
-        <div className={cn(
-            styles["card"],
-        )}>
-            <Image
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                src={`${cover}`}
-                alt={`${title}`}
-                className={`${styles["card-image"]}`}
-            />
-            <div className={cn(
-                "flex items-end",
-                styles["card-body"],
-            )}>
-                <div className={cn(
-                    "flex flex-col gap-4",
-                    styles["card-content"],
-                )}>
-                    <h6 className="heading-6 line-clamp-2">{title}</h6>
-                    {description && <p className="paragraph line-clamp-2">{description}</p>}
-                    {link && <Link href={link} className={cn(
-                        "link",
-                        styles["card-link"]
-                    )}>
-                        View project <MoveRightIcon />
-                    </Link>}
-                </div>
+        <div className={cn("flex flex-col gap-3 lg:gap-6 h-full")}>
+            <div className={cn(styles['preview-image-wrap'])}>
+                <Image
+                    width={620}
+                    height={380}
+                    src={`${cover}`}
+                    alt={`${title}`}
+                    className={cn(styles['preview-image'])}
+                />
+            </div>
+            <div className={cn("flex flex-col lg:gap-2 flex-1")}>
+                <h3 className="heading-3 line-clamp-2">{title}</h3>
+                {description && <p className="paragraph line-clamp-2 text-foreground/70">{description}</p>}
+            </div>
+            <div className="mt-auto">
+                {link && <Link href={link} className={cn("link text-link-secondary hover:text-link-secondary/70")}>
+                    View project <MoveRightIcon />
+                </Link>}
             </div>
         </div>
     )
