@@ -9,7 +9,9 @@ type ProjectCardType = {
     title: string,
     description?: string,
     cover?: string,
-    link?: string
+    link?: string,
+    slug?: string,
+    
 }
 
 const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {

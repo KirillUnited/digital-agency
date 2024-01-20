@@ -34,9 +34,9 @@ export const getProjects = cache(async () => {
     )
 })
 
-// export async function getProject(slug: string) {
-//     const projects = await getProjects()
-//     return projects.find((project) => project.slug === slug)
-// }
+export async function getProject(slug: string) {
+    const projects = await getProjects()
+    return projects.find((project: any) => project.slug === slug)
+}
 
 export default getProjects
