@@ -40,7 +40,7 @@ const FeaturedProjectCard = ({ title, description, cover, link }: ProjectCardTyp
                         "link",
                         styles["card-link"]
                     )}>
-                        View project <MoveRightIcon />
+                        Подробнее <MoveRightIcon />
                     </Link>}
                 </div>
             </div>
