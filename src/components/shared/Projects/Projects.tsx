@@ -2,10 +2,11 @@ import { MoveRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import { projects } from '@/content'
 import styles from './styles.module.css'
+import getProjects from '@/lib/getProjects'
 
-const Projects = () => {
+const Projects = async () => {
+  const projects = await getProjects();
   const shownProjects = projects.filter((item, index) => index < 3);
 
   return (
@@ -17,9 +18,9 @@ const Projects = () => {
         </div>
         <div className={`flex flex-col lg:grid gap-4 lg:gap-8 ${styles.grid}`}>
           {
-            shownProjects.map((item, index) => {
+            shownProjects.map(({...data}, index) => {
               return (
-                  <ProjectCard key={item.title} {...item} />
+                  <ProjectCard key={data?.title} {...data} />
               )
             })
           }
