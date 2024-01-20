@@ -26,9 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} wrapper`}>
+      <body className={`${montserrat.variable} wrapper bg-background-secondary`}>
         <Header />
-        <main className='flex-1'>{children}</main>
+        <main className='flex-1 bg-background'>{children}</main>
         <Footer />
       </body>
     </html>
