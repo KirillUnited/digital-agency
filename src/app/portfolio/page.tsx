@@ -1,6 +1,6 @@
 import Projects from '@/components/shared/Projects/Projects';
-import ProjectsFooter from '@/components/shared/Projects/ProjectsFooter';
-import ProjectsHeader from '@/components/shared/Projects/ProjectsHeader';
+import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
+import ProjectsHeader from '@/app/portfolio/components/ProjectsHeader';
 import React from 'react'
 
 const Portfolio = () => {

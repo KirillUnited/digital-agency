@@ -4,7 +4,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import styles from '@/components/shared/Projects/styles.module.css'
 import { cn } from '@/lib/utils';
-import ProjectsFooter from '@/components/shared/Projects/ProjectsFooter';
+import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
 
 type Props = {
     params: { slug: string }
