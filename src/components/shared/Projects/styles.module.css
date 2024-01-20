@@ -14,7 +14,7 @@
     max-width: 414px;
 }
 .card-image {
-    @apply object-cover transition-all duration-700;
+    @apply object-cover;
 }
 .card-body {
     @apply relative text-white h-full transition-all duration-700;
