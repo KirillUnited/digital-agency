@@ -5,9 +5,9 @@
     cover: '/images/project-1.png'
     link: '/portfolio/dizajn-sajta-dlya-renovation-group'
     info:
-        Client: facebook.com
-        Service: Product Design
-        Deliverable: UI Screens, UX Flow & Prototype
+        client: facebook.com
+        service: Product Design
+        deliverable: UI Screens, UX Flow & Prototype
     keywords: [Design, UI/UX, Wireframing, Branding, Development, webflow]
 ---
 

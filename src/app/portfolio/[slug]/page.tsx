@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import styles from '@/components/shared/Projects/styles.module.css'
 import { cn } from '@/lib/utils';
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
+import ProjectInfo from '@/components/shared/Projects/ProjectInfo';
 
 type Props = {
     params: { slug: string }
@@ -40,6 +41,7 @@ const ProjectTemplate = async ({ params }: Props) => {
                                 className={cn(styles['preview-image'])}
                             />
                         </div>
+                        <ProjectInfo {...project?.info}/>
                     </div>
                 </div>
             </section>
