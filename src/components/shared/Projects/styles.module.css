@@ -30,3 +30,7 @@
 .card-link {
     @apply text-primary hover:text-primary/70 truncate mt-auto;
 }
+.preview-image {
+    @apply p-4 lg:p-8;
+    background: linear-gradient(131deg, #F4EDE1 16.74%, #98B1C6 103.17%);
+}

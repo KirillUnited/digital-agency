@@ -1,0 +1,4 @@
+.header {
+    @apply bg-background-secondary/80;
+    backdrop-filter: blur(10px);
+}
