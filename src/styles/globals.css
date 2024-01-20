@@ -80,7 +80,7 @@
     @apply min-h-screen flex flex-col;
   }
   .section {
-    @apply py-14 xl:py-24;
+    @apply py-14 xl:py-24 bg-background;
   }
   .heading{
     @apply flex flex-col text-center mx-auto;
