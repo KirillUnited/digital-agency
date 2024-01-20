@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectPreview from './ProjectPreview';
+import ProjectCard from './ProjectCard';
 import getProjects from '@/lib/getProjects';
 
 export default async function Projects() {
@@ -13,7 +13,7 @@ export default async function Projects() {
                         projects.map(({ ...data }, index) => {
                             return (
                                 <li key={`${data.title}-${index}`}>
-                                    <ProjectPreview {...data} />
+                                    <ProjectCard {...data} />
                                 </li>
                             )
                         })

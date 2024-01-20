@@ -12,7 +12,7 @@ type ProjectPreviewType = {
     link?: string
 }
 
-const ProjectPreview = ({ title, description, cover, link }: ProjectPreviewType) => {
+const ProjectCard = ({ title, description, cover, link }: ProjectPreviewType) => {
     return (
         <div className={cn("flex flex-col gap-3 lg:gap-6 h-full")}>
             <div className={cn(styles['preview-image'])}>
@@ -37,4 +37,4 @@ const ProjectPreview = ({ title, description, cover, link }: ProjectPreviewType)
     )
 }
 
-export default ProjectPreview
+export default ProjectCard
