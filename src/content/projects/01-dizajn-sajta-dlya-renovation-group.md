@@ -4,6 +4,11 @@
     description: 'Новый стильный сайт Renovation Group - оцените онлайн!'
     cover: '/images/project-1.png'
     link: '/portfolio/dizajn-sajta-dlya-renovation-group'
+    info:
+        Client: facebook.com
+        Service: Product Design
+        Deliverable: UI Screens, UX Flow & Prototype
+    keywords: [Design, UI/UX, Wireframing, Branding, Development, webflow]
 ---
 
 ### About the project
@@ -17,8 +22,6 @@ Natus voluptates qui cum sed minima. Quo iure quia cum. Illo quia quam. Et quae 
 -   Duis aute irure dolor in reprehenderit in voluptate velit esse
 
 -   Excepteur sint occaecat cupidatat non proident, sunt in culpa
-
-![Дизайн сайта для Renovation Group](/images/project-1.png "Дизайн сайта для Renovation Group")
 
 ### How we do it
 

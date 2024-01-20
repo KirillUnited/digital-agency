@@ -5,23 +5,23 @@ import React from 'react'
 import { cn } from '@/lib/utils';
 import styles from './styles.module.css'
 
-type ProjectPreviewType = {
+type ProjectCardType = {
     title: string,
     description?: string,
     cover?: string,
     link?: string
 }
 
-const ProjectCard = ({ title, description, cover, link }: ProjectPreviewType) => {
+const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
     return (
         <div className={cn("flex flex-col gap-3 lg:gap-6 h-full")}>
-            <div className={cn(styles['preview-image'])}>
+            <div className={cn(styles['preview-image-wrap'])}>
                 <Image
                     width={620}
                     height={380}
                     src={`${cover}`}
                     alt={`${title}`}
-                    className={cn("w-full object-cover aspect-video")}
+                    className={cn(styles['preview-image'])}
                 />
             </div>
             <div className={cn("flex flex-col lg:gap-2 flex-1")}>

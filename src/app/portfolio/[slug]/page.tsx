@@ -25,16 +25,21 @@ const ProjectTemplate = async ({ params }: Props) => {
         <>
             <section className='section pb-0'>
                 <div className='container'>
-                    <h6 className="heading-6 text-foreground/80">Web design and development</h6>
-                    <h2 className='heading-2'>{project?.title}</h2>
-                    <p className="paragraph text-foreground/70">{project?.description}</p>
-                    <div className={cn(styles['preview-image'])}>
-                        <Image
-                            src={`${project?.cover}`}
-                            width={880}
-                            height={516}
-                            alt={`${project?.title}`}
-                        />
+                    <div className='flex flex-col gap-6 lg:gap-12'>
+                        <div className='flex flex-col gap-4 max-w-3xl'>
+                            <h6 className="heading-6 text-foreground/80">Web design and development</h6>
+                            <h2 className='heading-2'>{project?.title}</h2>
+                            <p className="paragraph text-foreground/70">{project?.description}</p>
+                        </div>
+                        <div className={cn(styles['preview-image-wrap'])}>
+                            <Image
+                                src={`${project?.cover}`}
+                                width={880}
+                                height={516}
+                                alt={`${project?.title}`}
+                                className={cn(styles['preview-image'])}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
