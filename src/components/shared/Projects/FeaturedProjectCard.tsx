@@ -14,7 +14,7 @@ type ProjectCardType = {
     
 }
 
-const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
+const FeaturedProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
     return (
         <div className={cn(
             styles["card"],
@@ -48,4 +48,4 @@ const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
     )
 }
 
-export default ProjectCard
+export default FeaturedProjectCard

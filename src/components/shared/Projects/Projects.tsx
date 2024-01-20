@@ -1,33 +1,25 @@
-import { MoveRightIcon } from 'lucide-react'
-import Link from 'next/link'
 import React from 'react'
-import ProjectCard from './ProjectCard'
-import styles from './styles.module.css'
-import getProjects from '@/lib/getProjects'
+import ProjectPreview from './ProjectPreview';
+import getProjects from '@/lib/getProjects';
 
-const Projects = async () => {
-  const projects = await getProjects();
-  const shownProjects = projects.filter((item, index) => index < 3);
+export default async function Projects() {
+    const projects = await getProjects();
 
-  return (
-    <section className="section">
-      <div className="container">
-        <div className={`flex flex-wrap items-center justify-between gap-4 pb-8 lg:pb-16`}>
-          <h2 className="heading-2">View our projects</h2>
-          <Link href={'/portfolio'} className='link text-link-secondary hover:text-link-secondary/70'>View More <MoveRightIcon /></Link>
-        </div>
-        <div className={`flex flex-col lg:grid gap-4 lg:gap-8 ${styles.grid}`}>
-          {
-            shownProjects.map(({...data}, index) => {
-              return (
-                  <ProjectCard key={data?.title} {...data} />
-              )
-            })
-          }
-        </div>
-      </div>
-    </section>
-  )
+    return (
+        <section className="section">
+            <div className="container">
+                <ul className="grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-8  lg:gap-y-16">
+                    {
+                        projects.map(({ ...data }, index) => {
+                            return (
+                                <li key={`${data.title}-${index}`}>
+                                    <ProjectPreview {...data} />
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+        </section>
+    )
 }
-
-export default Projects
