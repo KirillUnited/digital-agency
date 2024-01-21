@@ -19,7 +19,7 @@ const Navbar = ({ variant }: NavbarType) => {
 
                 return (
                     <li
-                        key={link.route}
+                        key={link.label}
                     >
                         <Link href={link.route}
                             className={cn(
