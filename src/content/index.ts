@@ -20,15 +20,15 @@ export const navbar = [
     },
     {
         label: 'Технологии',
-        route: '/'
+        route: '/tech'
     },
     {
         label: 'О нас',
-        route: '/'
+        route: '/about'
     },
     {
         label: 'Вопросы',
-        route: '/'
+        route: '/#faq'
     },
 ];
 
@@ -154,43 +154,46 @@ export const faq = [
 
 export const pricing = [
     {
-        price: '$299 +',
+        price: '$50 +',
         title: 'аудит сайта',
-        description: 'Beatae reiciendis necessitatibus dolor saepe.'
+        description: 'Beatae reiciendis necessitatibus dolor saepe.',
+        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users']
     },
     {
-        price: '$299 +',
+        price: '$200 +',
         title: 'дизайн сайта',
         description: 'Adipisci ipsa temporibus ea.',
-        variant: 'primary'
+        variant: 'primary',
+        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users']
     },
     {
-        price: '$299 +',
+        price: '$350 +',
         title: 'разработка сайта',
-        description: 'Hic quo et quae beatae dicta doloremque quisquam ut.'
+        description: 'Hic quo et quae beatae dicta doloremque quisquam ut.',
+        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users']
     },
     {
-        price: '$299 +',
+        price: '$200 +',
         title: 'разработка лендинга',
         description: 'Unde ut aliquam odio ut omnis.'
     },
     {
-        price: '$299 +',
+        price: '$200 +',
         title: 'контакстная реклама',
         description: 'Atque repellat aut et.'
     },
     {
-        price: '$299 +',
+        price: '$200 +',
         title: 'таргетированая реклама',
         description: 'Quod totam voluptatum.'
     },
     {
-        price: '$299 +',
+        price: '$150 +',
         title: 'SEO продвижение',
         description: 'Rem nesciunt architecto itaque natus culpa doloremque neque et voluptatibus.'
     },
     {
-        price: '$299 +',
+        price: '$200 +',
         title: 'SMM (ведение профилей в соцсетях)',
         description: 'Laboriosam ex ut.'
     },
