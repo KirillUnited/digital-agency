@@ -11,14 +11,14 @@ const Footer = () => {
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-6">
             <div className='flex flex-col gap-6'>
               <Logo />
-              <p className='paragraph lg:max-w-lg text-background-accent'>We are always open to discuss your project and improve your online presence.</p>
+              <p className='paragraph lg:max-w-lg text-background-accent'>Мы всегда готовы обсудить ваш проект и улучшить ваше присутствие в Интернете.</p>
               <div className='lg:mt-14 lg:max-w-lg'>
                 <Contacts />
               </div>
             </div>
             <div className="flex flex-col gap-4 pb-8">
-              <h2 className="heading-2">Lets Talk!</h2>
-              <p className="paragraph lg:max-w-lg text-background-accent">We are always open to discuss your project, improve your online presence and help with your UX/UI design challenges.</p>
+              <h2 className="heading-2">Давайте поговорим!</h2>
+              <p className="paragraph lg:max-w-lg text-background-accent">Мы всегда готовы обсудить ваш проект, улучшить ваше присутствие в Интернете и помочь в решении проблем, связанных с UX/UI дизайном.</p>
             </div>
           </div>
         </div>
