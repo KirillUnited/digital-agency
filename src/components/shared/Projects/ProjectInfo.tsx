@@ -3,6 +3,7 @@ import React from 'react'
 type ProjectInfoProps = {
     [propName: string]: string
 }
+
 export default function ProjectInfo({ client, service, deliverable }: ProjectInfoProps) {
     return (
         <div className='border-b border-foreground/30 pb-4 lg:pb-8'>
