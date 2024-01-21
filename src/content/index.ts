@@ -35,13 +35,13 @@ export const navbar = [
 export const contacts = [
     {
         name: 'email',
-        title: 'Email me at',
+        title: 'Пишите нам на',
         href: 'mailto:contact@website.com',
         label: 'contact@website.com'
     },
     {
         name: 'phone',
-        title: 'Call us',
+        title: 'Позвоните нам',
         href: 'tel:0927627728525',
         label: '0927 6277 28525'
     },

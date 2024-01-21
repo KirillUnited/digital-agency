@@ -30,7 +30,7 @@ const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
             </div>
             <div className="mt-auto">
                 {link && <Link href={link} className={cn("link text-link-secondary hover:text-link-secondary/70")}>
-                    View project <MoveRightIcon />
+                    Подробнее <MoveRightIcon />
                 </Link>}
             </div>
         </div>
