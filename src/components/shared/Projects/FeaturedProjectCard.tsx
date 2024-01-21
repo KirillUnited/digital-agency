@@ -19,13 +19,13 @@ const FeaturedProjectCard = ({ title, description, cover, link }: ProjectCardTyp
         <div className={cn(
             styles["card"],
         )}>
-            <Image
+            {cover && <Image
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`${cover}`}
                 alt={`${title}`}
                 className={`${styles["card-image"]}`}
-            />
+            />}
             <div className={cn(
                 "flex items-end",
                 styles["card-body"],

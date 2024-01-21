@@ -16,13 +16,13 @@ const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
     return (
         <div className={cn("flex flex-col gap-3 lg:gap-6 h-full")}>
             <div className={cn(styles['preview-image-wrap'])}>
-                <Image
+                {cover && <Image
                     width={620}
                     height={380}
                     src={`${cover}`}
                     alt={`${title}`}
                     className={cn(styles['preview-image'])}
-                />
+                />}
             </div>
             <div className={cn("flex flex-col lg:gap-2 flex-1")}>
                 <h3 className="heading-3 line-clamp-2">{title}</h3>
