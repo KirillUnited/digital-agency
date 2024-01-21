@@ -28,7 +28,7 @@ export const navbar = [
     },
     {
         label: 'Вопросы',
-        route: '/'
+        route: '/#faq'
     },
 ];
 

@@ -22,6 +22,7 @@ export default function ProjectHero({ project }: Props) {
                     </div>
                     <div className={cn(styles['preview-image-wrap'])}>
                         <Image
+                            priority
                             src={`${project?.cover}`}
                             width={880}
                             height={516}
