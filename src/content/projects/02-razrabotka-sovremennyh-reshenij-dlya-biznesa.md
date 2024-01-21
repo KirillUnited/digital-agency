@@ -4,6 +4,10 @@
     description: 'Создание и оптимизация вашего сайта для эффективного развития в онлайн-среде.'
     cover: '/images/project-3.png'
     link: '/portfolio/razrabotka-sovremennyh-reshenij-dlya-biznesa'
+    info:
+        client: meta.com
+        service: Development
+    keywords: [Design, Development, webflow]
 ---
 
 ### About the project

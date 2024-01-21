@@ -9,13 +9,13 @@ type Props = {
     params: { slug: string }
 }
 
-// export async function generateMetadata({ params }: Props) {
-//     const project = await getProject(params.slug);
+export async function generateMetadata({ params }: Props) {
+    const project = await getProject(params.slug);
 
-//     return {
-//         title: project?.title,
-//     }
-// }
+    return {
+        title: project?.title,
+    }
+}
 
 export async function generateStaticParams() {
     const posts = await getProjects();
