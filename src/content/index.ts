@@ -20,15 +20,15 @@ export const navbar = [
     },
     {
         label: 'Технологии',
-        route: '/tech'
+        route: '/'
     },
     {
         label: 'О нас',
-        route: '/about'
+        route: '/'
     },
     {
         label: 'Вопросы',
-        route: '/faq'
+        route: '/'
     },
 ];
 
