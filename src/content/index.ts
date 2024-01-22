@@ -15,6 +15,20 @@ export const site = {
             image: '/images/about-hero.png',
             link: ''
         },
+        aboutus: {
+            title: 'Who we are',
+            image: '/images/about-about-us.png',
+            content: [
+                {
+                    title: 'Goal focussed',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                },
+                {
+                    title: 'Continuous improvement',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                }
+            ]
+        },
         mission: {
             content: [
                 {
@@ -32,7 +46,27 @@ export const site = {
                     link: ''
                 },
             ]
-        }
+        },
+        benefits: {
+            title: 'The benefits of working with us',
+            content: [
+                {
+                    image: '1',
+                    title: 'Customize with ease',
+                    description: 'Odio id qui corrupti ad neque odit nesciunt itaque. Assumenda ut velit ipsam excepturi temporibus doloribus temporibus. Ab nesciunt necessitatibus eum. Ut itaque et eos. Officia laudantium a placeat laborum iure.'
+                },
+                {
+                    image: '2',
+                    title: 'Perfectly Responsive',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.'
+                },
+                {
+                    image: '3',
+                    title: 'Friendly Support',
+                    description: 'Fugit autem illo praesentium iure quo. Dolorem possimus vitae facere.'
+                }
+            ]
+        },
     }
 };
 
@@ -227,3 +261,15 @@ export const pricing = [
         description: 'Laboriosam ex ut.'
     },
 ]
+
+export const brands = {
+    title:'Finsweet Users',
+    count: '100.000+',
+    list:[
+        '/images/brand-1.png',
+        '/images/brand-2.png',
+        '/images/brand-3.png',
+        '/images/brand-4.png',
+        '/images/brand-5.png',
+    ]
+}

@@ -7,8 +7,8 @@ import { cn } from '@/lib/utils';
 
 interface MarketingCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     title: string,
+    description: string,
     subtitle?: string,
-    description?: string,
     image?: string,
     link?: string
 }
@@ -24,7 +24,7 @@ const MarketingCard = ({ subtitle, title, description, image, link, className }:
             <div className={cn(
                 styles["card-content"]
             )}>
-                {subtitle && <h6 className="text-base lg:text-lg font-medium">{subtitle}</h6>}
+                {subtitle && <span className="text-base lg:text-lg font-medium">{subtitle}</span>}
                 <h3 className="heading-3">{title}</h3>
                 <p className="paragraph text-foreground/70">{description}</p>
                 {link && <Link href={`${link}`} className='link'>Подробнее <MoveRightIcon /></Link>}

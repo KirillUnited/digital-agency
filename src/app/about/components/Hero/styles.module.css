@@ -1,4 +1,4 @@
-.card h3 {
+.card [class*="heading"] {
     @apply text-4xl md:text-[54px] font-semibold;
     line-height: 130%;
 }
