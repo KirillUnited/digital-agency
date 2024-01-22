@@ -14,6 +14,24 @@ export const site = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
             image: '/images/about-hero.png',
             link: ''
+        },
+        mission: {
+            content: [
+                {
+                    subtitle: 'Our Mission ',
+                    title: 'Inspire, Innovate, Share',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                    image: '/images/about-mission-1.png',
+                    link: ''
+                },
+                {
+                    subtitle: 'Our Vision',
+                    title: 'Laser focus',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                    image: '/images/about-mission-2.png',
+                    link: ''
+                },
+            ]
         }
     }
 };
