@@ -261,3 +261,15 @@ export const pricing = [
         description: 'Laboriosam ex ut.'
     },
 ]
+
+export const brands = {
+    title:'Finsweet Users',
+    count: '100.000+',
+    list:[
+        '/images/brand-1.png',
+        '/images/brand-2.png',
+        '/images/brand-3.png',
+        '/images/brand-4.png',
+        '/images/brand-5.png',
+    ]
+}

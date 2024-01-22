@@ -1,6 +1,7 @@
 import { site } from '@/content';
 import React from 'react'
 import BenefitsCard from './BenefitsCard';
+import Brands from '@/components/shared/Brands';
 
 const Benefits = () => {
     const title = site.about?.benefits?.title;
@@ -23,6 +24,7 @@ const Benefits = () => {
                         })
                     }
                 </ul>
+                <Brands />
             </div>
         </section>
     )
