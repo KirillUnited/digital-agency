@@ -1,0 +1,3 @@
+.card h3 {
+    @apply heading-1;
+}
