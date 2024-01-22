@@ -6,6 +6,33 @@ export const site = {
             description: 'Совмещая современный стиль, передовые технологии и инновационные подходы в интернет-маркетинге, мы разрабатываем эффективные средства для продвижения вашего бизнеса в онлайн-пространстве.',
             image: '/images/hero.png'
         },
+    },
+    about: {
+        hero: {
+            pageTitle: 'About Us',
+            title: 'Our designs solve problems',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+            image: '/images/about-hero.png',
+            link: ''
+        },
+        mission: {
+            content: [
+                {
+                    subtitle: 'Our Mission ',
+                    title: 'Inspire, Innovate, Share',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                    image: '/images/about-mission-1.png',
+                    link: ''
+                },
+                {
+                    subtitle: 'Our Vision',
+                    title: 'Laser focus',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                    image: '/images/about-mission-2.png',
+                    link: ''
+                },
+            ]
+        }
     }
 };
 
@@ -20,7 +47,7 @@ export const navbar = [
     },
     {
         label: 'Технологии',
-        route: '/tech'
+        route: '/about'
     },
     {
         label: 'О нас',
@@ -119,12 +146,14 @@ export const marketing = {
         {
             title: 'Контекстная реклама',
             description: 'Контекстная реклама — это эффективный инструмент привлечения внимания к вашему бизнесу. Текстовые, графические и видеообъявления появляются перед пользователями, когда они ищут информацию или интересуются определенной темой в сети. Обеспечьте максимальную видимость вашего предложения с нашей контекстной рекламой.',
-            image: '/images/marketing-1.png'
+            image: '/images/marketing-1.png',
+            link: '/'
         },
         {
             title: 'Таргетированная реклама',
             description: 'Таргетированная реклама – это эффективный метод продвижения в интернете. Мы предлагаем возможность выводить вашу рекламу перед определенной целевой аудиторией, установив параметры на социальных сетях, сайтах или в приложениях. Максимизируйте воздействие на вашу целевую аудиторию – обратитесь к нам для настройки успешной таргетированной рекламной кампании',
-            image: '/images/marketing-2.png'
+            image: '/images/marketing-2.png',
+            link: '/'
         },
     ]
 };
