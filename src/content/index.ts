@@ -46,7 +46,27 @@ export const site = {
                     link: ''
                 },
             ]
-        }
+        },
+        benefits: {
+            title: 'The benefits of working with us',
+            content: [
+                {
+                    image: '1',
+                    title: 'Customize with ease',
+                    description: 'Odio id qui corrupti ad neque odit nesciunt itaque. Assumenda ut velit ipsam excepturi temporibus doloribus temporibus. Ab nesciunt necessitatibus eum. Ut itaque et eos. Officia laudantium a placeat laborum iure.'
+                },
+                {
+                    image: '2',
+                    title: 'Perfectly Responsive',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.'
+                },
+                {
+                    image: '3',
+                    title: 'Friendly Support',
+                    description: 'Fugit autem illo praesentium iure quo. Dolorem possimus vitae facere.'
+                }
+            ]
+        },
     }
 };
 
