@@ -15,6 +15,20 @@ export const site = {
             image: '/images/about-hero.png',
             link: ''
         },
+        aboutus: {
+            title: 'Who we are',
+            image: '/images/about-about-us.png',
+            content: [
+                {
+                    title: 'Goal focussed',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                },
+                {
+                    title: 'Continuous improvement',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                }
+            ]
+        },
         mission: {
             content: [
                 {
