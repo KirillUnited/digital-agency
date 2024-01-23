@@ -102,11 +102,11 @@
     line-height: 130%;
   }
   .heading-5 {
-    @apply text-base md:text-3xl font-semibold;
+    @apply text-lg md:text-3xl font-semibold;
     line-height: 130%;
   }
   .heading-6 {
-    @apply text-sm md:text-2xl font-semibold;
+    @apply text-lg md:text-2xl font-semibold;
     line-height: 130%;
   }
   .paragraph {
