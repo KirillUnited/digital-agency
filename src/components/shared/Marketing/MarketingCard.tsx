@@ -16,7 +16,7 @@ interface MarketingCardProps extends React.DetailedHTMLProps<React.HTMLAttribute
 const MarketingCard = ({ subtitle, title, description, image, link, className }: MarketingCardProps) => {
     return (
         <div className={cn(
-            "grid lg:flex",
+            "marketing-card grid lg:flex",
             styles.card,
             className
         )}>

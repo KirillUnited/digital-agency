@@ -67,7 +67,45 @@ export const site = {
                 }
             ]
         },
-    }
+    },
+    features: {
+        hero: {
+            pageTitle: 'Технологии',
+            title: 'All the features you need',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            image: '/images/features-hero.png'
+        },
+        content: [
+            {
+                subtitle: 'Use Client-first',
+                title: 'Top agencies and freelancers around the world use Client-first',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+                image: '/images/feature-1.png',
+                link: ''
+            },
+            {
+                subtitle: 'Free Revision Rounds',
+                title: 'Get free Revisions and one week of free maintenance',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                image: '/images/feature-2.png',
+                link: ''
+            },
+            {
+                subtitle: '24/7 Support',
+                title: 'Working with us, you will be getting 24/7 priority support',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                image: '/images/feature-3.png',
+                link: ''
+            },
+            {
+                subtitle: 'Quick Delivery',
+                title: 'Guranteed 1 week delivery for standard five pager website',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                image: '/images/feature-4.png',
+                link: ''
+            },
+        ]
+    },
 };
 
 export const navbar = [
@@ -81,7 +119,7 @@ export const navbar = [
     },
     {
         label: 'Технологии',
-        route: '/about'
+        route: '/features'
     },
     {
         label: 'О нас',
@@ -263,9 +301,9 @@ export const pricing = [
 ]
 
 export const brands = {
-    title:'Finsweet Users',
+    title: 'Finsweet Users',
     count: '100.000+',
-    list:[
+    list: [
         '/images/brand-1.png',
         '/images/brand-2.png',
         '/images/brand-3.png',
