@@ -24,7 +24,7 @@ const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
                     className={cn(styles['preview-image'])}
                 />}
             </div>
-            <div className={cn("flex flex-col lg:gap-2 flex-1")}>
+            <div className={cn("flex flex-col gap-2 flex-1")}>
                 <h3 className="heading-3 line-clamp-2">{title}</h3>
                 {description && <p className="paragraph line-clamp-2 text-foreground/70">{description}</p>}
             </div>
