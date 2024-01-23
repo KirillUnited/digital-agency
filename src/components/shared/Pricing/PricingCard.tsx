@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button } from '../../ui/button'
 import { cn } from '@/lib/utils'
+import FeatureEnabled from '@/assets/svg/pricing-feature-enabled.svg'
+import FeatureDisabled from '@/assets/svg/pricing-feature-disabled.svg'
 
 type PricingCardType = {
     price: string, title: string, description: string, variant?: string, features?: string[]
@@ -28,40 +30,21 @@ const PricingCard = ({ price, title, description, variant, features }: PricingCa
                     {description}
                 </p>
             </div>
-            <ul className='flex flex-col gap-4 mt-auto'>
+            <ul className='flex flex-col gap-4'>
                 {
                     features?.map((item) => {
                         return (
                             <li key={item} className='paragraph grid grid-cols-[auto,_1fr] items-center gap-4'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21" fill="none">
-                                    <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#97DAAD" stroke="url(#paint0_linear_174_502)" strokeWidth="3" />
-                                    <defs>
-                                        <linearGradient id="paint0_linear_174_502" x1="-4.84615" y1="-17" x2="11.6069" y2="11.3225" gradientUnits="userSpaceOnUse">
-                                            <stop stopColor="white" />
-                                            <stop offset="1" stopColor="white" stopOpacity="0" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
+                                <FeatureEnabled />
                                 {item}
                             </li>
                         )
                     })
                 }
-                {/* <li className='paragraph grid grid-cols-[auto,_1fr] items-center gap-4'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21" fill="none">
-                        <g style={{ "mixBlendMode": "luminosity" }}>
-                            <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" fill="#FC80AD" />
-                            <path d="M13.7767 9.23707C14.5942 9.85191 14.5701 11.0868 13.729 11.6691L3.85392 18.5069C2.85908 19.1958 1.5 18.4838 1.5 17.2737L1.5 3.00968C1.5 1.77272 2.91294 1.06739 3.90155 1.81084L13.7767 9.23707Z" stroke="url(#paint0_linear_174_512)" strokeWidth="3" />
-                        </g>
-                        <defs>
-                            <linearGradient id="paint0_linear_174_512" x1="-4.84615" y1="-17" x2="11.6069" y2="11.3225" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="white" />
-                                <stop offset="1" stopColor="white" stopOpacity="0" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    Own analytics platform
-                </li> */}
+                <li className='paragraph grid grid-cols-[auto,_1fr] items-center gap-4'>
+                    <FeatureDisabled />
+                    Disabled feature
+                </li>
             </ul>
             <Button variant={(variant === 'primary' ? 'default' : 'secondary')} className={cn(
                 'mt-auto self-center',
