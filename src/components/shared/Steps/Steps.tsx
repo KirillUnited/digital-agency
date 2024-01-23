@@ -10,7 +10,7 @@ const Steps = () => {
             <div className="container grid grid-cols-1 lg:grid-cols-[405px_1fr] gap-6">
                 <div className="flex flex-col gap-3 lg:gap-6">
                     <h2 className="heading-2">Принципы нашей работы</h2>
-                    <Link href='/' className='link self-start gap-4'>Подробнее о нас <MoveRight /></Link>
+                    <Link href='/about' className='link self-start gap-4'>Подробнее о нас <MoveRight /></Link>
                 </div>
                 <ul className="content grid grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] w-full max-w-2xl mx-auto gap-6">
                     {
