@@ -11,7 +11,7 @@ const Marketing = () => {
                 </div>
                 <div className="marketing-grid gap-12">
                     {
-                        marketing.data.map((item, index) => <MarketingCard key={index} {...item} />)
+                        marketing.data.map((item, index) => <MarketingCard key={index} {...item} imageFit='contain' />)
                     }
                 </div>
             </div>

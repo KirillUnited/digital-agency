@@ -3,7 +3,10 @@
     flex-direction: var(--direction)
 }
 .card-image {
-    @apply w-full aspect-[515/336] object-contain object-center basis-[41%] mx-auto;
+    @apply w-full aspect-[515/336] object-cover object-top basis-[41%] mx-auto;
+}
+.card-image-contain {
+    @apply object-contain;
 }
 .card-content {
     @apply flex flex-col gap-4 flex-1;

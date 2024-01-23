@@ -119,7 +119,8 @@
   .marketing-grid {
     @apply flex flex-col;
   }
-  .marketing-grid > :nth-child(odd){
+  .marketing-grid > .marketing-card:nth-child(odd),
+  .marketing-grid > *:nth-child(odd) > .marketing-card {
     --direction: row-reverse;
   }
 }
