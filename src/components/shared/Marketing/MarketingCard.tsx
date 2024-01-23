@@ -21,7 +21,7 @@ const MarketingCard = ({ subtitle, title, description, image, link, className, i
             styles.card,
             className
         )}>
-            <Image src={`${image}`} width={515} height={336} alt={title} className={cn(styles["card-image"],
+            <Image src={`${image}`} width={515} height={336} alt={title} quality={60} className={cn(styles["card-image"],
                 {
                     [styles["card-image-contain"]]: imageFit === 'contain'
                 }
