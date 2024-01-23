@@ -10,17 +10,22 @@ interface MarketingCardProps extends React.DetailedHTMLProps<React.HTMLAttribute
     description: string,
     subtitle?: string,
     image?: string,
-    link?: string
+    link?: string,
+    imageFit?: string
 }
 
-const MarketingCard = ({ subtitle, title, description, image, link, className }: MarketingCardProps) => {
+const MarketingCard = ({ subtitle, title, description, image, link, className, imageFit }: MarketingCardProps) => {
     return (
         <div className={cn(
             "marketing-card grid lg:flex",
             styles.card,
             className
         )}>
-            <Image src={`${image}`} width={515} height={336} alt={title} className={cn(styles["card-image"])} />
+            <Image src={`${image}`} width={515} height={336} alt={title} className={cn(styles["card-image"],
+                {
+                    [styles["card-image-contain"]]: imageFit === 'contain'
+                }
+            )} />
             <div className={cn(
                 styles["card-content"]
             )}>
