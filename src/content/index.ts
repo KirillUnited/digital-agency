@@ -134,7 +134,7 @@ export const navbar = [
 export const contacts = [
     {
         name: 'email',
-        title: 'Пишите нам на',
+        title: 'Пишите нам',
         href: 'mailto:contact@website.com',
         label: 'contact@website.com'
     },
