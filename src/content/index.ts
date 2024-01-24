@@ -134,7 +134,7 @@ export const navbar = [
 export const contacts = [
     {
         name: 'email',
-        title: 'Пишите нам на',
+        title: 'Пишите нам',
         href: 'mailto:contact@website.com',
         label: 'contact@website.com'
     },
@@ -183,31 +183,31 @@ export const projects = [
     {
         title: 'Дизайн сайта для Renovation Group',
         description: 'Новый стильный сайт Renovation Group - оцените онлайн!',
-        cover: '/images/project-1.png',
+        thumbnail: '/images/project-1.png',
         link: '/'
     },
     {
         title: 'Таргетированная и контекстная реклама',
         description: 'Создание таргетированных и контекстных рекламных кампаний нацеленных на интересы вашей целевой аудитории.',
-        cover: '/images/project-2.png',
+        thumbnail: '/images/project-2.png',
         link: '/'
     },
     {
         title: 'Разработка современных решений для бизнеса',
         description: 'Создание и оптимизация вашего сайта для эффективного развития в онлайн-среде.',
-        cover: '/images/project-3.png',
+        thumbnail: '/images/project-3.png',
         link: '/'
     },
     {
         title: 'Дизайн',
         description: 'Создание адаптивного дизайна направленного на вашу целевую аудиторию',
-        cover: '/images/project-1.png',
+        thumbnail: '/images/project-1.png',
         link: '/'
     },
     {
         title: 'SEO-оптимизация',
         description: 'Оптимизация сайта с учетом потребностей вашей целевой аудитории для максимальной эффективности в поисковых системах.',
-        cover: '/images/project-2.png',
+        thumbnail: '/images/project-2.png',
         link: '/'
     }
 ];
@@ -255,48 +255,65 @@ export const faq = [
 
 export const pricing = [
     {
-        price: '$50 +',
+        price: '$50+',
+        subtitle: '',
         title: 'аудит сайта',
         description: 'Beatae reiciendis necessitatibus dolor saepe.',
-        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users']
+        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
+        link: '/'
     },
     {
-        price: '$200 +',
+        price: '$200+',
+        subtitle: 'Multi Design',
         title: 'дизайн сайта',
         description: 'Adipisci ipsa temporibus ea.',
         variant: 'primary',
-        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users']
+        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
+        link: '/'
     },
     {
-        price: '$350 +',
+        price: '$350',
+        subtitle: 'Multi Page',
         title: 'разработка сайта',
         description: 'Hic quo et quae beatae dicta doloremque quisquam ut.',
-        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users']
+        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
+        link: '/'
     },
     {
-        price: '$200 +',
+        price: '$200',
+        subtitle: 'Per page',
         title: 'разработка лендинга',
-        description: 'Unde ut aliquam odio ut omnis.'
+        description: 'Unde ut aliquam odio ut omnis.',
+        features: [],
+        link: '/'
     },
     {
-        price: '$200 +',
+        price: '$200',
+        subtitle: '',
         title: 'контакстная реклама',
-        description: 'Atque repellat aut et.'
+        description: 'Atque repellat aut et.',
+        link: '/'
     },
     {
-        price: '$200 +',
+        price: '$200',
+        subtitle: '',
         title: 'таргетированая реклама',
-        description: 'Quod totam voluptatum.'
+        description: 'Quod totam voluptatum.',
+        link: '/'
     },
     {
-        price: '$150 +',
+        price: '$150',
+        subtitle: '',
         title: 'SEO продвижение',
-        description: 'Rem nesciunt architecto itaque natus culpa doloremque neque et voluptatibus.'
+        description: 'Rem nesciunt architecto itaque natus culpa doloremque neque et voluptatibus.',
+        link: '/'
     },
     {
-        price: '$200 +',
+        price: '$200',
+        subtitle: '',
         title: 'SMM (ведение профилей в соцсетях)',
-        description: 'Laboriosam ex ut.'
+        description: 'Laboriosam ex ut.',
+        link: '/'
     },
 ]
 

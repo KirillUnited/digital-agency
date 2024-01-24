@@ -8,21 +8,21 @@ import { cn } from '@/lib/utils';
 type ProjectCardType = {
     title: string,
     description?: string,
-    cover?: string,
+    thumbnail?: string,
     link?: string,
     slug?: string,
     
 }
 
-const FeaturedProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
+const FeaturedProjectCard = ({ title, description, thumbnail, link }: ProjectCardType) => {
     return (
         <div className={cn(
             styles["card"],
         )}>
-            {cover && <Image
+            {thumbnail && <Image
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                src={`${cover}`}
+                src={`${thumbnail}`}
                 alt={`${title}`}
                 className={`${styles["card-image"]}`}
             />}

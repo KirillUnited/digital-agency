@@ -8,18 +8,18 @@ import styles from './styles.module.css'
 type ProjectCardType = {
     title: string,
     description?: string,
-    cover?: string,
+    thumbnail?: string,
     link?: string
 }
 
-const ProjectCard = ({ title, description, cover, link }: ProjectCardType) => {
+const ProjectCard = ({ title, description, thumbnail, link }: ProjectCardType) => {
     return (
         <div className={cn("flex flex-col gap-3 lg:gap-6 h-full")}>
             <div className={cn(styles['preview-image-wrap'])}>
-                {cover && <Image
+                {thumbnail && <Image
                     width={620}
                     height={380}
-                    src={`${cover}`}
+                    src={`${thumbnail}`}
                     alt={`${title}`}
                     className={cn(styles['preview-image'])}
                 />}

@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './Hero'
+import Hero from './components/Hero'
 import Benefits from '@/app/about/components/Benefits'
 import Faq from '@/components/shared/Faq/Faq'
 import { site } from '@/content'
