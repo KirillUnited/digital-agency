@@ -21,10 +21,10 @@ const PricingCard = ({ price, title, description, variant, features }: PricingCa
                         { 'text-primary': variant === 'primary' }
                     )}>Multi Design</span>
                 </h3>
-                <h6 className="heading-6 font-medium capitalize text-2xl">
+                <h6 className="heading-6 font-medium capitalize text-2xl line-clamp-2">
                     {title}
                 </h6>
-                <p className={cn('text-foreground/70 mt-2',
+                <p className={cn('text-foreground/70 mt-2 line-clamp-2',
                     { 'text-white/70': variant === 'primary' }
                 )}>
                     {description}
