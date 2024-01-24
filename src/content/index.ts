@@ -183,31 +183,31 @@ export const projects = [
     {
         title: 'Дизайн сайта для Renovation Group',
         description: 'Новый стильный сайт Renovation Group - оцените онлайн!',
-        cover: '/images/project-1.png',
+        thumbnail: '/images/project-1.png',
         link: '/'
     },
     {
         title: 'Таргетированная и контекстная реклама',
         description: 'Создание таргетированных и контекстных рекламных кампаний нацеленных на интересы вашей целевой аудитории.',
-        cover: '/images/project-2.png',
+        thumbnail: '/images/project-2.png',
         link: '/'
     },
     {
         title: 'Разработка современных решений для бизнеса',
         description: 'Создание и оптимизация вашего сайта для эффективного развития в онлайн-среде.',
-        cover: '/images/project-3.png',
+        thumbnail: '/images/project-3.png',
         link: '/'
     },
     {
         title: 'Дизайн',
         description: 'Создание адаптивного дизайна направленного на вашу целевую аудиторию',
-        cover: '/images/project-1.png',
+        thumbnail: '/images/project-1.png',
         link: '/'
     },
     {
         title: 'SEO-оптимизация',
         description: 'Оптимизация сайта с учетом потребностей вашей целевой аудитории для максимальной эффективности в поисковых системах.',
-        cover: '/images/project-2.png',
+        thumbnail: '/images/project-2.png',
         link: '/'
     }
 ];

@@ -21,9 +21,9 @@ export default function ProjectHero({ project }: Props) {
                         <p className="paragraph text-foreground/70 font-medium">{project?.description}</p>
                     </div>
                     <div className={cn(styles['preview-image-wrap'])}>
-                        {project?.cover && <Image
+                        {project?.thumbnail && <Image
                             priority
-                            src={`${project?.cover}`}
+                            src={`${project?.thumbnail}`}
                             width={880}
                             height={516}
                             alt={`${project?.title}`}
