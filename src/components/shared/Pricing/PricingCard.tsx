@@ -3,12 +3,20 @@ import { Button } from '../../ui/button'
 import { cn } from '@/lib/utils'
 import FeatureEnabled from '@/assets/svg/pricing-feature-enabled.svg'
 import FeatureDisabled from '@/assets/svg/pricing-feature-disabled.svg'
+import Link from 'next/link'
+import { MoveRightIcon } from 'lucide-react'
 
 type PricingCardType = {
-    price: string, title: string, description: string, variant?: string, features?: string[]
+    price: string,
+    title: string,
+    description: string,
+    subtitle?: string,
+    variant?: string,
+    features?: string[],
+    link?: string
 }
 
-const PricingCard = ({ price, title, description, variant, features }: PricingCardType) => {
+const PricingCard = ({ price, title, description, subtitle, variant, features, link }: PricingCardType) => {
     return (
         <div className={cn(
             'flex flex-col gap-8 lg:gap-16 bg-accent rounded-[12px] h-full px-6 lg:px-12 py-8 lg:py-16',
@@ -17,9 +25,9 @@ const PricingCard = ({ price, title, description, variant, features }: PricingCa
             <div>
                 <h3 className="heading-3 mb-5 flex items-center gap-2">
                     {price}
-                    <span className={cn('paragraph text-link',
+                    {subtitle && <span className={cn('paragraph text-link',
                         { 'text-primary': variant === 'primary' }
-                    )}>Multi Design</span>
+                    )}>{subtitle}</span>}
                 </h3>
                 <h6 className="heading-6 font-medium capitalize text-2xl line-clamp-2">
                     {title}
@@ -30,26 +38,30 @@ const PricingCard = ({ price, title, description, variant, features }: PricingCa
                     {description}
                 </p>
             </div>
-            <ul className='flex flex-col gap-4'>
-                {
-                    features?.map((item) => {
-                        return (
-                            <li key={item} className='paragraph grid grid-cols-[auto,_1fr] items-center gap-4'>
-                                <FeatureEnabled />
-                                {item}
-                            </li>
-                        )
-                    })
-                }
-                <li className='paragraph grid grid-cols-[auto,_1fr] items-center gap-4'>
-                    <FeatureDisabled />
-                    Disabled feature
-                </li>
-            </ul>
-            <Button variant={(variant === 'primary' ? 'default' : 'secondary')} className={cn(
-                'mt-auto self-center',
-                {}
-            )}>Get started</Button>
+            {
+                (features && features.length > 0) &&
+                <ul className='flex flex-col gap-4'>
+                    {
+                        features?.map((item) => {
+                            return (
+                                <li key={item} className='paragraph grid grid-cols-[auto,_1fr] items-center gap-4'>
+                                    <FeatureEnabled />
+                                    {item}
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            }
+            <div className="flex flex-col gap-4 items-center mt-auto">
+                <Button variant={(variant === 'primary' ? 'default' : 'secondary')} className={cn(
+                    'self-center',
+                    {}
+                )}>Заказать</Button>
+                {link && <Link href={`${link}`} className={cn('link',
+                    { 'text-foregroundSecondary hover:text-foregroundSecondary/70': variant === 'primary' }
+                )}>Подробнее <MoveRightIcon /></Link>}
+            </div>
         </div>
     )
 }
