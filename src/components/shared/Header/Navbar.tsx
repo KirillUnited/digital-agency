@@ -61,7 +61,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                                     pricing.map((item) => {
                                                         return (
                                                             <li key={item.title}>
-                                                                <NavigationMenuLink href={item.link} className='flex capitalize hover:text-foreground/70 py-2 px-6'>
+                                                                <NavigationMenuLink href={item.link} className='flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>
                                                                     {item.title}
                                                                 </NavigationMenuLink>
                                                             </li>
