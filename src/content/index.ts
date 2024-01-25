@@ -9,7 +9,7 @@ export const site = {
     },
     about: {
         hero: {
-            pageTitle: 'About Us',
+            pageTitle: 'О нас',
             title: 'Our designs solve problems',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
             image: '/images/about-hero.png',
@@ -241,23 +241,23 @@ export const faq = {
     },
     content: [
         {
-            title: 'How much time does it take?',
+            title: 'Сколько времени это займет?',
             description: 'Dignissimos libero placeat nesciunt quaerat quia harum. Itaque reprehenderit pariatur suscipit fuga. Amet nihil repellendus iste. Corrupti est eveniet.'
         },
         {
-            title: 'What is your class naming convention?',
+            title: 'Как вы называете классы?',
             description: 'Nam et corporis ipsam. Aut eveniet sit ipsa error voluptatem. Tempora repudiandae rerum.'
         },
         {
-            title: 'How do you communicate?',
+            title: 'Как вы общаетесь?',
             description: 'Quod qui adipisci sint libero harum cupiditate provident. Qui est fugit amet. Quo nisi qui quasi pariatur et odio. Magnam facilis magnam voluptas laborum aut iure maxime. A harum corrupti dolorem enim est qui. Omnis sint ipsam.'
         },
         {
-            title: 'I have a bigger project. Can you handle it?',
+            title: 'У меня есть проект побольше. Сможешь с ним справиться?',
             description: 'Aliquid sed eligendi incidunt ea quo vel officiis velit dolores. Dolor et enim maiores. Doloribus ipsum at et inventore occaecati recusandae perspiciatis quae. Dolore voluptas quia soluta ea delectus non eaque ut. Et laudantium asperiores pariatur perspiciatis officiis sed voluptatem consequatur.'
         },
         {
-            title: 'What is your class naming convention?',
+            title: 'Как вы называете свои классы?',
             description: 'Voluptatem repellendus explicabo impedit voluptas cumque et soluta quis ad. Quibusdam unde debitis itaque. Officia illo accusamus molestiae non cupiditate voluptas nisi est.'
         },
     ]

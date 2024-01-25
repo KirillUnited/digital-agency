@@ -3,7 +3,7 @@ import React from 'react'
 
 const Contacts = () => {
     return (
-        <div className='bg-primary text-foreground px-9 py-4'>
+        <div className='bg-primary text-foreground px-4 lg:px-9 py-4'>
             <ul className='flex flex-wrap gap-6'>
                 {
                     contacts.map(({ title, href, label }) => {
