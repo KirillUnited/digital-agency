@@ -15,7 +15,7 @@ const Header = () => {
                 <div className="flex items-center justify-between gap-6 min-h-24 py-4">
                     <Logo />
                     <div className="lg:flex hidden items-center justify-end gap-8">
-                        <Navbar variant='primary' />
+                        <Navbar variant='primary' enableSubmenu />
                         <PhoneCall />
                         <Button size={'sm'}>Обратная связь</Button>
                     </div>

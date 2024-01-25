@@ -17,10 +17,11 @@ import {
 import styles from './styles.module.css'
 
 type NavbarType = {
-    variant?: 'primary' | 'secondary'
+    variant?: 'primary' | 'secondary',
+    enableSubmenu?: boolean
 }
 
-const Navbar = ({ variant }: NavbarType) => {
+const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
     const pathname = usePathname();
 
     return (
@@ -34,7 +35,7 @@ const Navbar = ({ variant }: NavbarType) => {
                             key={link.label}
                         >
                             {
-                                link.menu &&
+                                (link.menu) &&
                                 <>
                                     <NavigationMenuTrigger className={cn(
                                         "p-0 bg-transparent hover:bg-transparent data-[state=open]:bg-transparent h-auto focus:bg-transparent focus:text-foregroundSecondary",
@@ -53,21 +54,23 @@ const Navbar = ({ variant }: NavbarType) => {
                                             {link.label}
                                         </NavigationMenuLink>
                                     </NavigationMenuTrigger>
-                                    <NavigationMenuContent className='z-[999]'>
-                                        <ul className='flex flex-col py-4 w-max max-w-64 bg-background'>
-                                            {
-                                                pricing.map((item) => {
-                                                    return (
-                                                        <li key={item.title}>
-                                                            <NavigationMenuLink href={item.link} className='flex capitalize hover:text-foreground/70 py-2 px-6'>
-                                                                {item.title}
-                                                            </NavigationMenuLink>
-                                                        </li>
-                                                    )
-                                                })
-                                            }
-                                        </ul>
-                                    </NavigationMenuContent>
+                                    {enableSubmenu &&
+                                        <NavigationMenuContent className='z-[999]'>
+                                            <ul className='flex flex-col py-4 w-max max-w-64 bg-background'>
+                                                {
+                                                    pricing.map((item) => {
+                                                        return (
+                                                            <li key={item.title}>
+                                                                <NavigationMenuLink href={item.link} className='flex capitalize hover:text-foreground/70 py-2 px-6'>
+                                                                    {item.title}
+                                                                </NavigationMenuLink>
+                                                            </li>
+                                                        )
+                                                    })
+                                                }
+                                            </ul>
+                                        </NavigationMenuContent>
+                                    }
                                 </>
                             }
                             {
