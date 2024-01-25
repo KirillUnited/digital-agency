@@ -111,11 +111,13 @@ export const site = {
 export const navbar = [
     {
         label: 'Портфолио',
-        route: '/portfolio'
+        route: '/portfolio',
+        menu: 'categories'
     },
     {
         label: 'Услуги',
-        route: '/pricing'
+        route: '/pricing',
+        menu: 'categories'
     },
     {
         label: 'Технологии',
