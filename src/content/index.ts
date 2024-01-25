@@ -9,7 +9,7 @@ export const site = {
     },
     about: {
         hero: {
-            pageTitle: 'About Us',
+            pageTitle: 'О нас',
             title: 'Our designs solve problems',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
             image: '/images/about-hero.png',
