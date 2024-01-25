@@ -28,10 +28,8 @@ const HeaderDrawer = () => {
                             <Logo />
                         </DrawerTitle>
                     </DrawerHeader>
-                    <DrawerFooter>
-                        <nav>
-                            <Navbar variant='primary' />
-                        </nav>
+                    <DrawerFooter className="items-center">
+                        <Navbar variant='primary' />
                     </DrawerFooter>
                     <DrawerFooter className="text-secondary-foreground">
                         <PhoneCall label="0927 6277 28525" />
