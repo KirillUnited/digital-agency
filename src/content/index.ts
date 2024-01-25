@@ -232,28 +232,36 @@ export const marketing = {
     ]
 };
 
-export const faq = [
-    {
-        title: 'How much time does it take?',
-        description: 'Dignissimos libero placeat nesciunt quaerat quia harum. Itaque reprehenderit pariatur suscipit fuga. Amet nihil repellendus iste. Corrupti est eveniet.'
+export const faq = {
+    title: 'Часто задаваемые вопросы',
+    description: '',
+    link: {
+        label: 'Свяжитесь с нами для получения дополнительной информации',
+        href: '/'
     },
-    {
-        title: 'What is your class naming convention?',
-        description: 'Nam et corporis ipsam. Aut eveniet sit ipsa error voluptatem. Tempora repudiandae rerum.'
-    },
-    {
-        title: 'How do you communicate?',
-        description: 'Quod qui adipisci sint libero harum cupiditate provident. Qui est fugit amet. Quo nisi qui quasi pariatur et odio. Magnam facilis magnam voluptas laborum aut iure maxime. A harum corrupti dolorem enim est qui. Omnis sint ipsam.'
-    },
-    {
-        title: 'I have a bigger project. Can you handle it?',
-        description: 'Aliquid sed eligendi incidunt ea quo vel officiis velit dolores. Dolor et enim maiores. Doloribus ipsum at et inventore occaecati recusandae perspiciatis quae. Dolore voluptas quia soluta ea delectus non eaque ut. Et laudantium asperiores pariatur perspiciatis officiis sed voluptatem consequatur.'
-    },
-    {
-        title: 'What is your class naming convention?',
-        description: 'Voluptatem repellendus explicabo impedit voluptas cumque et soluta quis ad. Quibusdam unde debitis itaque. Officia illo accusamus molestiae non cupiditate voluptas nisi est.'
-    },
-];
+    content: [
+        {
+            title: 'How much time does it take?',
+            description: 'Dignissimos libero placeat nesciunt quaerat quia harum. Itaque reprehenderit pariatur suscipit fuga. Amet nihil repellendus iste. Corrupti est eveniet.'
+        },
+        {
+            title: 'What is your class naming convention?',
+            description: 'Nam et corporis ipsam. Aut eveniet sit ipsa error voluptatem. Tempora repudiandae rerum.'
+        },
+        {
+            title: 'How do you communicate?',
+            description: 'Quod qui adipisci sint libero harum cupiditate provident. Qui est fugit amet. Quo nisi qui quasi pariatur et odio. Magnam facilis magnam voluptas laborum aut iure maxime. A harum corrupti dolorem enim est qui. Omnis sint ipsam.'
+        },
+        {
+            title: 'I have a bigger project. Can you handle it?',
+            description: 'Aliquid sed eligendi incidunt ea quo vel officiis velit dolores. Dolor et enim maiores. Doloribus ipsum at et inventore occaecati recusandae perspiciatis quae. Dolore voluptas quia soluta ea delectus non eaque ut. Et laudantium asperiores pariatur perspiciatis officiis sed voluptatem consequatur.'
+        },
+        {
+            title: 'What is your class naming convention?',
+            description: 'Voluptatem repellendus explicabo impedit voluptas cumque et soluta quis ad. Quibusdam unde debitis itaque. Officia illo accusamus molestiae non cupiditate voluptas nisi est.'
+        },
+    ]
+};
 
 export const pricing = [
     {

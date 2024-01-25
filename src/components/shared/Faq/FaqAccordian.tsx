@@ -9,7 +9,7 @@ const FaqAccordian = () => {
   return (
     <Accordion type="single" collapsible>
         {
-            faq.map(({ title, description }, index) => {
+            faq.content.map(({ title, description }, index) => {
                 const qNumber = (index + 1).toString().padStart(2, "0");
 
                 return (
