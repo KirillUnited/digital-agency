@@ -44,7 +44,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                             "text-neutral-300 hover:text-white": variant == 'primary'
                                         },
                                         {
-                                            "text-white": variant == 'primary' && isActive,
+                                            "text-white text-lg": variant == 'primary' && isActive,
                                         },
                                         {
                                             "text-foreground": variant == 'secondary'
@@ -82,7 +82,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                             "text-neutral-300 hover:text-white": variant == 'primary'
                                         },
                                         {
-                                            "text-white": variant == 'primary' && isActive,
+                                            "text-white text-lg": variant == 'primary' && isActive,
                                         },
                                         {
                                             "text-foreground": variant == 'secondary'
