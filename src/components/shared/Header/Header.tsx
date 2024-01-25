@@ -6,7 +6,7 @@ import Logo from '../Logo'
 import HeaderDrawer from './HeaderDrawer'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
-import PhoneCall from '@/components/PhoneCall'
+import PhoneCall from '@/components/shared/PhoneCall'
 
 const Header = () => {
     return (
@@ -14,11 +14,11 @@ const Header = () => {
             <div className="container">
                 <div className="flex items-center justify-between gap-6 min-h-24 py-4">
                     <Logo />
-                    <nav className="lg:flex hidden items-center justify-end gap-8">
+                    <div className="lg:flex hidden items-center justify-end gap-8">
                         <Navbar variant='primary' />
                         <PhoneCall />
                         <Button size={'sm'}>Обратная связь</Button>
-                    </nav>
+                    </div>
                     <div className='flex gap-6 items-center lg:hidden'>
                         <PhoneCall />
                         <HeaderDrawer />

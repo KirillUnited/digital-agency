@@ -13,7 +13,7 @@ import React from 'react'
 import Logo from "../Logo"
 import Navbar from "./Navbar"
 import { Button } from "@/components/ui/button"
-import PhoneCall from "@/components/PhoneCall"
+import PhoneCall from "@/components/shared/PhoneCall"
 
 const HeaderDrawer = () => {
     return (
