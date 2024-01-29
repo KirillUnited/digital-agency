@@ -20,7 +20,7 @@ export default function ProjectHero({ project }: Props) {
                         <h6 className="heading-6 text-foreground/80">Web design and development</h6>
                         <h2 className='heading-2'>{project?.title}</h2>
                         <p className="paragraph text-foreground/70 font-medium">{project?.description}</p>
-                        <PostDate date={`${project?.date}`}/>
+                        {project?.date && <PostDate date={`${project?.date}`}/>}
                     </div>
                     <div className={cn(styles['preview-image-wrap'])}>
                         {project?.thumbnail && <Image
