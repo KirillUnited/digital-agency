@@ -50,13 +50,14 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                             "text-foreground": variant == 'secondary'
                                         },
                                     )}>
-                                        <NavigationMenuLink href={`${link.route}`}>
-                                            {link.label}
-                                        </NavigationMenuLink>
+                                        {link.label}
                                     </NavigationMenuTrigger>
                                     {enableSubmenu &&
                                         <NavigationMenuContent className='z-[999]'>
                                             <ul className='flex flex-col py-4 w-max max-w-64 bg-background'>
+                                                <li>
+                                                    <Link href={`${link.route}`} className='text-link flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>Все категории</Link>
+                                                </li>
                                                 {
                                                     pricing.map((item) => {
                                                         return (
