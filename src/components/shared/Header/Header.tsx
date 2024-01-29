@@ -7,6 +7,7 @@ import HeaderDrawer from './HeaderDrawer'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
 import PhoneCall from '@/components/shared/PhoneCall'
+import CTAModal from '@/components/shared/Modal/CTAModal'
 
 const Header = () => {
     return (
@@ -17,7 +18,8 @@ const Header = () => {
                     <div className="lg:flex hidden items-center justify-end gap-8">
                         <Navbar variant='primary' enableSubmenu />
                         <PhoneCall />
-                        <Button size={'sm'}>Обратная связь</Button>
+                        {/* <Button size={'sm'}>Обратная связь</Button> */}
+                        <CTAModal triggerLabel='Обратная связь' triggerSize={`sm`} />
                     </div>
                     <div className='flex gap-6 items-center lg:hidden'>
                         <PhoneCall />
