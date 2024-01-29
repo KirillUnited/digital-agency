@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {
     Dialog,
@@ -8,6 +9,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 
 
 export default function Modal() {
@@ -18,33 +20,27 @@ export default function Modal() {
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Are you absolutely sure?</DialogTitle>
+                    <DialogTitle>Send inquiry</DialogTitle>
                     <DialogDescription>
-                        This action cannot be undone. This will permanently delete your account
-                        and remove your data from our servers.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
-                    {/* <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
-                            Name
-                        </Label>
+                    <div className="grid grid-cols-4 items-center gap-4">
                         <Input
                             id="name"
-                            defaultValue="Pedro Duarte"
+                            defaultValue="Your Name"
                             className="col-span-3"
                         />
                     </div>
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
-                            Username
-                        </Label>
                         <Input
-                            id="username"
-                            defaultValue="@peduarte"
+                            type='tel'
+                            id="phone"
+                            defaultValue="Phone"
                             className="col-span-3"
                         />
-                    </div> */}
+                    </div>
                 </div>
             </DialogContent>
         </Dialog>
