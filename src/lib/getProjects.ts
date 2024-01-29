@@ -7,6 +7,7 @@ export type ProjectType = {
     slug: string,
     title: string,
     description?: string,
+    date?: string,
     thumbnail?: string,
     link?: string,
     info?: object,
