@@ -2,3 +2,6 @@
     @apply bg-background-secondary/80;
     backdrop-filter: blur(10px);
 }
+.menu-link {
+    @apply inline-flex text-base font-medium transition-colors duration-300 hover:text-foreground/70;
+}
