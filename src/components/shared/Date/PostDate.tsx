@@ -8,7 +8,7 @@ interface DateProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDiv
 }
 
 export default function PostDate({ date, className }: DateProps) {
-    const formatDate = new Date(date).toUTCString();
+    const formatDate = new Intl.DateTimeFormat("ru", { dateStyle: "medium" }).format(new Date(date));
 
     return (
         <div className={cn(styles.date, className)}>
