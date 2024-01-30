@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Button } from '../../ui/button'
 import { cn } from '@/lib/utils'
@@ -5,6 +6,8 @@ import FeatureEnabled from '@/assets/svg/pricing-feature-enabled.svg'
 import FeatureDisabled from '@/assets/svg/pricing-feature-disabled.svg'
 import Link from 'next/link'
 import { MoveRightIcon } from 'lucide-react'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
+import CTAModal from '@/components/shared/Modal/CTAModal'
 
 type PricingCardType = {
     price: string,
@@ -54,10 +57,15 @@ const PricingCard = ({ price, title, description, subtitle, variant, features, l
                 </ul>
             }
             <div className="flex flex-col gap-4 items-center mt-auto">
-                <Button variant={(variant === 'primary' ? 'default' : 'secondary')} className={cn(
-                    'self-center',
-                    {}
-                )}>Заказать</Button>
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <Button variant={(variant === 'primary' ? 'default' : 'secondary')} className={cn(
+                            'self-center',
+                            {}
+                        )}>Заказать</Button>
+                    </DialogTrigger>
+                    <CTAModal />
+                </Dialog>
                 {link && <Link href={`${link}`} className={cn('link',
                     { 'text-foregroundSecondary hover:text-foregroundSecondary/70': variant === 'primary' }
                 )}>Подробнее <MoveRightIcon /></Link>}

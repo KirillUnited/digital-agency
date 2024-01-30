@@ -1,18 +1,54 @@
-import { pricing } from '@/content'
+'use client'
+import { badgeVariants } from '@/components/ui/badge'
+import { navbar, pricing } from '@/content'
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
+import styles from './styles.module.css'
+import { usePathname } from 'next/navigation'
+import { cva } from 'class-variance-authority'
+
+const filterItemStyle = cva(
+    "leading-6",
+    {
+        variants: {
+            variant: {
+                primary: [badgeVariants({ variant: 'default' }), "text-base lg:text-lg"],
+                secondary: badgeVariants({ variant: 'secondary' })
+            }
+        }
+    }
+)
 
 export default function ProjectsFilter() {
+    const pathname = usePathname();
+    const PROJECTS_ROUTE = navbar.filter((item) => item.label === 'Портфолио')[0].route;
+    const allFilters = pathname === PROJECTS_ROUTE;
+
     return (
-        <div className='flex flex-wrap items-center justify-center gap-4 mb-12'>
-            <ul className='flex flex-wrap gap-x-8 gap-y-3 items-center justify-center text-foreground/70 hover:text-foreground/70 text-base lg:text-lg capitalize'>
+        <div className={cn(styles['filter'])}>
+            <ul className={cn(styles['filter-list'])}>
                 <li>
-                    <Link href={`/portfolio`} className='link'>Все категории</Link>
+                    <Link href={`${PROJECTS_ROUTE}`} className={filterItemStyle({
+                        variant: allFilters ? "primary" : "secondary"
+                    })}>
+                        Все категории
+                    </Link>
                 </li>
                 {
-                    pricing?.map((item) => <li key={item.title} className=''>
-                        <Link href={`/`} className='hover:text-link transition-colors'>{item.title}</Link>
-                    </li>)
+                    pricing?.map((item) => {
+                        const activeFilter = pathname === item.link;
+
+                        return (
+                            <li key={item.title} className=''>
+                                <Link href={`${item.link}`} className={filterItemStyle({
+                                    variant: activeFilter ? "primary" : "secondary"
+                                })}>
+                                    {item.title}
+                                </Link>
+                            </li>
+                        )
+                    })
                 }
             </ul>
         </div>
