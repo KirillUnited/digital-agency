@@ -1,6 +1,6 @@
 'use client'
 import { badgeVariants } from '@/components/ui/badge'
-import { pricing } from '@/content'
+import { navbar, pricing } from '@/content'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
@@ -9,14 +9,12 @@ import { usePathname } from 'next/navigation'
 import { cva } from 'class-variance-authority'
 
 const filterItemStyle = cva(
-    cn(badgeVariants({ variant: 'secondary' })),
+    "leading-6",
     {
         variants: {
             variant: {
-                primary: ""
-            },
-            state: {
-                active: [cn(badgeVariants({ variant: 'default' })), "text-base lg:text-lg"]
+                primary: [badgeVariants({ variant: 'default' }), "text-base lg:text-lg"],
+                secondary: badgeVariants({ variant: 'secondary' })
             }
         }
     }
@@ -24,18 +22,18 @@ const filterItemStyle = cva(
 
 export default function ProjectsFilter() {
     const pathname = usePathname();
-    const allFilters = pathname === '/portfolio';
+    const PROJECTS_ROUTE = navbar.filter((item) => item.label === 'Портфолио')[0].route;
+    const allFilters = pathname === PROJECTS_ROUTE;
 
     return (
         <div className={cn(styles['filter'])}>
             <ul className={cn(styles['filter-list'])}>
                 <li>
-                    <Link href={`/portfolio`} className={cn(badgeVariants({ variant: 'default' }),
-                        "leading-6",
-                        {
-                            "text-base lg:text-lg": allFilters
-                        }
-                    )}>Все категории</Link>
+                    <Link href={`${PROJECTS_ROUTE}`} className={filterItemStyle({
+                        variant: allFilters ? "primary" : "secondary"
+                    })}>
+                        Все категории
+                    </Link>
                 </li>
                 {
                     pricing?.map((item) => {
@@ -43,12 +41,11 @@ export default function ProjectsFilter() {
 
                         return (
                             <li key={item.title} className=''>
-                                <Link href={`${item.link}`} className={cn(badgeVariants({ variant: 'secondary' }),
-                                    "leading-6",
-                                    {
-                                        "text-base lg:text-lg": activeFilter
-                                    }
-                                )}>{item.title}</Link>
+                                <Link href={`${item.link}`} className={filterItemStyle({
+                                    variant: activeFilter ? "primary" : "secondary"
+                                })}>
+                                    {item.title}
+                                </Link>
                             </li>
                         )
                     })
