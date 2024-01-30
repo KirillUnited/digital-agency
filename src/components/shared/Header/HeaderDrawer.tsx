@@ -15,6 +15,7 @@ import Navbar from "./Navbar"
 import { Button } from "@/components/ui/button"
 import PhoneCall from "@/components/shared/PhoneCall"
 import CTAModal from '@/components/shared/Modal/CTAModal'
+import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
 const HeaderDrawer = () => {
     return (
@@ -36,8 +37,12 @@ const HeaderDrawer = () => {
                         <PhoneCall label="0927 6277 28525" />
                     </DrawerFooter>
                     <DrawerFooter>
-                        {/* <Button size={'sm'}>Обратная связь</Button> */}
-                        <CTAModal triggerLabel='Обратная связь' triggerSize={`sm`} />
+                        <Dialog>
+                            <DialogTrigger>
+                                <Button size={'sm'}>Обратная связь</Button>
+                            </DialogTrigger>
+                            <CTAModal />
+                        </Dialog>
                     </DrawerFooter>
                 </div>
             </DrawerContent>
