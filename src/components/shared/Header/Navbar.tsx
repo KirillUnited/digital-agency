@@ -12,6 +12,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
+    NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import styles from './styles.module.css'
 import { cva } from 'class-variance-authority';
@@ -60,14 +61,20 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                     <NavigationMenuContent className='z-[999]'>
                                         <ul className='flex flex-col py-4 w-max max-w-64 bg-background'>
                                             <li>
-                                                <Link href={`${link.route}`} className='text-link flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>Все категории</Link>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href={`${link.route}`} className='text-link flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>
+                                                        Все категории
+                                                    </Link>
+                                                </NavigationMenuLink>
                                             </li>
                                             {
                                                 pricing.map((item) => {
                                                     return (
                                                         <li key={item.title}>
-                                                            <NavigationMenuLink href={item.link} className='flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>
-                                                                {item.title}
+                                                            <NavigationMenuLink asChild>
+                                                                <Link href={item.link} className='flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>
+                                                                    {item.title}
+                                                                </Link>
                                                             </NavigationMenuLink>
                                                         </li>
                                                     )
@@ -81,20 +88,24 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                     }
                     return (
                         <NavigationMenuItem key={link.label}>
-                            <Link href={link.route}
-                                className={cn(
-                                    menuLinkStyle({ variant }),
-                                    {
-                                        "text-white text-lg": variant == 'primary' && isActive,
-                                    },
-                                )}
-                            >
-                                {link.label}
-                            </Link>
+                            <NavigationMenuLink asChild>
+                                <Link href={link.route}
+                                    className={cn(
+                                        menuLinkStyle({ variant }),
+                                        {
+                                            "text-white text-lg": variant == 'primary' && isActive,
+                                        },
+                                    )}
+                                >
+                                    {link.label}
+                                </Link>
+                            </NavigationMenuLink>
                         </NavigationMenuItem>
                     )
                 })}
+                <NavigationMenuIndicator />
             </NavigationMenuList>
+            <NavigationMenuViewport />
         </NavigationMenu>
     )
 }
