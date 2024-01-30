@@ -38,7 +38,7 @@ const HeaderDrawer = () => {
                     </DrawerFooter>
                     <DrawerFooter>
                         <Dialog>
-                            <DialogTrigger>
+                            <DialogTrigger asChild>
                                 <Button size={'sm'}>Обратная связь</Button>
                             </DialogTrigger>
                             <CTAModal />
