@@ -70,7 +70,7 @@ export default function OrderForm() {
                             <FormItem>
                                 <FormLabel>Телефон</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="Введите Ваш номер телефона" {...field} />
+                                    <Input type="tel" placeholder="Введите Ваш номер телефона" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
