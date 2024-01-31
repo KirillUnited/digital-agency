@@ -8,22 +8,20 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+import validator from "validator";
 
 const formSchema = z.object({
     username: z.string().min(2, {
         message: "Имя должно состоять минимум из 2 символов.",
     }),
-    userphone: z.string().min(2, {
-        message: "Неверный номер телефон.",
+    userphone: z.string().refine(validator.isMobilePhone, {
+        message: "Неверный номер телефона.",
     }),
 })
 
@@ -67,29 +65,18 @@ export default function OrderForm() {
                 <FormField
                     control={form.control}
                     name="userphone"
-                    rules={{
-                        validate: (value) => isValidPhoneNumber(value)
-                    }}
                     render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Телефон</FormLabel>
-                            <FormControl>
-                                <Input placeholder="Введите Ваш номер телефона" {...field} />
-                            </FormControl>
-                            <PhoneInput
-                                value={field.value}
-                                onChange={field.onChange}
-                                defaultCountry="BY"
-                                id="userphone"
-                                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                            />
-                            <FormMessage />
-                        </FormItem>
+                        <>
+                            <FormItem>
+                                <FormLabel>Телефон</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="Введите Ваш номер телефона" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        </>
                     )}
                 />
-                {form.formState.errors["userphone"] && (
-                    <p className="text-sm font-medium text-destructive">{`${form.formState.errors.userphone.message}`}</p>
-                )}
                 <Button type="submit" className="w-full">Заказать звонок</Button>
             </form>
         </Form>
