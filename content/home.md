@@ -10,3 +10,5 @@ cats:
     description: Смотрящая
 ---
 Описание домашних котов Ирины Михайловны
+
+![Mickey the cat](/images/uploads/mickey.jpg "Любимый кот Ирины Михайловны")
