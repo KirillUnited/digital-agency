@@ -39,7 +39,7 @@ export default function OrderForm() {
     function onSubmit(values: z.infer<typeof formSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
-        alert(`
+        console.log(`
         Имя: ${values.username} \n
         Телефон: ${values.userphone}
         `)
