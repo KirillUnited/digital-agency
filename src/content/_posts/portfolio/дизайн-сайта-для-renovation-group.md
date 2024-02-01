@@ -1,4 +1,5 @@
 ---
+service: design
 title: Дизайн сайта для Renovation Group
 description: Новый стильный сайт Renovation Group - оцените онлайн!
 date: 2023-08-29T10:36:16.845Z
@@ -7,6 +8,13 @@ info:
   client: facebook.com
   deliverable: UI Screens, UX Flow & Prototype
   service: Product Design
+keywords:
+  - Design
+  - UI/UX
+  - Wireframing
+  - Branding
+  - Development
+  - webflow
 ---
 ### About the project
 
