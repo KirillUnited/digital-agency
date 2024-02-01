@@ -24,7 +24,7 @@ const Hero = () => {
                         <Button asChild className='w-full sm:w-fit'>
                             <Link href={'/portfolio'}>Портфолио</Link>
                         </Button>
-                        <Link href={'/'} className='link text-foregroundSecondary hover:text-foregroundSecondary/70'>Подробнее <MoveRight /></Link>
+                        <Link href={'/pricing'} className='link text-foregroundSecondary hover:text-foregroundSecondary/70'>Подробнее <MoveRight /></Link>
                     </div>
                 </div>
                 <Image
