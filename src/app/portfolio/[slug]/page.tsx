@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 
 const ProjectTemplate = async ({ params }: Props) => {
     const project = await getProject(params.slug);
-
+    
     return (
         <>
             <ProjectHero project={project} />

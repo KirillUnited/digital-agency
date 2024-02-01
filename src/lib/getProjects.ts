@@ -25,7 +25,7 @@ export const getProjects = cache(async () => {
         projects
             .filter((file) => path.extname(file) === '.md')
             .map(async (file) => {
-                const filePath = `${PROJECTS_PATH}${file}`
+                const filePath = `${PROJECTS_PATH}/${file}`
                 const projectContent = await fs.readFile(filePath, 'utf8')
                 const { data, content } = matter(projectContent)
 
@@ -39,6 +39,7 @@ export const getProjects = cache(async () => {
 })
 
 export async function getProject(slug: string) {
+    console.log(slug)
     const projects = await getProjects()
     return projects.find((project: any) => project.slug === slug)
 }
