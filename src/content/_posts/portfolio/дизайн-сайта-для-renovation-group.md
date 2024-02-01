@@ -6,7 +6,6 @@ keywords:
   - Branding
   - Development
   - webflow
-slug: дизайн-сайта-для-renovation-group
 service:
   - Дизайн сайтов
   - Разработка лендингов
