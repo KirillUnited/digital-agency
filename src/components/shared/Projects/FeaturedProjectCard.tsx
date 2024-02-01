@@ -4,9 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import styles from './styles.module.css';
 import { cn } from '@/lib/utils';
-import { ProjectCardType } from './ProjectCard';
+import { ProjectType } from '@/lib/getProjects';
 
-const FeaturedProjectCard = ({ title, description, thumbnail, link, slug }: ProjectCardType) => {
+const FeaturedProjectCard = ({ title, description, thumbnail, link, slug }: ProjectType) => {
     return (
         <div className={cn(
             styles["card"],
