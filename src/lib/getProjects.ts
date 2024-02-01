@@ -18,13 +18,14 @@ export type ProjectType = {
 // this means getPosts() will only be called once per page build, even though we may call it multiple times
 // when rendering the page.
 export const getProjects = cache(async () => {
-    const projects = await fs.readdir('./src/content/projects/')
+    const PROJECTS_PATH = './src/content/_posts/portfolio';
+    const projects = await fs.readdir(`${PROJECTS_PATH}`);
 
     return Promise.all(
         projects
             .filter((file) => path.extname(file) === '.md')
             .map(async (file) => {
-                const filePath = `./src/content/projects/${file}`
+                const filePath = `${PROJECTS_PATH}/${file}`
                 const projectContent = await fs.readFile(filePath, 'utf8')
                 const { data, content } = matter(projectContent)
 
@@ -38,6 +39,7 @@ export const getProjects = cache(async () => {
 })
 
 export async function getProject(slug: string) {
+    console.log(slug)
     const projects = await getProjects()
     return projects.find((project: any) => project.slug === slug)
 }

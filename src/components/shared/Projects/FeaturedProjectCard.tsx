@@ -4,17 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import styles from './styles.module.css';
 import { cn } from '@/lib/utils';
+import { ProjectCardType } from './ProjectCard';
 
-type ProjectCardType = {
-    title: string,
-    description?: string,
-    thumbnail?: string,
-    link?: string,
-    slug?: string,
-    
-}
-
-const FeaturedProjectCard = ({ title, description, thumbnail, link }: ProjectCardType) => {
+const FeaturedProjectCard = ({ title, description, thumbnail, link, slug }: ProjectCardType) => {
     return (
         <div className={cn(
             styles["card"],
@@ -36,7 +28,7 @@ const FeaturedProjectCard = ({ title, description, thumbnail, link }: ProjectCar
                 )}>
                     <h6 className="heading-6 line-clamp-2">{title}</h6>
                     {description && <p className="paragraph line-clamp-2">{description}</p>}
-                    {link && <Link href={link} className={cn(
+                    {slug && <Link href={`/portfolio/${slug}`} className={cn(
                         "link",
                         styles["card-link"]
                     )}>
