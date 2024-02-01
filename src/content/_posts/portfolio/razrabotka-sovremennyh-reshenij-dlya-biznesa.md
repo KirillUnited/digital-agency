@@ -1,5 +1,5 @@
 ---
-slug: dizajn-sajta-dlya-renovation-group
+slug: razrabotka-sovremennyh-reshenij-dlya-biznesa
 service:
   - Разработка сайтов
   - SEO продвижение
