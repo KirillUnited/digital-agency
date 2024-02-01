@@ -1,15 +1,9 @@
 ---
-keywords:
-  - Design
-  - UI/UX
-  - Wireframing
-  - Branding
-  - Development
-  - webflow
+page_slug: dizajn-sajta-dlya-renovation-group
 service:
   - Дизайн сайтов
   - Разработка лендингов
-title: Дизайн сайта для
+title: Дизайн сайта для Renovation Group
 description: Новый стильный сайт Renovation Group - оцените онлайн!
 date: 2023-08-29T10:36:16.845Z
 thumbnail: /images/uploads/project-3.png
@@ -17,6 +11,13 @@ info:
   client: facebook.com
   deliverable: UI Screens, UX Flow & Prototype
   service: Product Design
+keywords:
+  - Design
+  - UI/UX
+  - Wireframing
+  - Branding
+  - Development
+  - webflow
 ---
 ### About the project
 
