@@ -1,5 +1,5 @@
 ---
-page_slug: dizajn-sajta-dlya-renovation-group
+slug: dizajn-sajta-dlya-renovation-group
 service:
   - Дизайн сайтов
   - Разработка лендингов

@@ -28,9 +28,9 @@ collections:
       name: "portfolio"
       folder: "src/content/_posts/portfolio"
       create: true
-      slug: "{{fields.page_slug}}"
+      slug: "{{fields.slug}}"
       fields:
-          - { label: "Slug (Translit)", name: "page_slug", widget: "string" }
+          - { label: "Slug (Translit)", name: "slug", widget: "string" }
           - label: "Service"
             name: "service"
             widget: "select"

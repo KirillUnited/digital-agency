@@ -1,4 +1,5 @@
 ---
+slug: targetirovannaya-i-kontekstnaya-reklama
 service:
   - Таргетированая реклама
   - Контакстная реклама
