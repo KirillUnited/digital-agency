@@ -69,9 +69,29 @@ collections:
       name: "services"
       folder: "src/content/_posts/services"
       create: true
+      slug: "{{fields.slug}}"
       fields:
+          - { label: "Slug (Translit)", name: "slug", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Featured Image", name: "thumbnail", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
+    - label: "Widgets"
+      name: "widgets"
+      files:
+          - label: "Frequently asked questions"
+            name: "faq"
+            file: "src/content/widgets/faq.md"
+            fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - label: "Questions"
+                  name: "questions"
+                  widget: list
+                  fields:
+                      - { label: "Question", name: "question", widget: "string" }
+                      - {
+                            label: "Answer",
+                            name: "answer",
+                            widget: "text",
+                        }
