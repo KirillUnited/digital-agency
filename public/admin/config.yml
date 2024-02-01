@@ -28,9 +28,6 @@ collections:
       name: "portfolio"
       folder: "src/content/_posts/portfolio"
       create: true
-      slug:
-          encoding: "ascii"
-          clean_accents: true
       fields:
           - label: "Service"
             name: "service"
