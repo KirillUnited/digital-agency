@@ -4,6 +4,7 @@ import fs from 'fs/promises'
 import { cache } from 'react'
 
 export type ProjectType = {
+    service?: string[]
     slug: string,
     title: string,
     description?: string,

@@ -4,16 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import { cn } from '@/lib/utils';
 import styles from './styles.module.css'
+import { ProjectType } from '@/lib/getProjects';
 
-export type ProjectCardType = {
-    title: string,
-    description?: string,
-    thumbnail?: string,
-    slug?: string
-    link?: string
-}
-
-const ProjectCard = ({ title, description, thumbnail, link, slug }: ProjectCardType) => {
+const ProjectCard = ({ title, description, thumbnail, link, slug }: ProjectType) => {
     return (
         <div className={cn("flex flex-col gap-3 lg:gap-6 h-full")}>
             <div className={cn(styles['preview-image-wrap'])}>
