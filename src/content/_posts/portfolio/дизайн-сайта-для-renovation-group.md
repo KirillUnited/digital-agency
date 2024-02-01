@@ -1,4 +1,7 @@
 ---
+service:
+  - Дизайн сайтов
+  - Разработка лендингов
 title: Дизайн сайта для Renovation Group
 description: Новый стильный сайт Renovation Group - оцените онлайн!
 date: 2023-08-29T10:36:16.845Z
