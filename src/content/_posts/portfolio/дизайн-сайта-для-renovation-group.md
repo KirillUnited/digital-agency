@@ -1,16 +1,4 @@
 ---
-slug: дизайн-сайта-для-renovation-group
-service:
-  - Дизайн сайтов
-  - Разработка лендингов
-title: Дизайн сайта для Renovation Group
-description: Новый стильный сайт Renovation Group - оцените онлайн!
-date: 2023-08-29T10:36:16.845Z
-thumbnail: /images/uploads/project-3.png
-info:
-  client: facebook.com
-  deliverable: UI Screens, UX Flow & Prototype
-  service: Product Design
 keywords:
   - Design
   - UI/UX
@@ -18,6 +6,18 @@ keywords:
   - Branding
   - Development
   - webflow
+slug: дизайн-сайта-для-renovation-group
+service:
+  - Дизайн сайтов
+  - Разработка лендингов
+title: Дизайн сайта для
+description: Новый стильный сайт Renovation Group - оцените онлайн!
+date: 2023-08-29T10:36:16.845Z
+thumbnail: /images/uploads/project-3.png
+info:
+  client: facebook.com
+  deliverable: UI Screens, UX Flow & Prototype
+  service: Product Design
 ---
 ### About the project
 
