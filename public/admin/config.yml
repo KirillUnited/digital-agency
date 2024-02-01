@@ -37,6 +37,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Info"
         name: "info"
+        widget: object
         fields:
             - { label: "Client", name: "client", widget: "string" }
             - { label: "Service", name: "service", widget: "string" }
