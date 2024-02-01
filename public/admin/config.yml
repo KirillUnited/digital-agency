@@ -41,3 +41,13 @@ collections:
             - { label: "Client", name: "client", widget: "string" }
             - { label: "Service", name: "service", widget: "string" }
             - { label: "Deliverable(Результат)", name: "deliverable", widget: "string" }
+    - label: "Services"
+      name: "services"
+      folder: "src/content/_posts/services"
+      create: true
+      fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
