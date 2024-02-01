@@ -32,15 +32,16 @@ collections:
           - label: "Service"
             name: "service"
             widget: "select"
+            multiple: true
             options:
-                - { label: "Аудит сайтов", value: "audit" }
-                - { label: "Дизайн сайтов", value: "design" }
-                - { label: "Разработка сайтов", value: "development" }
-                - { label: "Разработка лендингов", value: "landing_page" }
-                - { label: "Контакстная реклама", value: "context" }
-                - { label: "Таргетированая реклама", value: "target" }
-                - { label: "SEO продвижение", value: "seo" }
-                - { label: "SMM (ведение профилей в соцсетях)", value: "smm" }
+                - { label: "Аудит сайтов", value: "Аудит сайтов" }
+                - { label: "Дизайн сайтов", value: "Дизайн сайтов" }
+                - { label: "Разработка сайтов", value: "Разработка сайтов" }
+                - { label: "Разработка лендингов", value: "Разработка лендингов" }
+                - { label: "Контакстная реклама", value: "Контакстная реклама" }
+                - { label: "Таргетированая реклама", value: "Таргетированая реклама" }
+                - { label: "SEO продвижение", value: "SEO продвижение" }
+                - { label: "SMM (ведение профилей в соцсетях)", value: "SMM (ведение профилей в соцсетях)" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Publish Date", name: "date", widget: "datetime" }
