@@ -4,51 +4,71 @@ backend:
 media_folder: public/images/uploads
 public_folder: /images/uploads
 collections:
-    - name: "pages"
-      label: "Pages"
-      files:
-          - label: "Cats"
-            name: "cats"
-            file: "src/content/cats.md"
-            fields:
-                - { label: "Title", name: "title", widget: "string" }
-                - { label: "Publish Date", name: "date", widget: "datetime" }
-                - { label: "Body", name: "body", widget: "markdown" }
-                - label: "Cats"
-                  name: "cats"
-                  widget: list
-                  fields:
-                      - { label: "Name", name: "name", widget: "string" }
-                      - {
-                            label: "Description",
-                            name: "description",
-                            widget: "text",
-                        }
+    # - name: "pages"
+    #   label: "Pages"
+    #   files:
+    #       - label: "Cats"
+    #         name: "cats"
+    #         file: "src/content/cats.md"
+    #         fields:
+    #             - { label: "Title", name: "title", widget: "string" }
+    #             - { label: "Publish Date", name: "date", widget: "datetime" }
+    #             - { label: "Body", name: "body", widget: "markdown" }
+    #             - label: "Cats"
+    #               name: "cats"
+    #               widget: list
+    #               fields:
+    #                   - { label: "Name", name: "name", widget: "string" }
+    #                   - {
+    #                         label: "Description",
+    #                         name: "description",
+    #                         widget: "text",
+    #                     }
     - label: "Portfolio"
       name: "portfolio"
       folder: "src/content/_posts/portfolio"
       create: true
       fields:
-      - {label: "Service", name: "service", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Info"
-        name: "info"
-        widget: object
-        fields:
-            - { label: "Client", name: "client", widget: "string" }
-            - { label: "Service", name: "service", widget: "string" }
-            - { label: "Deliverable(Результат)", name: "deliverable", widget: "string" }
+          - label: "Service"
+            name: "service"
+            widget: "select"
+            options:
+                - { label: "Аудит сайтов", value: "audit" }
+                - { label: "Дизайн сайтов", value: "design" }
+                - { label: "Разработка сайтов", value: "development" }
+                - { label: "Разработка лендингов", value: "landing_page" }
+                - { label: "Контакстная реклама", value: "context" }
+                - { label: "Таргетированая реклама", value: "target" }
+                - { label: "SEO продвижение", value: "seo" }
+                - { label: "SMM (ведение профилей в соцсетях)", value: "smm" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Featured Image", name: "thumbnail", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Info"
+            name: "info"
+            widget: object
+            fields:
+                - { label: "Client", name: "client", widget: "string" }
+                - { label: "Service", name: "service", widget: "string" }
+                - {
+                      label: "Deliverable(Результат)",
+                      name: "deliverable",
+                      widget: "string",
+                  }
+          - label: "Keywords"
+            name: "keywords"
+            widget: "select"
+            multiple: true
+            options: ["Design", "UI/UX", "Wireframing", "Branding", "Development", "webflow", "Marketing", "SMM"]
     - label: "Services"
       name: "services"
       folder: "src/content/_posts/services"
       create: true
       fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Featured Image", name: "thumbnail", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
