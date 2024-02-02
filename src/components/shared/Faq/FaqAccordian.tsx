@@ -5,7 +5,7 @@ import { faq } from '@/content'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css';
 
-const FaqAccordian = () => {
+const FaqAccordian = ({items}:any) => {
   return (
     <Accordion type="single" collapsible>
         {
