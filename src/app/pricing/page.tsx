@@ -3,8 +3,11 @@ import { faq, pricing } from '@/content'
 import React from 'react'
 import FaqAccordian from '@/components/shared/Faq/FaqAccordian'
 import Link from 'next/link'
+import { getWidget } from '@/lib/getWidgets'
 
-const Pricing = () => {
+const Pricing = async () => {
+    const faqList = await getWidget('faq.md');
+
     return (
         <section className='section'>
             <div className="container flex flex-col gap-8 lg:gap-16 items-center">
@@ -22,10 +25,10 @@ const Pricing = () => {
                 <div className='self-stretch'>
                     <div className="grid grid-cols-1 lg:grid-cols-[328px_1fr] gap-6 lg:gap-28">
                         <div className="flex flex-col gap-4">
-                            <h3 className="heading-3">{faq.title}</h3>
+                            <h3 className="heading-3">{faqList?.title}</h3>
                             <Link href={faq.link.href} className='link self-start'>{faq.link.label}</Link>
                         </div>
-                        <FaqAccordian />
+                        <FaqAccordian items={faqList?.content} />
                     </div>
                 </div>
             </div>
