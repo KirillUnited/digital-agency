@@ -7,7 +7,8 @@ const PATH = './src/content/widgets';
 type WidgetProps = {
     title: string,
     body: string,
-    fileName: string
+    fileName: string,
+    content?: any
 }
 
 export const getWidgets = cache(async () => {

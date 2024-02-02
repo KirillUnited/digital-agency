@@ -1,15 +1,19 @@
 'use client'
 import React from 'react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { faq } from '@/content'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css';
 
-const FaqAccordian = ({items}:any) => {
+type FaqAccordianItemsProps = {
+    title: string,
+    description: string
+}
+
+const FaqAccordian = ({ items }: any) => {
   return (
     <Accordion type="single" collapsible>
         {
-            faq.content.map(({ title, description }, index) => {
+            items.map(({ title, description } : FaqAccordianItemsProps, index: number) => {
                 const qNumber = (index + 1).toString().padStart(2, "0");
 
                 return (
