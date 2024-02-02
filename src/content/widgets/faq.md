@@ -1,7 +1,7 @@
 ---
 title: Часто задаваемые вопросы
 questions:
-  - question: Сколsdvько времени это займет?
+  - question: Сколько времени это займет?
     answer: Dignissimos libero placeat nesciunt quaerat quia harum. Itaque
       reprehenderit pariatur suscipit fuga. Amet nihil repellendus iste.
       Corrupti est eveniet.
