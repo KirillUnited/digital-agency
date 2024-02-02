@@ -86,12 +86,12 @@ collections:
             fields:
                 - { label: "Title", name: "title", widget: "string" }
                 - label: "Questions"
-                  name: "questions"
+                  name: "content"
                   widget: list
                   fields:
-                      - { label: "Question", name: "question", widget: "string" }
+                      - { label: "Question", name: "title", widget: "string" }
                       - {
                             label: "Answer",
-                            name: "answer",
+                            name: "description",
                             widget: "text",
                         }
