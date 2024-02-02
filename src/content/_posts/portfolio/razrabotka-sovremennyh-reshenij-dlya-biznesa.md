@@ -6,7 +6,7 @@ service:
 title: Разработка современных решений для бизнеса
 description: Создание и оптимизация вашего сайта для эффективного развития в онлайн-среде.
 date: 2023-11-27T10:44:44.966Z
-thumbnail: /images/uploads/project-1.png
+thumbnail: /images/uploads/project-3.png
 info:
   client: meta.com
   service: Development
