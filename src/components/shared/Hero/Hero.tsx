@@ -5,7 +5,6 @@ import { MoveRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { site } from '@/content'
-import heroImage from '../../../../public/images/hero.png'
 
 const Hero = () => {
     const title = site.home?.hero?.title;
@@ -28,12 +27,12 @@ const Hero = () => {
                     </div>
                 </div>
                 <Image
-                    src={heroImage}
+                    src={image}
                     width={638}
                     height={360}
                     alt={title}
                     className={`${styles.image}`}
-                    placeholder='blur'
+                    priority
                 />
             </div>
         </section>
