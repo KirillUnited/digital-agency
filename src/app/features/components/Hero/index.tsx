@@ -4,11 +4,11 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { site } from '@/content'
-import heroImage from '@/assets/images/features-hero.png'
 
 const Hero = () => {
     const title = site.features?.hero?.title;
     const description = site.features?.hero?.description;
+    const image = site.features?.hero?.image;
 
     return (
         <section className={`section ${styles.section}`}>
@@ -25,12 +25,12 @@ const Hero = () => {
                     </div>
                 </div>
                 <Image
-                    src={heroImage}
+                    src={`${image}`}
                     width={638}
                     height={360}
                     alt={title}
                     className={`${styles.image}`}
-                    placeholder='blur'
+                    priority
                 />
             </div>
         </section>
