@@ -10,16 +10,17 @@ import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 import CTAModal from '@/components/shared/Modal/CTAModal'
 
 type PricingCardType = {
-    price: string,
-    title: string,
-    description: string,
+    slug?: string,
+    price?: string,
+    title?: string,
+    description?: string,
     subtitle?: string,
     variant?: string,
     features?: string[],
     link?: string
 }
 
-const PricingCard = ({ price, title, description, subtitle, variant, features, link }: PricingCardType) => {
+const PricingCard = ({ price, title, description, subtitle, variant, features, slug }: PricingCardType) => {
     return (
         <div className={cn(
             'flex flex-col gap-8 lg:gap-16 bg-accent rounded-[12px] h-full px-6 lg:px-12 py-8 lg:py-16',
@@ -66,7 +67,7 @@ const PricingCard = ({ price, title, description, subtitle, variant, features, l
                     </DialogTrigger>
                     <CTAModal />
                 </Dialog>
-                {link && <Link href={`${link}`} className={cn('link',
+                {slug && <Link href={`pricing/${slug}`} className={cn('link',
                     { 'text-foregroundSecondary hover:text-foregroundSecondary/70': variant === 'primary' }
                 )}>Подробнее <MoveRightIcon /></Link>}
             </div>
