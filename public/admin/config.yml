@@ -116,7 +116,6 @@ collections:
           - label: "Variant"
             name: "variant"
             widget: "select"
-            multiple: false
             options:
                 [
                     "primary",
