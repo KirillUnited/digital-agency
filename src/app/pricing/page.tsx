@@ -6,6 +6,12 @@ import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
 import { getPosts } from '@/lib/getProjects'
 
+export async function generateMetadata() {
+    return {
+        title: 'Услуги',
+    }
+}
+
 const Pricing = async () => {
     const data = await getPosts('services')
     const faqList = await getWidget('faq.md');
