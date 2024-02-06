@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import validator from "validator";
+import { cn } from "@/lib/utils"
 
 const formSchema = z.object({
     username: z.string().min(2, {
@@ -25,7 +26,11 @@ const formSchema = z.object({
     }),
 })
 
-export default function OrderForm() {
+interface OrderFormProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+
+}
+
+export default function OrderForm({ className }: OrderFormProps) {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -44,7 +49,7 @@ export default function OrderForm() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className={cn("space-y-8", className)}>
                 <FormField
                     control={form.control}
                     name="username"
@@ -52,7 +57,7 @@ export default function OrderForm() {
                         <FormItem>
                             <FormLabel>Имя</FormLabel>
                             <FormControl>
-                                <Input placeholder="Введите Ваше имя" {...field} />
+                                <Input type="text" placeholder="Введите Ваше имя" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
