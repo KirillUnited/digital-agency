@@ -29,7 +29,7 @@ export default function CTAModal() {
             </div>
             <div className='flex flex-col gap-6'>
                 <DialogClose asChild>
-                    <Link href={`/about`} className='link self-center'>
+                    <Link href={`/#order_section`} className='link self-center'>
                         Свяжитесь с нами <MoveRightIcon />
                     </Link>
                 </DialogClose>
