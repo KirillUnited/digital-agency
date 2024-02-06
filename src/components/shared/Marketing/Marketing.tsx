@@ -20,7 +20,7 @@ const Marketing = async () => {
                             description={item?.description}
                             image={item?.thumbnail}
                             imageFit='contain'
-                            link={`${item?.slug}`}
+                            link={`/pricing/${item?.slug}`}
                         />)
                     }
                 </div>
