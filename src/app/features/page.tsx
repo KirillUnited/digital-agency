@@ -7,6 +7,14 @@ import MarketingCard from '@/components/shared/Marketing/MarketingCard'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
 
+export async function generateMetadata() {
+    const title = site?.features?.hero?.pageTitle;
+    
+    return {
+        title
+    }
+}
+
 export default function FeaturesPage() {
     return (
         <>
