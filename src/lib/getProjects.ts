@@ -44,4 +44,31 @@ export async function getProject(slug: string) {
     return projects.find((project: any) => project.slug === slug)
 }
 
+// TODO: remove hardcode, do refact getProjects() to common getPosts() & getPost()
+export const getPosts = cache(async (type: string) => {
+    const PATH = `./src/content/_posts/${type}`;
+    const posts = await fs.readdir(`${PATH}`);
+
+    return Promise.all(
+        posts
+            .filter((file) => path.extname(file) === '.md')
+            .map(async (file) => {
+                const filePath = `${PATH}/${file}`
+                const postContent = await fs.readFile(filePath, 'utf8')
+                const { data, content } = matter(postContent)
+
+                if (data.published === false) {
+                    return null
+                }
+
+                return { ...data, body: content } as ProjectType
+            })
+    )
+});
+
+export async function getPost(slug: string, type: string) {
+    const posts = await getPosts(type);
+    return posts.find((post) => post?.slug === slug)
+}
+
 export default getProjects
