@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 export default function OrderSection() {
     return (
-        <section className={cn("section", styles.section)}>
+        <section className={cn("section pt-0", styles.section)}>
             <div className={cn("container", styles.container)}>
                 <div className={cn(styles['image-wrap'])}>
                     <Image
