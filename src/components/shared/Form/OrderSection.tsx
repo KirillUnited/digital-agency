@@ -1,12 +1,21 @@
-import React from 'react'
+'use server'
+import React, { useState } from 'react'
 import { OrderForm } from '.'
 import { MoveRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
 import Image from 'next/image'
+import { getWidget } from '@/lib/getWidgets'
 
-export default function OrderSection() {
+export default async function OrderSection() {
+    let data;
+    try {
+        data = await getWidget('order-section.md');
+    } catch (error) {
+        console.error(error)
+    }
+
     return (
         <section id="order_section" className={cn("section", styles.section)}>
             <div className={cn("container", styles.container)}>
