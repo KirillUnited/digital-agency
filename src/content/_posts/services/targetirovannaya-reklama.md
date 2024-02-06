@@ -8,8 +8,16 @@ description: >+
   Максимизируйте воздействие на вашу целевую аудиторию – обратитесь к нам для
   настройки успешной таргетированной рекламной кампании
 
+subtitle: Multi Design
 date: 2024-02-06T14:25:54.545Z
 thumbnail: /images/uploads/marketing-2.png
+price: $200
+features:
+  - Marketing
+  - SMM
+  - Optimize hashtags
+  - Chat support
+variant: primary
 ---
 # Таргетированная реклама
 

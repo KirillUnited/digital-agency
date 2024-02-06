@@ -6,8 +6,16 @@ description: Контекстная реклама — это эффективн
   перед пользователями, когда они ищут информацию или интересуются определенной
   темой в сети. Обеспечьте максимальную видимость вашего предложения с нашей
   контекстной рекламой.
+subtitle: Per page
 date: 2024-02-01T14:56:36.163Z
 thumbnail: /images/uploads/marketing-1.png
+price: $200
+features:
+  - All limited links
+  - Chat support
+  - Marketing
+  - SMM
+variant: secondary
 ---
 # Контекстная реклама
 
