@@ -1,8 +1,11 @@
 import React from 'react'
 import MarketingCard from './MarketingCard'
 import { marketing } from '@/content'
+import { getPosts } from '@/lib/getProjects'
 
-const Marketing = () => {
+const Marketing = async () => {
+    const data = await getPosts('services');
+
     return (
         <section className="section bg-accent">
             <div className="container">
@@ -11,7 +14,14 @@ const Marketing = () => {
                 </div>
                 <div className="marketing-grid gap-12">
                     {
-                        marketing.data.map((item, index) => <MarketingCard key={index} {...item} imageFit='contain' />)
+                        data.map((item, index) => <MarketingCard
+                            key={index}
+                            title={item?.title}
+                            description={item?.description}
+                            image={item?.thumbnail}
+                            imageFit='contain'
+                            link={`${item?.slug}`}
+                        />)
                     }
                 </div>
             </div>
