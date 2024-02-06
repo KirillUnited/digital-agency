@@ -19,7 +19,7 @@ export default function OrderSection() {
                         className={cn(styles.image)}
                     />
                     <div className={cn(styles.heading, "relative h-full bg-background-secondary/50 pb-8 lg:pb-16")}>
-                        <h2 className="heading-1">Создание великолепных веб-сайтов для ранних стартапов</h2>
+                        <h2 className="heading-2">Создание великолепных веб-сайтов для ранних стартапов</h2>
                         <p className={cn("paragraph", styles.description)}>
                             Совмещая современный стиль, передовые технологии и инновационные подходы в интернет-маркетинге, мы разрабатываем эффективные средства для продвижения вашего бизнеса в онлайн-пространстве.
                         </p>
@@ -36,9 +36,9 @@ export default function OrderSection() {
                         <OrderForm className={cn(styles.form)} />
                     </div>
                     <div className={cn(styles.footer)}>
-                        <Link href={`/about`} className={cn('link', styles.link)}>
+                        {/* <Link href={`/about`} className={cn('link', styles.link)}>
                             Свяжитесь с нами <MoveRightIcon />
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>
