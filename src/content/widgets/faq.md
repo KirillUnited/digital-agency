@@ -8,4 +8,7 @@ content:
   - title: Как вы называете классы?
     description: Nam et corporis ipsam. Aut eveniet sit ipsa error voluptatem.
       Tempora repudiandae rerum.
+  - title: I have a bigger project. Can you handle it?
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
