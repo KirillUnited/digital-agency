@@ -7,7 +7,6 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { MoveRightIcon } from 'lucide-react'
 import { OrderForm } from '@/components/shared/Form'
@@ -29,9 +28,9 @@ export default function CTAModal() {
             </div>
             <div className='flex flex-col gap-6'>
                 <DialogClose asChild>
-                    <Link href={`/#order_section`} className='link self-center'>
+                    <a href={`/#order_section`} className='link self-center'>
                         Свяжитесь с нами <MoveRightIcon />
-                    </Link>
+                    </a>
                 </DialogClose>
             </div>
         </DialogContent>
