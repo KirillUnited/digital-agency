@@ -4,9 +4,13 @@ import path from 'path'
 import fs from 'fs/promises'
 
 const PATH = './src/content/widgets';
+
 type WidgetProps = {
     title: string,
+    description?: string,
     body: string,
+    form_title?: string,
+    form_description?: string,
     fileName: string,
     content?: any
 }

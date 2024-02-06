@@ -28,17 +28,17 @@ export default async function OrderSection() {
                         className={cn(styles.image)}
                     />
                     <div className={cn(styles.heading, "relative h-full bg-background-secondary/50 pb-8 lg:pb-16")}>
-                        <h2 className="heading-2">Создание великолепных веб-сайтов для ранних стартапов</h2>
+                        <h2 className="heading-2">{data?.title}</h2>
                         <p className={cn("paragraph", styles.description)}>
-                            Совмещая современный стиль, передовые технологии и инновационные подходы в интернет-маркетинге, мы разрабатываем эффективные средства для продвижения вашего бизнеса в онлайн-пространстве.
+                            {data?.description}
                         </p>
                     </div>
                 </div>
                 <div className={cn(styles.content)}>
                     <div className={cn(styles.heading)}>
-                        <h5 className={cn("heading-5", styles.title)}>Отправить запрос</h5>
+                        <h5 className={cn("heading-5", styles.title)}>{data?.form_title}</h5>
                         <p className={cn("paragraph", styles.description)}>
-                            Eaque voluptates voluptas enim. Pariatur consequatur et rerum eius aut ratione.
+                            {data?.form_description}
                         </p>
                     </div>
                     <div className={cn(styles.body)}>
