@@ -16,6 +16,8 @@ export default async function OrderSection() {
         console.error(error)
     }
 
+    if (!data) return null;
+
     return (
         <section id="order_section" className={cn("section", styles.section)}>
             <div className={cn("container", styles.container)}>
