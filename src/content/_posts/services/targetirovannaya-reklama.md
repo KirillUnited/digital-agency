@@ -9,7 +9,7 @@ description: >+
   настройки успешной таргетированной рекламной кампании
 
 date: 2024-02-06T14:25:54.545Z
-thumbnail: http://localhost:3000/_next/image?url=%2Fimages%2Fmarketing-2.png&w=640&q=60
+thumbnail: /images/uploads/marketing-2.png
 ---
 # Таргетированная реклама
 

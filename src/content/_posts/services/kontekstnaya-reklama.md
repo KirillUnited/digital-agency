@@ -7,7 +7,7 @@ description: Контекстная реклама — это эффективн
   темой в сети. Обеспечьте максимальную видимость вашего предложения с нашей
   контекстной рекламой.
 date: 2024-02-01T14:56:36.163Z
-thumbnail: http://localhost:3000/_next/image?url=%2Fimages%2Fmarketing-1.png&w=640&q=60
+thumbnail: /images/uploads/marketing-1.png
 ---
 # Контекстная реклама
 
