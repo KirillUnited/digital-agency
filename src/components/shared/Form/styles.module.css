@@ -1,0 +1,30 @@
+.container {
+    @apply lg:grid grid-cols-2;
+}
+.content {
+    @apply bg-background-secondary;
+}
+.heading {
+    @apply text-foregroundSecondary px-6 lg:px-12 pt-8 lg:pt-16 space-y-4;
+}
+.body {
+    @apply px-6 lg:px-12 py-6;
+}
+.footer {
+    @apply flex flex-col gap-6 px-6 lg:px-12 pb-6 lg:pb-12;
+}
+.image-wrap {
+    @apply relative;
+}
+.image {
+    @apply object-cover w-full;
+}
+.link {
+    @apply self-center text-foregroundSecondary hover:text-foregroundSecondary/70;
+}
+.form label {
+    @apply text-foregroundSecondary;
+}
+.form input {
+    @apply text-foregroundSecondary bg-transparent;
+}
