@@ -39,11 +39,20 @@ collections:
                 - { label: "Аудит сайтов", value: "Аудит сайтов" }
                 - { label: "Дизайн сайтов", value: "Дизайн сайтов" }
                 - { label: "Разработка сайтов", value: "Разработка сайтов" }
-                - { label: "Разработка лендингов", value: "Разработка лендингов" }
+                - {
+                      label: "Разработка лендингов",
+                      value: "Разработка лендингов",
+                  }
                 - { label: "Контакстная реклама", value: "Контакстная реклама" }
-                - { label: "Таргетированая реклама", value: "Таргетированая реклама" }
+                - {
+                      label: "Таргетированая реклама",
+                      value: "Таргетированая реклама",
+                  }
                 - { label: "SEO продвижение", value: "SEO продвижение" }
-                - { label: "SMM (ведение профилей в соцсетях)", value: "SMM (ведение профилей в соцсетях)" }
+                - {
+                      label: "SMM (ведение профилей в соцсетях)",
+                      value: "SMM (ведение профилей в соцсетях)",
+                  }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -64,7 +73,17 @@ collections:
             name: "keywords"
             widget: "select"
             multiple: true
-            options: ["Design", "UI/UX", "Wireframing", "Branding", "Development", "webflow", "Marketing", "SMM"]
+            options:
+                [
+                    "Design",
+                    "UI/UX",
+                    "Wireframing",
+                    "Branding",
+                    "Development",
+                    "webflow",
+                    "Marketing",
+                    "SMM",
+                ]
     - label: "Services"
       name: "services"
       folder: "src/content/_posts/services"
@@ -90,8 +109,12 @@ collections:
                   widget: list
                   fields:
                       - { label: "Question", name: "title", widget: "string" }
-                      - {
-                            label: "Answer",
-                            name: "description",
-                            widget: "text",
-                        }
+                      - { label: "Answer", name: "description", widget: "text" }
+          - label: "Секция с формой для связи"
+            name: "order_section"
+            file: "src/content/widgets/order-section.md"
+            fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Form title", name: "form_title", widget: "string" }
+                - { label: "Form description", name: "form_description", widget: "text" }
