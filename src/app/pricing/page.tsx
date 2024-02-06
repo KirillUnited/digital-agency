@@ -4,21 +4,23 @@ import React from 'react'
 import FaqAccordian from '@/components/shared/Faq/FaqAccordian'
 import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
+import { getPosts } from '@/lib/getProjects'
 
 const Pricing = async () => {
+    const data = await getPosts('services')
     const faqList = await getWidget('faq.md');
 
     return (
         <section className='section'>
             <div className="container flex flex-col gap-8 lg:gap-16 items-center">
                 <div className='text-center max-w-xl'>
-                    <h2 className="heading-2">Our Pricing Plans</h2>
-                    <p className='mt-4'>When you’re ready to go beyond prototyping in Figma, Webflow is ready to help you bring your designs to life — without coding them.</p>
+                    <h2 className="heading-2">Наши тарифные планы</h2>
+                    <p className='mt-4'>Когда вы готовы выйти за рамки прототипирования, Мы готовы помочь вам воплотить ваши проекты в жизнь.</p>
                 </div>
                 <ul className='flex flex-col lg:grid grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-8 self-stretch'>
                     {
-                        pricing.map((item) => {
-                            return <li key={item.title}><PricingCard {...item} /></li>
+                        data.map((item) => {
+                            return <li key={item?.title}><PricingCard {...item} /></li>
                         })
                     }
                 </ul>
