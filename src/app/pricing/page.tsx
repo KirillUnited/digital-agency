@@ -1,10 +1,11 @@
 import PricingCard from '@/components/shared/Pricing/PricingCard'
 import { faq, pricing } from '@/content'
-import React from 'react'
+import React, { Suspense } from 'react'
 import FaqAccordian from '@/components/shared/Faq/FaqAccordian'
 import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
 import { getPosts } from '@/lib/getProjects'
+import { SkeletonDemo } from '@/components/shared/Skeleton/SkeletonDemo'
 
 export async function generateMetadata() {
     return {
@@ -24,11 +25,14 @@ const Pricing = async () => {
                     <p className='mt-4'>Когда вы готовы выйти за рамки прототипирования, Мы готовы помочь вам воплотить ваши проекты в жизнь.</p>
                 </div>
                 <ul className='flex flex-col lg:grid grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-8 self-stretch'>
-                    {
-                        data.map((item) => {
-                            return <li key={item?.title}><PricingCard {...item} /></li>
-                        })
-                    }
+                    <Suspense fallback={<SkeletonDemo />}>
+                        {
+                            data &&
+                            data.map((item) => {
+                                return <li key={item?.title}><PricingCard {...item} /></li>
+                            })
+                        }
+                    </Suspense>
                 </ul>
                 <div className='self-stretch'>
                     <div className="grid grid-cols-1 lg:grid-cols-[328px_1fr] gap-6 lg:gap-28">
