@@ -105,9 +105,9 @@ collections:
             widget: "relation"
             collection: "widgets"
             file: "faq"
-            display_fields: ["faq.*.name"]
-            search_fields: ["faq.*.name"]
-            value_field: "faq.*.name"
+            display_fields: ["name"]
+            search_fields: ["name"]
+            value_field: "name"
     - label: "[Widgets]"
       name: "widgets"
       files:
