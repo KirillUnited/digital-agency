@@ -4,27 +4,8 @@ backend:
 media_folder: public/images/uploads
 public_folder: /images/uploads
 collections:
-    # - name: "pages"
-    #   label: "Pages"
-    #   files:
-    #       - label: "Cats"
-    #         name: "cats"
-    #         file: "src/content/cats.md"
-    #         fields:
-    #             - { label: "Title", name: "title", widget: "string" }
-    #             - { label: "Publish Date", name: "date", widget: "datetime" }
-    #             - { label: "Body", name: "body", widget: "markdown" }
-    #             - label: "Cats"
-    #               name: "cats"
-    #               widget: list
-    #               fields:
-    #                   - { label: "Name", name: "name", widget: "string" }
-    #                   - {
-    #                         label: "Description",
-    #                         name: "description",
-    #                         widget: "text",
-    #                     }
     - label: "Portfolio"
+      label_singular: "Case"
       name: "portfolio"
       folder: "src/content/_posts/portfolio"
       create: true
@@ -85,6 +66,7 @@ collections:
                     "SMM",
                 ]
     - label: "Services"
+      label_singular: "Service"
       name: "services"
       folder: "src/content/_posts/services"
       create: true
@@ -116,13 +98,9 @@ collections:
           - label: "Variant"
             name: "variant"
             widget: "select"
-            options:
-                [
-                    "primary",
-                    "secondary"
-                ]
+            options: ["primary", "secondary"]
             default: "secondary"
-    - label: "Widgets"
+    - label: "[Widgets]"
       name: "widgets"
       files:
           - label: "Frequently asked questions"
@@ -147,4 +125,51 @@ collections:
                       label: "Form description",
                       name: "form_description",
                       widget: "text",
+                  }
+    - label: "Home Section"
+      name: "sections"
+      widget: "list"
+      types:
+          - label: "Carousel"
+            name: "carousel"
+            widget: object
+            summary: "{{fields.header}}"
+            fields:
+                - {
+                      label: Header,
+                      name: header,
+                      widget: string,
+                      default: "Image Gallery",
+                  }
+                - {
+                      label: Template,
+                      name: template,
+                      widget: string,
+                      default: "carousel.html",
+                  }
+                - label: Images
+                  name: images
+                  widget: list
+                  field: { label: Image, name: image, widget: image }
+          - label: "Spotlight"
+            name: "spotlight"
+            widget: object
+            fields:
+                - {
+                      label: Header,
+                      name: header,
+                      widget: string,
+                      default: "Spotlight",
+                  }
+                - {
+                      label: Template,
+                      name: template,
+                      widget: string,
+                      default: "spotlight.html",
+                  }
+                - {
+                      label: Text,
+                      name: text,
+                      widget: text,
+                      default: "Hello World",
                   }
