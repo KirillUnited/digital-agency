@@ -104,9 +104,10 @@ collections:
             name: "related_widget"
             widget: "relation"
             collection: "widgets"
-            display_fields: "files.*"
-            search_fields: "files.*"
-            value_field: "files.*"
+            file: "faq"
+            display_fields: ["faq.*.name"]
+            search_fields: ["faq.*.name"]
+            value_field: "faq.*.name"
     - label: "[Widgets]"
       name: "widgets"
       files:
