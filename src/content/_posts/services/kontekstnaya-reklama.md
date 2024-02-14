@@ -10,6 +10,23 @@ subtitle: Per page
 date: 2024-02-01T14:56:36.163Z
 thumbnail: /images/uploads/marketing-1.png
 price: $200
+price_content:
+  - description: Осметируем работы и предложим комиссию в соответствии с вашими задачами
+  - description: |
+      Разработаем необходимые креативы
+  - description: |
+      Запустим РК с нуля или перенесем РК от прошлого подрядчика
+  - description: |
+      Еженедельная аналитика результата с генерацией гипотез на рост
+steps:
+  - description: |
+      Вы оставляете заявку
+  - description: |
+      Мы изучаем бизнес, погружаемся в продукт
+  - description: |
+      Переносим старые РК, отсекая неэффективные
+  - description: |
+      Анализируем результат, проверяем гипотезы
 features:
   - All limited links
   - Chat support
