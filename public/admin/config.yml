@@ -100,12 +100,6 @@ collections:
             widget: "select"
             options: ["primary", "secondary"]
             default: "secondary"
-          - label: "Related Widget"
-            name: "related_widget"
-            widget: "relation"
-            collection: "portfolio"
-            search_fields: ["name"]
-            value_field: "name"
     - label: "[Widgets]"
       name: "widgets"
       files:
