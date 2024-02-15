@@ -12,7 +12,8 @@ thumbnail: /images/uploads/marketing-1.png
 price: $200
 hero_links:
   - label: Заказать
-    link: ""
+    link: /
+    CTA: true
 price_content:
   - description: Осметируем работы и предложим комиссию в соответствии с вашими задачами
   - description: |
