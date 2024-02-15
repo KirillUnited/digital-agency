@@ -83,7 +83,7 @@ collections:
             name: "hero_links"
             widget: "list"
             fields:
-                - { label: "CTA", name: "CTA", widget: "boolen" }
+                - { label: "CTA", name: "CTA", widget: "boolean" }
                 - { label: "Label", name: "label", widget: "string" }
                 - { label: "Link", name: "link", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
