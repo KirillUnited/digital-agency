@@ -44,14 +44,14 @@ const Hero = (
                                 links.map(({ CTA, label, link }) => {
                                     if (CTA) {
                                         return (
-                                            <Button asChild className='w-full sm:w-fit'>
+                                            <Button key={label} asChild className='w-full sm:w-fit'>
                                                 <Link href={`${link}`}>{label}</Link>
                                             </Button>
                                         )
 
                                     }
                                     return (
-                                        <Link
+                                        <Link key={label}
                                             href={`${link}`}
                                             className='link text-foregroundSecondary hover:text-foregroundSecondary/70'
                                         >
