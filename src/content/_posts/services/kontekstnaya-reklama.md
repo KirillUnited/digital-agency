@@ -10,6 +10,9 @@ subtitle: Per page
 date: 2024-02-01T14:56:36.163Z
 thumbnail: /images/uploads/marketing-1.png
 price: $200
+hero_links:
+  - label: Заказать
+    link: ""
 price_content:
   - description: Осметируем работы и предложим комиссию в соответствии с вашими задачами
   - description: |
@@ -28,10 +31,9 @@ steps:
   - description: |
       Анализируем результат, проверяем гипотезы
 features:
-  - All limited links
-  - Chat support
-  - Marketing
-  - SMM
+  - Работаем с целями от лидов до ROI
+  - в 90 % случаев достигаем поставленных целей
+  - Открываем доступы в кабинеты и передаем РК после окончания
 variant: secondary
 ---
 ## ЗАЧЕМ НУЖНА КОНТЕКСТНАЯ РЕКЛАМА?
