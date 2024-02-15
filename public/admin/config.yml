@@ -79,6 +79,13 @@ collections:
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Featured Image", name: "thumbnail", widget: "image" }
           - { label: "Price", name: "price", widget: "string" }
+          - label: "Hero Links"
+            name: "hero_links"
+            widget: "list"
+            fields:
+                - { label: "CTA", name: "CTA", widget: "boolen" }
+                - { label: "Label", name: "label", widget: "string" }
+                - { label: "Link", name: "link", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - label: "Что входит в цену"
             name: "price_content"
@@ -104,6 +111,9 @@ collections:
                     "webflow",
                     "Marketing",
                     "SMM",
+                    "Работаем с целями от лидов до ROI",
+                    "в 90 % случаев достигаем поставленных целей",
+                    "Открываем доступы в кабинеты и передаем РК после окончания",
                 ]
           - label: "Variant"
             name: "variant"

@@ -6,11 +6,29 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { site } from '@/content'
 
-const Hero = () => {
-    const title = site.home?.hero?.title;
-    const description = site.home?.hero?.description;
-    const image = site.home?.hero?.image;
+const siteTitle = site.home?.hero?.title;
+const siteDescription = site.home?.hero?.description;
+const siteImage = site.home?.hero?.image;
 
+type HeroLinksProps = {
+    CTA?: boolean,
+    label?: string,
+    link?: string
+}
+export interface HeroProps {
+    title?: string,
+    description?: string,
+    image?: string,
+    links?: Array<HeroLinksProps>
+}
+
+const Hero = (
+    {
+        title = siteTitle,
+        description = siteDescription,
+        image = siteImage,
+        links = []
+    }: HeroProps) => {
     return (
         <section className={`section ${styles.section}`}>
             <div className={`container ${styles.container}`}>
@@ -19,12 +37,31 @@ const Hero = () => {
                     <p className="paragraph text-foregroundSecondary/70">
                         {description}
                     </p>
-                    <div className={`${styles.footer}`}>
-                        <Button asChild className='w-full sm:w-fit'>
-                            <Link href={'/portfolio'}>Портфолио</Link>
-                        </Button>
-                        <Link href={'/pricing'} className='link text-foregroundSecondary hover:text-foregroundSecondary/70'>Подробнее <MoveRight /></Link>
-                    </div>
+                    {
+                        links?.length > 0 &&
+                        <div className={`${styles.footer}`}>
+                            {
+                                links.map(({ CTA, label, link }) => {
+                                    if (CTA) {
+                                        return (
+                                            <Button asChild className='w-full sm:w-fit'>
+                                                <Link href={`${link}`}>{label}</Link>
+                                            </Button>
+                                        )
+
+                                    }
+                                    return (
+                                        <Link
+                                            href={`${link}`}
+                                            className='link text-foregroundSecondary hover:text-foregroundSecondary/70'
+                                        >
+                                            {label} <MoveRight />
+                                        </Link>
+                                    )
+                                })
+                            }
+                        </div>
+                    }
                 </div>
                 <Image
                     src={image}

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
 import ProjectKeys from '@/components/shared/Projects/ProjectKeys';
-import ProjectHero from '@/components/shared/Projects/ProjectHero';
+import Hero from '@/components/shared/Hero/Hero';
 
 type Props = {
     params: { slug: string }
@@ -30,7 +30,11 @@ const ServicePage = async ({ params }: Props) => {
 
     return (
         <>
-            <ProjectHero project={post} />
+            <Hero
+                title={post?.title}
+                description={post?.description}
+                image={post?.thumbnail}
+            />
             <section className='section'>
                 <div className="container max-w-4xl">
                     <article className='prose'>
