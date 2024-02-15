@@ -10,7 +10,7 @@ const siteTitle = site.home?.hero?.title;
 const siteDescription = site.home?.hero?.description;
 const siteImage = site.home?.hero?.image;
 
-type HeroLinksProps = {
+export type HeroLinkProps = {
     CTA?: boolean,
     label?: string,
     link?: string
@@ -19,7 +19,7 @@ export interface HeroProps {
     title?: string,
     description?: string,
     image?: string,
-    links?: Array<HeroLinksProps>
+    links?: Array<HeroLinkProps>
 }
 
 const Hero = (

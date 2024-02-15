@@ -31,9 +31,8 @@ const ServicePage = async ({ params }: Props) => {
     return (
         <>
             <Hero
-                title={post?.title}
-                description={post?.description}
-                image={post?.thumbnail}
+                {...post}
+                links={post?.hero_links}
             />
             <section className='section'>
                 <div className="container max-w-4xl">
