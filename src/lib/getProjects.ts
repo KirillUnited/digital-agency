@@ -17,6 +17,7 @@ export type ProjectType = {
     keywords?: string[]
     features?: string[]
     body: string
+    steps?: Array<{description:string}>
 }
 // `cache` is a React 18 feature that allows you to cache a function for the lifetime of a request.
 // this means getPosts() will only be called once per page build, even though we may call it multiple times

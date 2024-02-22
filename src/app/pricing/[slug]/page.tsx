@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
 import ProjectKeys from '@/components/shared/Projects/ProjectKeys';
 import Hero from '@/components/shared/Hero/Hero';
+import ProcessSteps from './components/ProcessSteps';
 
 type Props = {
     params: { slug: string }
@@ -36,14 +37,18 @@ const ServicePage = async ({ params }: Props) => {
                 links={post?.hero_links}
             />
             <section className='section'>
-                <div className="container max-w-4xl">
+                <div className="container">
                     <article className='prose'>
                         <ReactMarkdown>{post?.body}</ReactMarkdown>
                     </article>
                 </div>
             </section>
-            <section className='bg-background'>
-                <div className="container max-w-5xl">
+            {
+                post?.steps &&
+                <ProcessSteps {...post} />
+            }
+            <section className='section pb-0 bg-background'>
+                <div className="container">
                     <ProjectKeys title='Тэги' keywords={post?.features} />
                 </div>
             </section>

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 type StepsCardType = {
-    step: string,
+    step: string | number,
     title: string,
     description?: string
 }
