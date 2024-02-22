@@ -32,6 +32,7 @@ const ServicePage = async ({ params }: Props) => {
         <>
             <Hero
                 {...post}
+                image={post?.thumbnail}
                 links={post?.hero_links}
             />
             <section className='section'>
