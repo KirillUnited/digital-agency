@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 import { cva } from 'class-variance-authority'
 
 const filterItemStyle = cva(
-    "leading-6",
+    "leading-6 whitespace-nowrap",
     {
         variants: {
             variant: {
