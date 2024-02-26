@@ -7,6 +7,8 @@ import { ProjectType } from '@/lib/getProjects'
 import React from 'react'
 
 export default function ProcessSteps({ ...items }: ProjectType) {
+    if (!items.steps?.length) return null;
+
     return (
         <section className='section bg-background-accent'>
             <div className="container">
