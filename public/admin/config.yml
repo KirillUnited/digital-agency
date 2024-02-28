@@ -120,6 +120,18 @@ collections:
             widget: "select"
             options: ["primary", "secondary"]
             default: "secondary"
+    - label: "Posts"
+      label_singular: "Post"
+      name: "posts"
+      folder: "src/content/_posts/posts"
+      create: true      
+      slug: "{{fields.slug}}"
+      fields:
+          - { label: "Slug (Translit)", name: "slug", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Featured Image", name: "thumbnail", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
     - label: "[Widgets]"
       name: "widgets"
       files:
