@@ -33,7 +33,7 @@ const PostTemplate = async ({ params }: Props) => {
                 description={post?.description}
                 thumbnail={post?.thumbnail}
             />
-            <section className='section'>
+            <section className='section pt-0'>
                 <div className="container max-w-4xl">
                     <article className='prose'>
                         <ReactMarkdown>{post?.body}</ReactMarkdown>
