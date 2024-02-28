@@ -27,7 +27,7 @@ export default function Projects({ projects }: Props) {
             </section>
             <section className="section">
                 <div className="container">
-                    <ul className="grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-8 gap-y-12 lg:gap-y-16">
+                    <ul className="grid grid-cols-[repeat(auto-fill,_minmax(min(400px,_100%),_1fr))] gap-8 gap-y-12 lg:gap-y-16">
                         {
                             filteredProjectsByService.map(({ ...data }: ProjectType, index: number) => {
                                 return (
