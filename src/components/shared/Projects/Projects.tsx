@@ -1,23 +1,35 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import ProjectCard from './ProjectCard';
-import getProjects from '@/lib/getProjects';
 import ProjectsFilter from './ProjectsFilter';
+import { ProjectType } from '@/lib/getProjects';
 
-export default async function Projects() {
-    const projects = await getProjects();
+type Props = {
+    projects: Array<ProjectType>
+}
+
+export default function Projects({ projects }: Props) {
+    const [selectedFilter, setSelectedFilter] = useState('');
+    const filteredProjectsByService = selectedFilter
+        ? projects.filter((project: ProjectType) => project?.service?.includes(selectedFilter))
+        : projects;
 
     return (
         <>
             <section className="section pb-0">
                 <div className="container">
-                    <ProjectsFilter />
+                    <ProjectsFilter
+                        selectedFilter={selectedFilter}
+                        onSelect={setSelectedFilter}
+                        projects={projects}
+                    />
                 </div>
             </section>
             <section className="section">
                 <div className="container">
                     <ul className="grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-8 gap-y-12 lg:gap-y-16">
                         {
-                            projects.map(({ ...data }, index) => {
+                            filteredProjectsByService.map(({ ...data }: ProjectType, index: number) => {
                                 return (
                                     <li key={`${data.title}-${index}`}>
                                         <ProjectCard {...data} />

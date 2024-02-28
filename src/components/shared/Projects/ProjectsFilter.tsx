@@ -1,15 +1,19 @@
 'use client'
 import { badgeVariants } from '@/components/ui/badge'
-import { navbar, pricing } from '@/content'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
 import React from 'react'
 import styles from './styles.module.css'
-import { usePathname } from 'next/navigation'
 import { cva } from 'class-variance-authority'
+import { ProjectType } from '@/lib/getProjects'
+
+type Props = {
+    selectedFilter: string,
+    onSelect(filter: string): void,
+    projects: Array<ProjectType>
+}
 
 const filterItemStyle = cva(
-    "leading-6 whitespace-nowrap",
+    "leading-6 whitespace-nowrap cursor-pointer transition-all duration-300",
     {
         variants: {
             variant: {
@@ -20,32 +24,35 @@ const filterItemStyle = cva(
     }
 )
 
-export default function ProjectsFilter() {
-    const pathname = usePathname();
-    const PROJECTS_ROUTE = navbar.filter((item) => item.label === 'Портфолио')[0].route;
-    const allFilters = pathname === PROJECTS_ROUTE;
+export default function ProjectsFilter({ selectedFilter, onSelect, projects }: Props) {
+    const splitServices = projects?.flatMap((project) => project?.service);
+    const services = Array.from(new Set(splitServices));
 
     return (
         <div className={cn(styles['filter'])}>
             <ul className={cn(styles['filter-list'])}>
                 <li>
-                    <Link href={`${PROJECTS_ROUTE}`} className={filterItemStyle({
-                        variant: allFilters ? "primary" : "secondary"
-                    })}>
+                    <a className={filterItemStyle({
+                        variant: !selectedFilter ? "primary" : "secondary"
+                    })}
+                        onClick={() => onSelect('')}
+                    >
                         Все категории
-                    </Link>
+                    </a>
                 </li>
                 {
-                    pricing?.map((item) => {
-                        const activeFilter = pathname === item.link;
+                    services?.map((item, i) => {
+                        const activeFilter = selectedFilter === item;
 
                         return (
-                            <li key={item.title} className=''>
-                                <Link href={`${item.link}`} className={filterItemStyle({
+                            <li key={i} className=''>
+                                <a className={filterItemStyle({
                                     variant: activeFilter ? "primary" : "secondary"
-                                })}>
-                                    {item.title}
-                                </Link>
+                                })}
+                                    onClick={() => onSelect(`${item}`)}
+                                >
+                                    {`${item}`}
+                                </a>
                             </li>
                         )
                     })
