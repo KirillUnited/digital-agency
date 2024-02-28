@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import ProjectCard from './ProjectCard';
 import ProjectsFilter from './ProjectsFilter';
 import { ProjectType } from '@/lib/getProjects';
+import { cn } from '@/lib/utils';
+import styles from './styles.module.css'
 
 type Props = {
-    projects: (ProjectType|null)[]
+    projects: (ProjectType | null)[]
 }
 
 export default function Projects({ projects = [] }: Props) {
@@ -27,7 +29,7 @@ export default function Projects({ projects = [] }: Props) {
             </section>
             <section className="section">
                 <div className="container">
-                    <ul className="grid grid-cols-[repeat(auto-fill,_minmax(min(400px,_100%),_1fr))] gap-8 gap-y-12 lg:gap-y-16">
+                    <ul className={cn("grid", styles.grid)}>
                         {
                             filteredProjectsByService?.map(({ ...data }, index: number) => {
                                 return (

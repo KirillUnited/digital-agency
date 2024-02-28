@@ -16,7 +16,7 @@ const FeaturedProjects = async () => {
           <h2 className="heading-2">Наши проекты</h2>
           <Link href={'/portfolio'} className='link text-link-secondary hover:text-link-secondary/70'>Смотреть ещё <MoveRightIcon /></Link>
         </div>
-        <div className={`flex flex-col lg:grid gap-4 lg:gap-8 ${styles.grid}`}>
+        <div className={`flex flex-col lg:grid gap-4 lg:gap-8 ${styles['featured-grid']}`}>
           {
             shownProjects.map(({...data}, index) => {
               return (
