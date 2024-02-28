@@ -2,6 +2,7 @@ import Projects from '@/components/shared/Projects/Projects';
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
 import ProjectsHeader from '@/app/portfolio/components/ProjectsHeader';
 import React from 'react'
+import getProjects, { ProjectType } from '@/lib/getProjects';
 
 export async function generateMetadata() {
     return {
@@ -9,12 +10,14 @@ export async function generateMetadata() {
     }
 }
 
-const Portfolio = () => {
+const Portfolio = async () => {
+    const projects = await getProjects();
+
     return (
         <>
-            <ProjectsHeader/>
-            <Projects/>
-            <ProjectsFooter/>
+            <ProjectsHeader />
+            {projects && <Projects projects={projects} />}
+            <ProjectsFooter />
         </>
     )
 }
