@@ -9,7 +9,7 @@ import { ProjectType } from '@/lib/getProjects'
 type Props = {
     selectedFilter: string,
     onSelect(filter: string): void,
-    projects: Array<ProjectType>
+    projects: (ProjectType|null)[]
 }
 
 const filterItemStyle = cva(

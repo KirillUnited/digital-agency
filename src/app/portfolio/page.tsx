@@ -2,7 +2,7 @@ import Projects from '@/components/shared/Projects/Projects';
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
 import ProjectsHeader from '@/app/portfolio/components/ProjectsHeader';
 import React from 'react'
-import getProjects from '@/lib/getProjects';
+import getProjects, { ProjectType } from '@/lib/getProjects';
 
 export async function generateMetadata() {
     return {
@@ -16,7 +16,7 @@ const Portfolio = async () => {
     return (
         <>
             <ProjectsHeader />
-            <Projects projects={projects} />
+            {projects && <Projects projects={projects} />}
             <ProjectsFooter />
         </>
     )

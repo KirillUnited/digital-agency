@@ -5,13 +5,13 @@ import ProjectsFilter from './ProjectsFilter';
 import { ProjectType } from '@/lib/getProjects';
 
 type Props = {
-    projects: Array<ProjectType>
+    projects: (ProjectType|null)[]
 }
 
-export default function Projects({ projects }: Props) {
+export default function Projects({ projects = [] }: Props) {
     const [selectedFilter, setSelectedFilter] = useState('');
     const filteredProjectsByService = selectedFilter
-        ? projects.filter((project: ProjectType) => project?.service?.includes(selectedFilter))
+        ? projects?.filter((project) => project?.service?.includes(selectedFilter))
         : projects;
 
     return (
@@ -21,7 +21,7 @@ export default function Projects({ projects }: Props) {
                     <ProjectsFilter
                         selectedFilter={selectedFilter}
                         onSelect={setSelectedFilter}
-                        projects={projects}
+                        projects={projects || []}
                     />
                 </div>
             </section>
@@ -29,7 +29,7 @@ export default function Projects({ projects }: Props) {
                 <div className="container">
                     <ul className="grid grid-cols-[repeat(auto-fill,_minmax(min(400px,_100%),_1fr))] gap-8 gap-y-12 lg:gap-y-16">
                         {
-                            filteredProjectsByService.map(({ ...data }: ProjectType, index: number) => {
+                            filteredProjectsByService?.map(({ ...data }, index: number) => {
                                 return (
                                     <li key={`${data.title}-${index}`}>
                                         <ProjectCard {...data} />
