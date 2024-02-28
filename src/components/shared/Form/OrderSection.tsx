@@ -50,6 +50,7 @@ export default async function OrderSection() {
                         {/* <Link href={`/about`} className={cn('link', styles.link)}>
                             Свяжитесь с нами <MoveRightIcon />
                         </Link> */}
+                        <p className='text-foregroundSecondary/70 text-sm'>Нажимая кнопку, ты разрешаешь обработку персональных данных и соглашаешься с <Link href={`/posts/privacy-policy`} className={cn('link inline', styles.link)}>политикой конфиденциальности.</Link></p>
                     </div>
                 </div>
             </div>
