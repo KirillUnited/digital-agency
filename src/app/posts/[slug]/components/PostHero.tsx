@@ -11,7 +11,7 @@ type Props = {
 export default function PostHero({ title, subtitle, description, thumbnail }: Props) {
 	return (
 		<section className="section">
-			<div className="container">
+			<div className="container max-w-7xl">
 				<div className='heading max-w-3xl'>
 					{subtitle && <p className='paragraph text-foreground/70'>{subtitle}</p>}
 					<h2 className="heading-2">{title}</h2>
@@ -23,7 +23,7 @@ export default function PostHero({ title, subtitle, description, thumbnail }: Pr
 						alt={`${title}`}
 						width={1280}
 						height={477}
-						className='w-full mt-16'
+						className='w-full mt-8 lg:mt-16 aspect-[1280/477] object-cover'
 					/>
 				}
 			</div>
