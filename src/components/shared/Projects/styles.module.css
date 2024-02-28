@@ -1,10 +1,13 @@
-.grid {
+.featured-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 284px);
 }
-.grid>:nth-child(1){
+.featured-grid>:nth-child(1){
     grid-column: span 2;
     grid-row: span 2;
+}
+.grid {
+    @apply grid-cols-[repeat(auto-fill,_minmax(min(400px,_100%),_1fr))] gap-8 gap-y-12 lg:gap-y-16;
 }
 .card {
     @apply relative h-60 lg:h-full;
@@ -24,7 +27,7 @@
 .card-content {
     @apply p-8 overflow-hidden;
 }
-.grid>:nth-child(1) .card-content{
+.featured-grid>:nth-child(1) .card-content{
     @apply lg:h-1/2;
 }
 .card-link {
