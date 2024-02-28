@@ -129,8 +129,8 @@ collections:
       fields:
           - { label: "Slug (Translit)", name: "slug", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Featured Image", name: "thumbnail", widget: "image" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
     - label: "[Widgets]"
       name: "widgets"
