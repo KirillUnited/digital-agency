@@ -17,7 +17,7 @@ features:
   - SMM
   - Optimize hashtags
   - Chat support
-variant: primary
+variant: secondary
 ---
 # Таргетированная реклама
 
