@@ -23,7 +23,7 @@ export default function PostHero({ title, subtitle, description, thumbnail }: Pr
 						alt={`${title}`}
 						width={1280}
 						height={477}
-						className='w-full'
+						className='w-full mt-16'
 					/>
 				}
 			</div>
