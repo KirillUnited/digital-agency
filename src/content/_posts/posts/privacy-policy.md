@@ -3,7 +3,7 @@ slug: privacy-policy
 title: Privacy Policy
 description: "When you’re ready to go beyond prototyping in Figma, Webflow’s
   ready to help you bring your "
-thumbnail: ""
+thumbnail: /images/uploads/post.jpg
 ---
 ## Lorem ipsum dolor.
 
