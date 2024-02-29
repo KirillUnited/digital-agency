@@ -1,0 +1,9 @@
+.root {
+    @apply grid grid-cols-[auto,_1fr] gap-4 rounded-[12px] h-full p-6 from-slate-700 bg-gradient-to-r text-white lg:text-lg
+}
+.icon-wrap {
+    @apply w-10 h-10 grid place-items-center rounded-full bg-primary;
+}
+.icon {
+    @apply text-foreground;
+}

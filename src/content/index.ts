@@ -116,7 +116,7 @@ export const navbar = [
     },
     {
         label: 'Услуги',
-        route: '/pricing',
+        route: '/services',
         menu: 'categories'
     },
     {

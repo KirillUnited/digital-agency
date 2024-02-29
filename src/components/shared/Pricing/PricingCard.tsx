@@ -67,7 +67,7 @@ const PricingCard = ({ price, title, description, subtitle, variant, features, s
                     </DialogTrigger>
                     <CTAModal />
                 </Dialog>
-                {slug && <Link href={`pricing/${slug}`} className={cn('link',
+                {slug && <Link href={`services/${slug}`} className={cn('link',
                     { 'text-foregroundSecondary hover:text-foregroundSecondary/70': variant === 'primary' }
                 )}>Подробнее <MoveRightIcon /></Link>}
             </div>
