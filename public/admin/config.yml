@@ -190,11 +190,7 @@ collections:
                   fields:
                       - { label: Title, name: title, widget: string }
                       - { label: Subtitle, name: subtitle, widget: string }
-                      - {
-                            label: Description,
-                            name: description,
-                            widget: text,
-                        }
+                      - { label: Description, name: description, widget: text }
                       - { label: "Image", name: "image", widget: "image" }
           - label: "Article image sections"
             name: "article_image_sections"
@@ -206,23 +202,21 @@ collections:
                   fields:
                       - { label: Title, name: title, widget: string }
                       - { label: Subtitle, name: subtitle, widget: string }
-                      - {
-                            label: Description,
-                            name: description,
-                            widget: text,
-                        }
+                      - { label: Description, name: description, widget: text }
                       - { label: "Image", name: "image", widget: "image" }
                 - label: "Marketing columns"
                   name: "marketing_cols"
                   widget: object
                   fields:
                       - { label: Title, name: title, widget: string }
-                      - {
-                            label: Content,
-                            name: content,
-                            widget: list,
-                            fields:
-                                - { label: "Title", name: "title", widget: "string" }
-                                - { label: "Description", name: "description", widget: "text" }
-                        }
+                      - label: Content
+                        name: content
+                        widget: list
+                        fields:
+                            - { label: Title, name: title, widget: string }
+                            - {
+                                  label: Description,
+                                  name: description,
+                                  widget: text,
+                              }
                       - { label: "Image", name: "image", widget: "image" }
