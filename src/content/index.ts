@@ -112,12 +112,12 @@ export const navbar = [
     {
         label: 'Портфолио',
         route: '/portfolio',
-        menu: 'categories'
+        menu: 'portfolio'
     },
     {
         label: 'Услуги',
         route: '/services',
-        menu: 'categories'
+        menu: 'services'
     },
     {
         label: 'Технологии',

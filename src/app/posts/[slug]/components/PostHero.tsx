@@ -19,6 +19,7 @@ export default function PostHero({ title, subtitle, description, thumbnail }: Pr
 				</div>
 				{thumbnail &&
 					<Image
+						priority
 						src={`${thumbnail}`}
 						alt={`${title}`}
 						width={1280}

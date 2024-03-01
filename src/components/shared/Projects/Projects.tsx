@@ -5,6 +5,7 @@ import ProjectsFilter from './ProjectsFilter';
 import { ProjectType } from '@/lib/getProjects';
 import { cn } from '@/lib/utils';
 import styles from './styles.module.css'
+import Loader from '../Loader';
 
 type Props = {
     projects: (ProjectType | null)[]
@@ -12,17 +13,26 @@ type Props = {
 
 export default function Projects({ projects = [] }: Props) {
     const [selectedFilter, setSelectedFilter] = useState('');
+    const [loading, setLoading] = useState(false);
     const filteredProjectsByService = selectedFilter
         ? projects?.filter((project) => project?.service?.includes(selectedFilter))
         : projects;
+    const handleSelect = (filter: string) => {
+        setLoading(true);
+        setTimeout(() => {
+            setSelectedFilter(filter);
+            setLoading(false);
+        }, 600);
+    }
 
     return (
         <>
+            {loading && <Loader />}
             <section className="section pb-0">
                 <div className="container">
                     <ProjectsFilter
                         selectedFilter={selectedFilter}
-                        onSelect={setSelectedFilter}
+                        onSelect={handleSelect}
                         projects={projects || []}
                     />
                 </div>
