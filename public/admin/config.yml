@@ -178,7 +178,9 @@ collections:
       name: "about"
       folder: "src/content/_posts/about"
       create: true
+      slug: "{{fields.slug}}"
       fields:
+          - { label: "Slug (Translit)", name: "slug", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
           - label: "Hero Section"
             name: "hero_sections"
