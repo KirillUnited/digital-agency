@@ -124,14 +124,29 @@ collections:
       label_singular: "Post"
       name: "posts"
       folder: "src/content/_posts/posts"
-      create: true      
+      create: true
       slug: "{{fields.slug}}"
       fields:
           - { label: "Slug (Translit)", name: "slug", widget: "string" }
-          - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+          - {
+                label: "Sub Title",
+                name: "subtitle",
+                widget: "string",
+                required: false,
+            }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text", required: false }
-          - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+          - {
+                label: "Description",
+                name: "description",
+                widget: "text",
+                required: false,
+            }
+          - {
+                label: "Featured Image",
+                name: "thumbnail",
+                widget: "image",
+                required: false,
+            }
           - { label: "Body", name: "body", widget: "markdown" }
     - label: "[Widgets]"
       name: "widgets"
@@ -159,3 +174,49 @@ collections:
                       name: "form_description",
                       widget: "text",
                   }
+    - label: "About"
+      name: "about"
+      folder: "src/content/_posts/about"
+      create: true
+      fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Hero Section"
+            name: "hero_sections"
+            widget: "list"
+            types:
+                - label: "Marketing"
+                  name: "marketing"
+                  widget: object
+                  fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: Subtitle, name: subtitle, widget: string }
+                      - { label: Description, name: description, widget: text }
+                      - { label: "Image", name: "image", widget: "image" }
+          - label: "Article image sections"
+            name: "article_image_sections"
+            widget: "list"
+            types:
+                - label: "Marketing row"
+                  name: "marketing_row"
+                  widget: object
+                  fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: Subtitle, name: subtitle, widget: string }
+                      - { label: Description, name: description, widget: text }
+                      - { label: "Image", name: "image", widget: "image" }
+                - label: "Marketing columns"
+                  name: "marketing_cols"
+                  widget: object
+                  fields:
+                      - { label: Title, name: title, widget: string }
+                      - label: Content
+                        name: content
+                        widget: list
+                        fields:
+                            - { label: Title, name: title, widget: string }
+                            - {
+                                  label: Description,
+                                  name: description,
+                                  widget: text,
+                              }
+                      - { label: "Image", name: "image", widget: "image" }
