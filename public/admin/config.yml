@@ -174,9 +174,9 @@ collections:
                 required: false,
             }
           - { label: "Body", name: "body", widget: "markdown" }
-    - label: "About"
-      name: "about"
-      folder: "src/content/_collections/about"
+    - label: "Articles"
+      name: "articles"
+      folder: "src/content/_collections/articles"
       create: true
       slug: "{{fields.slug}}"
       fields:
