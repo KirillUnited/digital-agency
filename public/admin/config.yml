@@ -4,6 +4,32 @@ backend:
 media_folder: public/images/uploads
 public_folder: /images/uploads
 collections:
+    - label: "[Widgets]"
+      name: "widgets"
+      files:
+          - label: "Frequently asked questions"
+            name: "faq"
+            file: "src/content/widgets/faq.md"
+            fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - label: "Questions"
+                  name: "content"
+                  widget: list
+                  fields:
+                      - { label: "Question", name: "title", widget: "string" }
+                      - { label: "Answer", name: "description", widget: "text" }
+          - label: "Секция с формой для связи"
+            name: "order_section"
+            file: "src/content/widgets/order-section.md"
+            fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Form title", name: "form_title", widget: "string" }
+                - {
+                      label: "Form description",
+                      name: "form_description",
+                      widget: "text",
+                  }
     - label: "Portfolio"
       label_singular: "Case"
       name: "portfolio"
@@ -148,32 +174,6 @@ collections:
                 required: false,
             }
           - { label: "Body", name: "body", widget: "markdown" }
-    - label: "[Widgets]"
-      name: "widgets"
-      files:
-          - label: "Frequently asked questions"
-            name: "faq"
-            file: "src/content/widgets/faq.md"
-            fields:
-                - { label: "Title", name: "title", widget: "string" }
-                - label: "Questions"
-                  name: "content"
-                  widget: list
-                  fields:
-                      - { label: "Question", name: "title", widget: "string" }
-                      - { label: "Answer", name: "description", widget: "text" }
-          - label: "Секция с формой для связи"
-            name: "order_section"
-            file: "src/content/widgets/order-section.md"
-            fields:
-                - { label: "Title", name: "title", widget: "string" }
-                - { label: "Description", name: "description", widget: "text" }
-                - { label: "Form title", name: "form_title", widget: "string" }
-                - {
-                      label: "Form description",
-                      name: "form_description",
-                      widget: "text",
-                  }
     - label: "About"
       name: "about"
       folder: "src/content/_posts/about"
