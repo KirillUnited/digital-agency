@@ -9,7 +9,7 @@ import Hero from '@/components/shared/Hero/Hero'
 import AboutUs from '../about/components/AboutUs/AboutUs'
 
 export async function generateMetadata() {
-    const data = await getPost('features', 'about');
+    const data = await getPost('features', 'articles');
 
     return {
         title: data?.title
@@ -17,7 +17,7 @@ export async function generateMetadata() {
 }
 
 export default async function FeaturesPage() {
-    const { hero_sections, article_image_sections }: any = await getPost('features', 'about');
+    const { hero_sections, article_image_sections }: any = await getPost('features', 'articles');
     const marketing_cols = article_image_sections.filter((section: any) => section.type === 'marketing_cols');
     const marketing_row = article_image_sections.filter((section: any) => section.type === 'marketing_row');
 

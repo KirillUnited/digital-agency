@@ -23,7 +23,7 @@ export type ProjectType = {
 // this means getPosts() will only be called once per page build, even though we may call it multiple times
 // when rendering the page.
 export const getProjects = cache(async () => {
-    const PROJECTS_PATH = './src/content/_posts/portfolio';
+    const PROJECTS_PATH = './src/content/_collections/portfolio';
     const projects = await fs.readdir(`${PROJECTS_PATH}`);
 
     return Promise.all(
@@ -50,7 +50,7 @@ export async function getProject(slug: string) {
 
 // TODO: remove hardcode, do refact getProjects() to common getPosts() & getPost()
 export const getPosts = cache(async (type: string) => {
-    const PATH = `./src/content/_posts/${type}`;
+    const PATH = `./src/content/_collections/${type}`;
     const posts = await fs.readdir(`${PATH}`);
 
     return Promise.all(

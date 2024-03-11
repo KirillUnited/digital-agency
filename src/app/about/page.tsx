@@ -6,7 +6,7 @@ import { ProjectType, getPost } from '@/lib/getProjects';
 import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard';
 
 export async function generateMetadata() {
-    const data = await getPost('about', 'about');
+    const data = await getPost('about', 'articles');
 
     return {
         title: data?.title,
@@ -22,8 +22,8 @@ interface Props extends ProjectType {
     }>
 }
 
-export default async function About() {
-    const { hero_sections, article_image_sections }: any = await getPost('about', 'about');
+export default async function AboutPage() {
+    const { hero_sections, article_image_sections }: any = await getPost('about', 'articles');
     const marketing_cols = article_image_sections.filter((section: any) => section.type === 'marketing_cols');
     const marketing_row = article_image_sections.filter((section: any) => section.type === 'marketing_row');
 
