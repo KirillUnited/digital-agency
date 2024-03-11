@@ -3,12 +3,13 @@ import { site } from '@/content'
 import React from 'react'
 import styles from './styles.module.css'
 
-export default function Hero() {
-    const title = site.about?.hero?.title
-    const subtitle = site.about?.hero?.pageTitle
-    const desccription = site.about?.hero?.description
-    const image = site.about?.hero?.image
-
+type Props = {
+    title: string,
+    subtitle?: string,
+    desccription?: string,
+    image?: string
+}
+export default function Hero({ title, subtitle, desccription, image }: Props) {
     return (
         <section className="section">
             <div className="container">

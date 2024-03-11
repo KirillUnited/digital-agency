@@ -14,7 +14,7 @@ const hero_links = [
   {
     CTA: false,
     label: 'Подробнее',
-    link: '/pricing'
+    link: '/services'
   }
 ]
 

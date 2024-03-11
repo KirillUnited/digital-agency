@@ -2,11 +2,13 @@ import { site } from '@/content'
 import Image from 'next/image'
 import React from 'react'
 
-export default function AboutUs() {
-    const title = site.about?.aboutus?.title;
-    const content = site.about?.aboutus?.content;
-    const image = site.about?.aboutus?.image;
+type Props = {
+    title: string,
+    content?: Array<{ title: string, description: string }>,
+    image?: string
+}
 
+export default function AboutUs({title, content, image}:Props) {
     return (
         <section className='bg-background'>
             <div className="container">
@@ -14,7 +16,7 @@ export default function AboutUs() {
                     <p className='font-medium'>{title}</p>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-14">
                         {
-                            content.map(({ title, description }) => {
+                            content?.map(({ title, description }) => {
                                 return (
                                     <div key={title} className="flex flex-col gap-4">
                                         <h3 className='heading-3'>{title}</h3>
