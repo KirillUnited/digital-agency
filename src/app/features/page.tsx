@@ -38,17 +38,19 @@ export default async function FeaturesPage() {
                 })
             )
             }
-            <div className="marketing-grid">
-                {
-                    marketing_row.map((item: MarketingCardProps) => {
-                        return (
-                            <section key={item.title} className={cn("section", styles.section)}>
-                                <MarketingCard {...item} className='container' />
-                            </section>
-                        )
-                    })
-                }
-            </div>
+            {marketing_row.length > 0 &&
+                <div className="marketing-grid">
+                    {
+                        marketing_row.map((item: MarketingCardProps) => {
+                            return (
+                                <section key={item.title} className={cn("section", styles.section)}>
+                                    <MarketingCard {...item} className='container' />
+                                </section>
+                            )
+                        })
+                    }
+                </div>
+            }
             <Faq />
         </>
     )
