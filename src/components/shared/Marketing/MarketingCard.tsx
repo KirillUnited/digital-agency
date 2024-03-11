@@ -5,7 +5,7 @@ import React from 'react'
 import styles from './styles.module.css';
 import { cn } from '@/lib/utils';
 
-interface MarketingCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface MarketingCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     title: string | undefined,
     description: string | undefined,
     subtitle?: string,
@@ -23,7 +23,7 @@ const MarketingCard = ({ subtitle, title, description, image, link, className, i
         )}>
             {
                 image &&
-                <Image priority src={`${image}`} width={515} height={336} alt={title || 'Digital Agency'} quality={60} className={cn(styles["card-image"],
+                <Image src={`${image}`} width={515} height={336} alt={title || 'Digital Agency'} quality={60} className={cn(styles["card-image"],
                     {
                         [styles["card-image-contain"]]: imageFit === 'contain'
                     }
