@@ -20,7 +20,7 @@ const Hero = () => {
                     </p>
                     <div className={`${styles.footer}`}>
                         <Button asChild className='w-full sm:w-fit'>
-                            <Link href={'/pricing'}>Услуги</Link>
+                            <Link href={'/services'}>Услуги</Link>
                         </Button>
                     </div>
                 </div>
