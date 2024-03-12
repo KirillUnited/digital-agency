@@ -2,7 +2,7 @@ import { getPost, getPosts } from '@/lib/getProjects'
 import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
-import ProjectKeys from '@/components/shared/Projects/ProjectKeys';
+import ProjectKeys from '@/components/shared/project/project-keys';
 import Hero from '@/components/shared/hero';
 import ProcessSteps from './components/ProcessSteps';
 import ServiceFeature from '../../../components/shared/service/service-feature';

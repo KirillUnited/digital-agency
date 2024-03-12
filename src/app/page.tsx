@@ -1,6 +1,6 @@
 import Marketing from '@/components/shared/marketing'
 import Hero from '@/components/shared/hero'
-import FeaturedProjects from '@/components/shared/Projects/FeaturedProjects'
+import FeaturedProjectList from '@/components/shared/project/featured-project-list'
 import Steps from '@/components/shared/Steps/Steps'
 import Faq from '@/components/shared/faq'
 import { OrderSection } from '@/components/shared/order'
@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <Hero links={hero_links} />
       <Steps />
-      <FeaturedProjects />
+      <FeaturedProjectList />
       <Marketing />
       <Faq />
       <OrderSection />

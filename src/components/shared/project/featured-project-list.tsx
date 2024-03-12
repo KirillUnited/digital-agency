@@ -1,11 +1,11 @@
 import { MoveRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import FeaturedProjectCard from './FeaturedProjectCard'
+import FeaturedProjectCard from './featured-project-card'
 import styles from './styles.module.css'
 import getProjects from '@/lib/getProjects'
 
-const FeaturedProjects = async () => {
+const FeaturedProjectList = async () => {
   const projects = await getProjects();
   const shownProjects = projects.filter((item, index) => index < 3);
 
@@ -30,4 +30,4 @@ const FeaturedProjects = async () => {
   )
 }
 
-export default FeaturedProjects
+export default FeaturedProjectList

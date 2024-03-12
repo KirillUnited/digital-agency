@@ -24,7 +24,7 @@ const filterItemStyle = cva(
     }
 )
 
-export default function ProjectsFilter({ selectedFilter, onSelect, projects }: Props) {
+export default function ProjectListFilter({ selectedFilter, onSelect, projects }: Props) {
     const splitServices = projects?.flatMap((project) => project?.service);
     const services = Array.from(new Set(splitServices));
 

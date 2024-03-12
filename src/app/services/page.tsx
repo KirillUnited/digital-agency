@@ -5,7 +5,7 @@ import FaqAccordion from '@/components/shared/faq/faq-accordion'
 import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
 import { getPosts } from '@/lib/getProjects'
-import { SkeletonDemo } from '@/components/shared/Skeleton/SkeletonDemo'
+import { SkeletonDemo } from '@/components/shared/skeleton/skeleton-demo'
 
 export async function generateMetadata() {
     return {
