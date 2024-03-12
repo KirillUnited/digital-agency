@@ -4,6 +4,27 @@ backend:
 media_folder: public/images/uploads
 public_folder: /images/uploads
 collections:
+    - label: "[Settings]"
+      name: "settings"
+      files:
+          - label: "Navbar options"
+            name: navbar
+            file: "src/content/settings/navbar.md"
+            fields:
+                - label: Primary navigation
+                  name: primaryNav
+                  widget: list
+                  fields:
+                      - label: Label
+                        name: label
+                        widget: string
+                      - label: Page
+                        name: uri
+                        widget: relation
+                        collection: services
+                        value_field: "{{slug}}"
+                        display_fields: [title]
+                        search_fields: [title]
     - label: "[Widgets]"
       name: "widgets"
       files:
