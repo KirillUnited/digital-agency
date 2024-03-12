@@ -27,7 +27,6 @@ export default function Projects({ projects = [] }: Props) {
 
     return (
         <>
-            {loading && <Loader />}
             <section className="section pb-0">
                 <div className="container">
                     <ProjectsFilter
@@ -37,20 +36,23 @@ export default function Projects({ projects = [] }: Props) {
                     />
                 </div>
             </section>
-            <section className="section">
-                <div className="container">
-                    <ul className={cn("grid", styles.grid)}>
-                        {
-                            filteredProjectsByService?.map(({ ...data }, index: number) => {
-                                return (
-                                    <li key={`${data.title}-${index}`}>
-                                        <ProjectCard {...data} />
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
+            <section className="section relative">
+                {loading && <Loader />}
+                {!loading &&
+                    <div className="container">
+                        <ul className={cn("grid", styles.grid)}>
+                            {
+                                filteredProjectsByService?.map(({ ...data }, index: number) => {
+                                    return (
+                                        <li key={`${data.title}-${index}`}>
+                                            <ProjectCard {...data} />
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                }
             </section>
         </>
     )
