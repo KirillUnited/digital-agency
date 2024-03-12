@@ -31,7 +31,7 @@ export default function ProjectsFilter({ selectedFilter, onSelect, projects }: P
     return (
         <div className={cn(styles['filter'])}>
             <ul className={cn(styles['filter-list'])}>
-                <li>
+                <li className='px-2 sm:px-0'>
                     <a className={filterItemStyle({
                         variant: !selectedFilter ? "primary" : "secondary"
                     })}
@@ -45,7 +45,7 @@ export default function ProjectsFilter({ selectedFilter, onSelect, projects }: P
                         const activeFilter = selectedFilter === item;
 
                         return (
-                            <li key={i} className=''>
+                            <li key={i} className='px-2 sm:px-0'>
                                 <a className={filterItemStyle({
                                     variant: activeFilter ? "primary" : "secondary"
                                 })}
