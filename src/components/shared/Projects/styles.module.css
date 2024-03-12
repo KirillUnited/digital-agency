@@ -44,6 +44,6 @@
     @apply flex flex-wrap items-center justify-center gap-4 -mx-4 sm:mx-0;
 }
 .filter-list {
-    @apply flex sm:flex-wrap gap-x-8 gap-y-3 items-center sm:justify-center text-foreground/70 hover:text-foreground/70 text-base lg:text-lg capitalize overflow-x-auto;
+    @apply flex sm:flex-wrap gap-x-2 sm:gap-x-8 gap-y-3 items-center sm:justify-center text-foreground/70 hover:text-foreground/70 text-base lg:text-lg capitalize overflow-x-auto;
     scrollbar-width: none;
 }

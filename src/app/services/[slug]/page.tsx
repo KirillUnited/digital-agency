@@ -5,7 +5,7 @@ import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
 import ProjectKeys from '@/components/shared/Projects/ProjectKeys';
 import Hero from '@/components/shared/Hero/Hero';
 import ProcessSteps from './components/ProcessSteps';
-import ServiceFeature from '../../../components/shared/Pricing/ServiceFeature/ServiceFeature';
+import ServiceFeature from '../../../components/shared/service/service-feature';
 
 type Props = {
     params: { slug: string }
