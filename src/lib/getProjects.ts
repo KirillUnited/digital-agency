@@ -2,7 +2,7 @@ import matter from 'gray-matter'
 import path from 'path'
 import fs from 'fs/promises'
 import { cache } from 'react'
-import { HeroLinkProps } from '@/components/shared/Hero/Hero'
+import { HeroLinkProps } from '@/components/shared/hero'
 
 export type ProjectType = {
     service?: string[]

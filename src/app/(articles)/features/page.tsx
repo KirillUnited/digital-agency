@@ -1,11 +1,11 @@
 import React from 'react'
 import Benefits from '@/components/shared/benefits'
 import Faq from '@/components/shared/faq'
-import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard'
+import MarketingCard, { MarketingCardProps } from '@/components/shared/marketing/marketing-card'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
 import { getPost } from '@/lib/getProjects'
-import Hero from '@/components/shared/Hero/Hero'
+import Hero from '@/components/shared/hero'
 import AboutUs from '../about/components/AboutUs/AboutUs'
 
 export async function generateMetadata() {

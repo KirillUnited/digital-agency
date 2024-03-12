@@ -3,7 +3,7 @@ import Hero from './components/Hero/Hero'
 import AboutUs from './components/AboutUs/AboutUs';
 import Benefits from '@/components/shared/benefits';
 import { ProjectType, getPost } from '@/lib/getProjects';
-import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard';
+import MarketingCard, { MarketingCardProps } from '@/components/shared/marketing/marketing-card';
 
 export async function generateMetadata() {
     const data = await getPost('about', 'articles');

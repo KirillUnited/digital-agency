@@ -11,10 +11,10 @@ import { Menu } from "lucide-react"
 
 import React from 'react'
 import Logo from "../Logo"
-import Navbar from "./Navbar"
+import Navbar from "./navbar"
 import { Button } from "@/components/ui/button"
-import PhoneCall from "@/components/shared/PhoneCall"
-import CTAModal from '@/components/shared/Modal/CTAModal'
+import PhoneCall from "@/components/shared/phone-call"
+import CTAModal from '@/components/shared/modal/cta-modal'
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
 const HeaderDrawer = () => {

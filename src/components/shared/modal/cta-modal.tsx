@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog"
 import Link from 'next/link'
 import { MoveRightIcon } from 'lucide-react'
-import { OrderForm } from '@/components/shared/Form'
+import { OrderForm } from '@/components/shared/order'
 
 type Props = {
 }

@@ -1,7 +1,6 @@
 'use server'
-import React, { useState } from 'react'
-import { OrderForm } from '.'
-import { MoveRightIcon } from 'lucide-react'
+import React from 'react'
+import OrderForm from './order-form'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
@@ -47,9 +46,6 @@ export default async function OrderSection() {
                         <OrderForm className={cn(styles.form)} />
                     </div>
                     <div className={cn(styles.footer)}>
-                        {/* <Link href={`/about`} className={cn('link', styles.link)}>
-                            Свяжитесь с нами <MoveRightIcon />
-                        </Link> */}
                         <p className='text-foregroundSecondary/70 text-sm'>Нажимая кнопку, ты разрешаешь обработку персональных данных и соглашаешься с <Link href={`/posts/privacy-policy`} className={cn('link inline', styles.link)}>политикой конфиденциальности.</Link></p>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import Navbar from './Navbar'
+import Navbar from './navbar'
 import { Menu } from 'lucide-react'
 import { Button } from '../../ui/button'
 import Logo from '../Logo'

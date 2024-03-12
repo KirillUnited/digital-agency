@@ -1,5 +1,5 @@
 'use client'
-import CTAModal from '@/components/shared/Modal/CTAModal'
+import CTAModal from '@/components/shared/modal/cta-modal'
 import StepsCard from '@/components/shared/Steps/StepsCard'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'

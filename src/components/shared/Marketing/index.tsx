@@ -1,5 +1,5 @@
 import React from 'react'
-import MarketingCard from './MarketingCard'
+import MarketingCard from './marketing-card'
 import { marketing } from '@/content'
 import { getPosts } from '@/lib/getProjects'
 import Link from 'next/link'

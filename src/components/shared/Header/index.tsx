@@ -1,13 +1,13 @@
 'use client'
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './navbar'
 import { Button } from '../../ui/button'
 import Logo from '../Logo'
-import HeaderDrawer from './HeaderDrawer'
+import HeaderDrawer from './header-drawer'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
-import PhoneCall from '@/components/shared/PhoneCall'
-import CTAModal from '@/components/shared/Modal/CTAModal'
+import PhoneCall from '@/components/shared/phone-call'
+import CTAModal from '@/components/shared/modal/cta-modal'
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
 const Header = () => {

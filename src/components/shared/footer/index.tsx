@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Header/Navbar'
+import Navbar from '../header/navbar'
 import Logo from '../Logo'
 import Contacts from '../Contacts'
 

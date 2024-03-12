@@ -7,7 +7,7 @@ import FeatureDisabled from '@/assets/svg/pricing-feature-disabled.svg'
 import Link from 'next/link'
 import { MoveRightIcon } from 'lucide-react'
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'
-import CTAModal from '@/components/shared/Modal/CTAModal'
+import CTAModal from '@/components/shared/modal/cta-modal'
 
 type PricingCardType = {
     slug?: string,
