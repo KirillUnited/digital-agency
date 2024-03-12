@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
-import BenefitIcon from './BenefitIcon'
+import BenefitIcon from './benefit-icon'
 
 export interface BenefitsCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     image?: string,
@@ -8,7 +8,7 @@ export interface BenefitsCardProps extends React.DetailedHTMLProps<React.HTMLAtt
     description?: string
 }
 
-export default function BenefitsCard({ image, title, description, className }: BenefitsCardProps) {
+export default function BenefitCard({ image, title, description, className }: BenefitsCardProps) {
     return (
         <div className={cn('flex flex-col gap-5 bg-accent h-full p-6 lg:p-12', className)}>
             <BenefitIcon icon={image} />

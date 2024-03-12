@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './components/Hero/Hero'
 import AboutUs from './components/AboutUs/AboutUs';
-import Benefits from './components/Benefits';
+import Benefits from '@/components/shared/benefits';
 import { ProjectType, getPost } from '@/lib/getProjects';
 import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard';
 
@@ -54,8 +54,6 @@ export default async function AboutPage() {
                 </section>
             )
             }
-            {/* <AboutUs />
-            <Mission /> */}
             <Benefits />
         </>
     )

@@ -1,6 +1,6 @@
 import { site } from '@/content';
 import React from 'react'
-import BenefitsCard from './BenefitsCard';
+import BenefitCard from './benefit-card';
 import Brands from '@/components/shared/Brands';
 
 const Benefits = () => {
@@ -18,7 +18,7 @@ const Benefits = () => {
                         content.map((item) => {
                             return (
                                 <li key={item.title}>
-                                    <BenefitsCard {...item} />
+                                    <BenefitCard {...item} />
                                 </li>
                             )
                         })
