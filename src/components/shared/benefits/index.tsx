@@ -1,7 +1,7 @@
 import { site } from '@/content';
 import React from 'react'
 import BenefitCard from './benefit-card';
-import Brands from '@/components/shared/Brands';
+import Brands from '@/components/shared/brands';
 
 const Benefits = () => {
     const title = site.about?.benefits?.title;

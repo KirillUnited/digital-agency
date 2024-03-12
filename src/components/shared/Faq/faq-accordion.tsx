@@ -9,7 +9,7 @@ type FaqAccordianItemsProps = {
     description: string
 }
 
-const FaqAccordian = ({ items }: any) => {
+const FaqAccordion = ({ items }: any) => {
   return (
     <Accordion type="single" collapsible>
         {
@@ -41,4 +41,4 @@ const FaqAccordian = ({ items }: any) => {
   )
 }
 
-export default FaqAccordian
+export default FaqAccordion

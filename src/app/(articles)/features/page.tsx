@@ -1,6 +1,6 @@
 import React from 'react'
 import Benefits from '@/components/shared/benefits'
-import Faq from '@/components/shared/Faq/Faq'
+import Faq from '@/components/shared/faq'
 import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'

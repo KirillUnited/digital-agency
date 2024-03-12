@@ -1,7 +1,7 @@
 import ServiceCard from '@/components/shared/service/service-card'
 import { faq } from '@/content'
 import React, { Suspense } from 'react'
-import FaqAccordian from '@/components/shared/Faq/FaqAccordian'
+import FaqAccordion from '@/components/shared/faq/faq-accordion'
 import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
 import { getPosts } from '@/lib/getProjects'
@@ -40,7 +40,7 @@ const ServiceListPage = async () => {
                             <h3 className="heading-3">{faqList?.title}</h3>
                             <Link href={faq.link.href} className='link self-start'>{faq.link.label}</Link>
                         </div>
-                        <FaqAccordian items={faqList?.content} />
+                        <FaqAccordion items={faqList?.content} />
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-import FaqAccordian from './FaqAccordian'
+import FaqAccordion from './faq-accordion'
 import { faq } from '@/content'
 import { getWidget } from '@/lib/getWidgets'
 
@@ -16,7 +16,7 @@ const Faq = async() => {
                     <h3 className="heading-3">{faqList?.title}</h3>
                     <Link href={faq.link.href} className='link self-start'>{faq.link.label}</Link>
                 </div>
-                <FaqAccordian items={faqList?.content} />
+                <FaqAccordion items={faqList?.content} />
             </div>
         </section>
     )
