@@ -1,5 +1,5 @@
-import PricingCard from '@/components/shared/Pricing/PricingCard'
-import { faq, pricing } from '@/content'
+import ServiceCard from '@/components/shared/service/service-card'
+import { faq } from '@/content'
 import React, { Suspense } from 'react'
 import FaqAccordian from '@/components/shared/Faq/FaqAccordian'
 import Link from 'next/link'
@@ -13,7 +13,7 @@ export async function generateMetadata() {
     }
 }
 
-const Pricing = async () => {
+const ServiceListPage = async () => {
     const data = await getPosts('services')
     const faqList = await getWidget('faq.md');
 
@@ -29,7 +29,7 @@ const Pricing = async () => {
                         {
                             data &&
                             data.map((item) => {
-                                return <li key={item?.title}><PricingCard {...item} /></li>
+                                return <li key={item?.title}><ServiceCard {...item} /></li>
                             })
                         }
                     </Suspense>
@@ -48,4 +48,4 @@ const Pricing = async () => {
     )
 }
 
-export default Pricing
+export default ServiceListPage

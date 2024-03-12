@@ -20,7 +20,7 @@ type PricingCardType = {
     link?: string
 }
 
-const PricingCard = ({ price, title, description, subtitle, variant, features, slug }: PricingCardType) => {
+const ServiceCard = ({ price, title, description, subtitle, variant, features, slug }: PricingCardType) => {
     return (
         <div className={cn(
             'flex flex-col gap-8 lg:gap-16 bg-accent rounded-[12px] h-full px-6 lg:px-12 py-8 lg:py-16',
@@ -75,4 +75,4 @@ const PricingCard = ({ price, title, description, subtitle, variant, features, s
     )
 }
 
-export default PricingCard
+export default ServiceCard
