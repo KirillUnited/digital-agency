@@ -1,5 +1,5 @@
 import React from 'react'
-import Benefits from '@/app/about/components/Benefits'
+import Benefits from '@/components/shared/benefits'
 import Faq from '@/components/shared/Faq/Faq'
 import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard'
 import { cn } from '@/lib/utils'
