@@ -185,6 +185,7 @@ collections:
           - label: "Hero Section"
             name: "hero_sections"
             widget: "list"
+            max: 1
             types:
                 - label: "Marketing"
                   name: "marketing"
