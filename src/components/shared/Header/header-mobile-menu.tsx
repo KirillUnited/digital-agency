@@ -9,7 +9,7 @@ import {
 import Navbar from './navbar'
 import { Menu } from 'lucide-react'
 import { Button } from '../../ui/button'
-import Logo from '../Logo'
+import Logo from '../logo'
 
 const MobileMenu = () => {
     return (

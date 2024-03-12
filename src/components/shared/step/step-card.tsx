@@ -6,7 +6,7 @@ type StepsCardType = {
     title: string,
     description?: string
 }
-const StepsCard = ({ step, title, description }: StepsCardType) => {
+const StepCard = ({ step, title, description }: StepsCardType) => {
     return (
         <div className='flex flex-col sm:items-stretch gap-4' key={step}>
             <div className="relative w-12 h-12 bg-link rounded-md grid place-items-center">
@@ -27,4 +27,4 @@ const StepsCard = ({ step, title, description }: StepsCardType) => {
     )
 }
 
-export default StepsCard
+export default StepCard

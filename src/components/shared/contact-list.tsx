@@ -1,7 +1,7 @@
 import { contacts } from '@/content'
 import React from 'react'
 
-const Contacts = () => {
+const ContactList = () => {
     return (
         <div className='bg-primary text-foreground px-4 lg:px-9 py-4'>
             <ul className='flex flex-wrap gap-6'>
@@ -20,4 +20,4 @@ const Contacts = () => {
     )
 }
 
-export default Contacts
+export default ContactList

@@ -10,7 +10,7 @@ import {
 import { Menu } from "lucide-react"
 
 import React from 'react'
-import Logo from "../Logo"
+import Logo from "../logo"
 import Navbar from "./navbar"
 import { Button } from "@/components/ui/button"
 import PhoneCall from "@/components/shared/phone-call"

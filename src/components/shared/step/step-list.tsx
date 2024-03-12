@@ -2,9 +2,9 @@ import { steps } from '@/content'
 import { MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import StepsCard from './StepsCard'
+import StepCard from './step-card'
 
-const Steps = () => {
+const StepList = () => {
     return (
         <section className='section bg-background-accent'>
             <div className="container grid grid-cols-1 lg:grid-cols-[405px_1fr] gap-6">
@@ -14,7 +14,7 @@ const Steps = () => {
                 </div>
                 <ul className="content grid grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] w-full max-w-2xl mx-auto gap-6">
                     {
-                        steps.map(({step, title, description }) => <li key={step}><StepsCard step={step} title={title} description={description} /></li>)
+                        steps.map(({step, title, description }) => <li key={step}><StepCard step={step} title={title} description={description} /></li>)
                     }
                 </ul>
             </div>
@@ -22,4 +22,4 @@ const Steps = () => {
     )
 }
 
-export default Steps
+export default StepList

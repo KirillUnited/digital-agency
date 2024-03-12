@@ -2,7 +2,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import { Button } from '../../ui/button'
-import Logo from '../Logo'
+import Logo from '../logo'
 import HeaderDrawer from './header-drawer'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'

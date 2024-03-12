@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../header/navbar'
-import Logo from '../Logo'
-import Contacts from '../Contacts'
+import Logo from '../logo'
+import ContactList from '../contact-list'
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
               <Logo />
               <p className='paragraph lg:max-w-lg text-background-accent'>Мы всегда готовы обсудить ваш проект и улучшить ваше присутствие в Интернете.</p>
               <div className='lg:mt-14 lg:max-w-lg'>
-                <Contacts />
+                <ContactList />
               </div>
             </div>
             <div className="flex flex-col gap-4 pb-8">
