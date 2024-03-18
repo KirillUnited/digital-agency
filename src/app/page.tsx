@@ -1,8 +1,8 @@
-import Marketing from '@/components/shared/marketing'
-import Hero from '@/components/shared/hero'
+import Marketing from '@/components/shared/_marketing'
+import Hero from '@/components/shared/_hero'
 import FeaturedProjectList from '@/components/shared/project/featured-project-list'
 import StepList from '@/components/shared/step/step-list'
-import Faq from '@/components/shared/faq'
+import Faq from '@/components/shared/_faq'
 import { OrderSection } from '@/components/shared/order'
 
 const hero_links = [

@@ -1,8 +1,8 @@
 import React from 'react'
-import Hero from './components/hero'
+import Hero from './components/_hero'
 import AboutUs from './components/about-us';
 import Benefits from '@/components/shared/benefits';
-import MarketingCard, { MarketingCardProps } from '@/components/shared/marketing/marketing-card';
+import MarketingCard, { MarketingCardProps } from '@/components/shared/_marketing/marketing-card';
 import { getCollectionItem } from '@/lib/collections';
 
 export async function generateMetadata() {
