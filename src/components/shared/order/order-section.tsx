@@ -7,7 +7,7 @@ import styles from './styles.module.css'
 import Image from 'next/image'
 import { getWidget } from '@/lib/getWidgets'
 
-export default async function OrderSection() {
+export default async function OrderSection({ className }: React.HTMLAttributes<HTMLDivElement>) {
     let data;
     try {
         data = await getWidget('order-section.md');
@@ -18,7 +18,13 @@ export default async function OrderSection() {
     if (!data) return null;
 
     return (
-        <section id="order_section" className={cn("section", styles.section)}>
+        <section
+            id="order_section"
+            className={cn(
+                "section",
+                styles.section,
+                className
+            )}>
             <div className={cn("container", styles.container)}>
                 <div className={cn(styles['image-wrap'])}>
                     <Image

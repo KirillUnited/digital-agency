@@ -17,7 +17,7 @@ const filterItemStyle = cva(
     {
         variants: {
             variant: {
-                primary: badgeVariants({ variant: 'default', className: "sm:text-base" }),
+                primary: badgeVariants({ variant: 'default', className: "sm:text-base pointer-events-none" }),
                 secondary: badgeVariants({ variant: 'secondary' })
             }
         }
