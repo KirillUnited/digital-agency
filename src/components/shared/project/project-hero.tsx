@@ -5,7 +5,7 @@ import ProjectInfo from '@/components/shared/project/project-info';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { ProjectType } from '@/lib/getProjects';
-import PostDate from '@/components/shared/date/post-date';
+import PostDate from '@/components/shared/date/postdate';
 
 type Props = {
     project: ProjectType | null | undefined
