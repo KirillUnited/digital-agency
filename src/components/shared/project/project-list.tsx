@@ -5,7 +5,7 @@ import ProjectListFilter from './project-list-filter';
 import { ProjectType } from '@/lib/getProjects';
 import { cn } from '@/lib/utils';
 import styles from './styles.module.css'
-import Loader from '@/components/shared/loader';
+import Loader from '@/components/shared/_Loader';
 
 type Props = {
     projects: (ProjectType | null)[]
