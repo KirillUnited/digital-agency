@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import styles from '@/components/shared/Projects/styles.module.css'
+import styles from './styles.module.css'
 import ProjectInfo from '@/components/shared/project/project-info';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';

@@ -4,7 +4,7 @@ import React, { Suspense } from 'react'
 import FaqAccordion from '@/components/shared/faq/faq-accordion'
 import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
-import { getPosts } from '@/lib/getProjects'
+import { getCollection } from '@/lib/collections'
 import { SkeletonDemo } from '@/components/shared/skeleton/skeleton-demo'
 
 export async function generateMetadata() {
@@ -14,7 +14,7 @@ export async function generateMetadata() {
 }
 
 const ServiceListPage = async () => {
-    const data = await getPosts('services')
+    const data = await getCollection('services')
     const faqList = await getWidget('faq.md');
 
     return (

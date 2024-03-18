@@ -4,12 +4,12 @@ import Faq from '@/components/shared/faq'
 import MarketingCard, { MarketingCardProps } from '@/components/shared/marketing/marketing-card'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
-import { getPost } from '@/lib/getProjects'
+import { getCollectionItem } from '@/lib/collections'
 import Hero from '@/components/shared/hero'
 import AboutUs from '../about/components/AboutUs/AboutUs'
 
 export async function generateMetadata() {
-    const data = await getPost('features', 'articles');
+    const data = await getCollectionItem('features', 'articles');
 
     return {
         title: data?.title
@@ -17,7 +17,7 @@ export async function generateMetadata() {
 }
 
 export default async function FeaturesPage() {
-    const { hero_sections, article_image_sections }: any = await getPost('features', 'articles');
+    const { hero_sections, article_image_sections }: any = await getCollectionItem('features', 'articles');
     const marketing_cols = article_image_sections.filter((section: any) => section.type === 'marketing_cols');
     const marketing_row = article_image_sections.filter((section: any) => section.type === 'marketing_row');
 

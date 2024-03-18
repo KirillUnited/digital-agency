@@ -1,4 +1,4 @@
-import { getPost, getPosts } from '@/lib/getProjects'
+import { getCollectionItem, getCollection } from '@/lib/collections'
 import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
@@ -12,7 +12,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props) {
-    const post = await getPost(params.slug, 'services');
+    const post = await getCollectionItem(params.slug, 'services');
 
     return {
         title: post?.title,
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-    const posts = await getPosts('services');
+    const posts = await getCollection('services');
 
     return posts.map((post) => ({
         slug: post?.slug,
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 }
 
 const ServicePage = async ({ params }: Props) => {
-    const post = await getPost(params.slug, 'services');
+    const post = await getCollectionItem(params.slug, 'services');
     const hasFeatures = post?.features;
 
     return (
