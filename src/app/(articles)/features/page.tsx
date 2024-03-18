@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
 import { getCollectionItem } from '@/lib/collections'
 import Hero from '@/components/shared/hero'
-import AboutUs from '../about/components/AboutUs/AboutUs'
+import AboutUs from '../about/components/about-us'
 
 export async function generateMetadata() {
     const data = await getCollectionItem('features', 'articles');

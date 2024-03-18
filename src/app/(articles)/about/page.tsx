@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from './components/Hero/Hero'
-import AboutUs from './components/AboutUs/AboutUs';
+import Hero from './components/hero'
+import AboutUs from './components/about-us';
 import Benefits from '@/components/shared/benefits';
 import MarketingCard, { MarketingCardProps } from '@/components/shared/marketing/marketing-card';
 import { getCollectionItem } from '@/lib/collections';
