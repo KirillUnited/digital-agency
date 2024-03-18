@@ -1,29 +1,20 @@
 import React from 'react'
-import Hero from './components/Hero/Hero'
-import AboutUs from './components/AboutUs/AboutUs';
+import Hero from './components/_hero'
+import AboutUs from './components/about-us';
 import Benefits from '@/components/shared/benefits';
-import { ProjectType, getPost } from '@/lib/getProjects';
-import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard';
+import MarketingCard, { MarketingCardProps } from '@/components/shared/_marketing/marketing-card';
+import { getCollectionItem } from '@/lib/collections';
 
 export async function generateMetadata() {
-    const data = await getPost('about', 'articles');
+    const data = await getCollectionItem('about', 'articles');
 
     return {
         title: data?.title,
     }
 }
 
-interface Props extends ProjectType {
-    hero_sections: Array<{
-        type: string,
-        title: string,
-        subtitle: string,
-        description: string,
-    }>
-}
-
 export default async function AboutPage() {
-    const { hero_sections, article_image_sections }: any = await getPost('about', 'articles');
+    const { hero_sections, article_image_sections }: any = await getCollectionItem('about', 'articles');
     const marketing_cols = article_image_sections.filter((section: any) => section.type === 'marketing_cols');
     const marketing_row = article_image_sections.filter((section: any) => section.type === 'marketing_row');
 

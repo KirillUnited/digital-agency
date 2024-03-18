@@ -1,15 +1,15 @@
 import React from 'react'
 import Benefits from '@/components/shared/benefits'
-import Faq from '@/components/shared/Faq/Faq'
-import MarketingCard, { MarketingCardProps } from '@/components/shared/Marketing/MarketingCard'
+import Faq from '@/components/shared/_faq'
+import MarketingCard, { MarketingCardProps } from '@/components/shared/_marketing/marketing-card'
 import { cn } from '@/lib/utils'
 import styles from './styles.module.css'
-import { getPost } from '@/lib/getProjects'
-import Hero from '@/components/shared/Hero/Hero'
-import AboutUs from '../about/components/AboutUs/AboutUs'
+import { getCollectionItem } from '@/lib/collections'
+import Hero from '@/components/shared/_hero'
+import AboutUs from '../about/components/about-us'
 
 export async function generateMetadata() {
-    const data = await getPost('features', 'articles');
+    const data = await getCollectionItem('features', 'articles');
 
     return {
         title: data?.title
@@ -17,7 +17,7 @@ export async function generateMetadata() {
 }
 
 export default async function FeaturesPage() {
-    const { hero_sections, article_image_sections }: any = await getPost('features', 'articles');
+    const { hero_sections, article_image_sections }: any = await getCollectionItem('features', 'articles');
     const marketing_cols = article_image_sections.filter((section: any) => section.type === 'marketing_cols');
     const marketing_row = article_image_sections.filter((section: any) => section.type === 'marketing_row');
 

@@ -1,4 +1,4 @@
-import { getPost, getPosts } from '@/lib/getProjects'
+import { getCollectionItem, getCollection } from '@/lib/collections'
 import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import PostHero from './components/PostHero';
@@ -8,7 +8,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props) {
-    const post = await getPost(params.slug, 'posts');
+    const post = await getCollectionItem(params.slug, 'posts');
 
     return {
         title: post?.title,
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-    const posts = await getPosts('posts');
+    const posts = await getCollection('posts');
 
     return posts.map((post) => ({
         slug: post?.slug,
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 }
 
 const PostTemplate = async ({ params }: Props) => {
-    const post = await getPost(params.slug, 'posts');
+    const post = await getCollectionItem(params.slug, 'posts');
 
     return (
         <>

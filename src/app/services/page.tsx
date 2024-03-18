@@ -1,11 +1,11 @@
 import ServiceCard from '@/components/shared/service/service-card'
 import { faq } from '@/content'
 import React, { Suspense } from 'react'
-import FaqAccordian from '@/components/shared/Faq/FaqAccordian'
+import FaqAccordion from '@/components/shared/_faq/faq-accordion'
 import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
-import { getPosts } from '@/lib/getProjects'
-import { SkeletonDemo } from '@/components/shared/Skeleton/SkeletonDemo'
+import { getCollection } from '@/lib/collections'
+import { SkeletonDemo } from '@/components/shared/skeleton/skeleton-demo'
 
 export async function generateMetadata() {
     return {
@@ -14,7 +14,7 @@ export async function generateMetadata() {
 }
 
 const ServiceListPage = async () => {
-    const data = await getPosts('services')
+    const data = await getCollection('services')
     const faqList = await getWidget('faq.md');
 
     return (
@@ -40,7 +40,7 @@ const ServiceListPage = async () => {
                             <h3 className="heading-3">{faqList?.title}</h3>
                             <Link href={faq.link.href} className='link self-start'>{faq.link.label}</Link>
                         </div>
-                        <FaqAccordian items={faqList?.content} />
+                        <FaqAccordion items={faqList?.content} />
                     </div>
                 </div>
             </div>

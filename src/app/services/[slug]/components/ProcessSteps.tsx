@@ -1,6 +1,6 @@
 'use client'
-import CTAModal from '@/components/shared/Modal/CTAModal'
-import StepsCard from '@/components/shared/Steps/StepsCard'
+import CTAModal from '@/components/shared/modal/cta-modal'
+import StepCard from '@/components/shared/step/step-card'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 import { ProjectType } from '@/lib/getProjects'
@@ -17,7 +17,7 @@ export default function ProcessSteps({ ...items }: ProjectType) {
                 </div>
                 <ul className="content grid grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] gap-6 py-8 lg:py-16">
                     {
-                        items?.steps?.map(({ description }, index: number) => <li key={index}><StepsCard step={index + 1} title={description} /></li>)
+                        items?.steps?.map(({ description }, index: number) => <li key={index}><StepCard step={index + 1} title={description} /></li>)
                     }
                 </ul>
                 <Dialog>

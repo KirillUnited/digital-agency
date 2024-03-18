@@ -1,9 +1,9 @@
-import Marketing from '@/components/shared/Marketing/Marketing'
-import Hero from '@/components/shared/Hero/Hero'
-import FeaturedProjects from '@/components/shared/Projects/FeaturedProjects'
-import Steps from '@/components/shared/Steps/Steps'
-import Faq from '@/components/shared/Faq/Faq'
-import { OrderSection } from '@/components/shared/Form'
+import Marketing from '@/components/shared/_marketing'
+import Hero from '@/components/shared/_hero'
+import FeaturedProjectList from '@/components/shared/project/featured-project-list'
+import StepList from '@/components/shared/step/step-list'
+import Faq from '@/components/shared/_faq'
+import { OrderSection } from '@/components/shared/order'
 
 const hero_links = [
   {
@@ -22,8 +22,8 @@ export default function Home() {
   return (
     <>
       <Hero links={hero_links} />
-      <Steps />
-      <FeaturedProjects />
+      <StepList />
+      <FeaturedProjectList />
       <Marketing />
       <Faq />
       <OrderSection />

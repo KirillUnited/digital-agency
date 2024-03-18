@@ -2,8 +2,8 @@ import getProjects, { ProjectType, getProject } from '@/lib/getProjects'
 import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import ProjectsFooter from '@/app/portfolio/components/ProjectsFooter';
-import ProjectKeys from '@/components/shared/Projects/ProjectKeys';
-import ProjectHero from '@/components/shared/Projects/ProjectHero';
+import ProjectKeys from '@/components/shared/project/project-keys';
+import ProjectHero from '@/components/shared/project/project-hero';
 
 type Props = {
     params: { slug: string }
