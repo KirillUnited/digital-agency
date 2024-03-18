@@ -25,8 +25,8 @@ export default function Home() {
       <StepList />
       <FeaturedProjectList />
       <Marketing />
+      <OrderSection className='bg-background-secondary' />
       <Faq />
-      <OrderSection />
     </>
   )
 }
