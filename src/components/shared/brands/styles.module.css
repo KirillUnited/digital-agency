@@ -1,0 +1,6 @@
+.list {
+    @apply flex flex-wrap gap-4 lg:gap-10 items-center justify-center;
+}
+.carousel-item {
+    @apply basis-1/2 sm:basis-1/4;
+}
