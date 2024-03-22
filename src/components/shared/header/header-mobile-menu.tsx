@@ -6,10 +6,10 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import Navbar from './_navbar'
+import Navbar from './navbar'
 import { Menu } from 'lucide-react'
 import { Button } from '../../ui/button'
-import Logo from '../_logo'
+import Logo from '../logo'
 
 const MobileMenu = () => {
     return (

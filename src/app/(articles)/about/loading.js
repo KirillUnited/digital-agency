@@ -1,4 +1,4 @@
-import Loader from '@/components/shared/_Loader'
+import Loader from '@/components/shared/loader'
 
 function Loading() {
   return <Loader/>

@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../_header/_navbar'
-import Logo from '../_logo'
+import Navbar from '../header/navbar'
+import Logo from '../logo'
 import ContactList from '../contact-list'
 
 const Footer = () => {
