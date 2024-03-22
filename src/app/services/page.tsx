@@ -1,7 +1,7 @@
 import ServiceCard from '@/components/shared/service/service-card'
 import { faq } from '@/content'
 import React, { Suspense } from 'react'
-import FaqAccordion from '@/components/shared/_faq/faq-accordion'
+import FaqAccordion from '@/components/shared/faq/faq-accordion'
 import Link from 'next/link'
 import { getWidget } from '@/lib/getWidgets'
 import { getCollection } from '@/lib/collections'

@@ -1,4 +1,4 @@
-import MarketingCard from '@/components/shared/_marketing/marketing-card'
+import MarketingCard from '@/components/shared/marketing/marketing-card'
 import React from 'react'
 import styles from './styles.module.css'
 

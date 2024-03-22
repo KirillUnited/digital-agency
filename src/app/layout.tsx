@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Montserrat } from 'next/font/google'
 import '@/styles/globals.css'
-import Header from '@/components/shared/_header'
+import Header from '@/components/shared/header'
 import Footer from '@/components/shared/footer'
 
 const montserrat = Montserrat({
