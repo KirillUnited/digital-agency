@@ -21,7 +21,10 @@ const hero_links = [
 export default function Home() {
   return (
     <>
-      <Hero links={hero_links} />
+      <Hero
+        links={hero_links}
+        particlesEffect={true}
+      />
       <StepList />
       <FeaturedProjectList />
       <Marketing />

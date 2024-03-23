@@ -1,8 +1,8 @@
 .section{
-    @apply bg-background-secondary text-foregroundSecondary bg-contain;
+    @apply bg-background-secondary text-foregroundSecondary bg-contain relative;
 }
 .container {
-    @apply grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-x-14 gap-y-7 items-center;
+    @apply relative grid grid-cols-[repeat(auto-fit,_minmax(min(400px,_100%),_1fr))] gap-x-14 gap-y-7 items-center;
 }
 .content {
     @apply flex flex-col gap-6;
@@ -12,4 +12,11 @@
 }
 .image {
     @apply w-full max-h-[70vh] object-contain object-center 2xl:max-h-[50vh];
+}
+.section [id=tsparticles] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
