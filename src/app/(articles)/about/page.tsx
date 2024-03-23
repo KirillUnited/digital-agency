@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './components/_hero'
+import Hero from './components/hero'
 import AboutUs from './components/about-us';
 import Benefits from '@/components/shared/benefits';
 import MarketingCard, { MarketingCardProps } from '@/components/shared/marketing/marketing-card';
