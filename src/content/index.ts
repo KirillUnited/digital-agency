@@ -112,7 +112,7 @@ export const navbar = [
     {
         label: 'Портфолио',
         route: '/portfolio',
-        menu: 'portfolio'
+        // menu: 'portfolio'
     },
     {
         label: 'Услуги',
@@ -263,7 +263,7 @@ export const faq = {
     ]
 };
 
-export const pricing = [
+export const services = [
     {
         price: '$50+',
         subtitle: '',
@@ -302,14 +302,14 @@ export const pricing = [
         subtitle: '',
         title: 'контакстная реклама',
         description: 'Atque repellat aut et.',
-        link: '/'
+        link: '/services/kontekstnaya-reklama'
     },
     {
         price: '$200',
         subtitle: '',
         title: 'таргетированая реклама',
         description: 'Quod totam voluptatum.',
-        link: '/'
+        link: '/services/targetirovannaya-reklama'
     },
     {
         price: '$150',
