@@ -1,5 +1,5 @@
 'use client'
-import { navbar, pricing } from '@/content';
+import { navbar, services } from '@/content';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -68,7 +68,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                                 </NavigationMenuLink>
                                             </li>
                                             {
-                                                pricing.map((item) => {
+                                                services.map((item) => {
                                                     return (
                                                         <li key={item.title}>
                                                             <NavigationMenuLink asChild>
