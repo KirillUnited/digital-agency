@@ -4,6 +4,9 @@ import FeaturedProjectList from '@/components/shared/project/featured-project-li
 import StepList from '@/components/shared/step/step-list'
 import Faq from '@/components/shared/faq'
 import { OrderSection } from '@/components/shared/order'
+import { ScrollLink } from '@/components/shared/link'
+import { MoveUpIcon } from 'lucide-react'
+import styles from '@/components/shared/link/styles.module.css'
 
 const hero_links = [
   {
