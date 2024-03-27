@@ -33,7 +33,7 @@ const Hero = (
         particlesEffect
     }: HeroProps) => {
     return (
-        <section className={`section ${styles.section}`}>
+        <section id='hero' className={`section ${styles.section}`}>
             {particlesEffect && <ParticlesApp />}
             <div className={`container ${styles.container}`}>
                 <div className={`${styles.content}`}>

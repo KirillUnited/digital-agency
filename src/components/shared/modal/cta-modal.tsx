@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { HtmlHTMLAttributes, useCallback } from 'react'
 import {
     DialogClose,
     DialogContent,
@@ -7,21 +7,36 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
-import Link from 'next/link'
 import { MoveRightIcon } from 'lucide-react'
 import { OrderForm } from '@/components/shared/order'
+import { cn } from '@/lib/utils'
 
-type Props = {
+export interface CTAModalProps extends React.HTMLAttributes<HTMLDivElement> {
+    title?: string,
+    description?: string
 }
 
-export default function CTAModal() {
+export default function CTAModal(
+    {
+        title = 'Отправить запрос',
+        description = 'Укажите в заявке ваше имя и номер телефона. Наши менеджеры свяжутся с вами, ответят на все вопросы и подготовят коммерческое предложение!',
+        className,
+        ...props
+    }: CTAModalProps) {
     return (
-        <DialogContent>
+        <DialogContent
+            className={cn(
+                className
+            )}
+            {...props}
+        >
             <DialogHeader className='space-y-4'>
-                <DialogTitle className='text-3xl'>Отправить запрос</DialogTitle>
-                <DialogDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                </DialogDescription>
+                <DialogTitle className='text-3xl'>{title}</DialogTitle>
+                {description &&
+                    <DialogDescription>
+                        {description}
+                    </DialogDescription>
+                }
             </DialogHeader>
             <div className="py-4">
                 <OrderForm />

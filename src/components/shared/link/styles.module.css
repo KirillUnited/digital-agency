@@ -1,0 +1,18 @@
+.top {
+    display: flex;
+    place-items: center;
+    place-self: end;
+    gap: 0.25rem;
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    /* margin-top: calc(100vh + 50px); */
+    text-decoration: none;
+    width: auto;
+    height: 40px;
+    padding: 1rem;
+    z-index: 99;
+    background-color: hsl(var(--secondary));
+    border-radius: 8px;
+    color: hsl(var(--secondary-foreground));
+}
